@@ -1,0 +1,37 @@
+================================================================================
+  THE GUILD - EUROPA 1410 — RUSSIAN LOCALIZATION (UNOFFICIAL FAN MOD)
+================================================================================
+
+This archive contains ONLY Russian localization files for the game
+"The Guild - Europa 1410". It does NOT contain the game itself.
+
+WHAT THIS IS:
+  - An unofficial fan translation to help Russian-speaking players
+  - A language overlay installed into your existing game folder
+  - Free, non-commercial community work
+
+WHAT THIS IS NOT:
+  - Not a crack, hack, or piracy tool
+  - Not a replacement for buying the game
+  - Not affiliated with or endorsed by the game's publisher or developer
+
+REQUIREMENTS:
+  - You MUST own a legal copy of the game (e.g. via Steam)
+  - Copy these files into:
+      Europa1410/Content/Paks/
+    alongside your existing game files
+
+RIGHTS:
+  - The game and all original content belong to their respective rights holders
+  - Translators claim no ownership of game intellectual property
+  - This project makes no commercial claims
+
+USE AT YOUR OWN RISK. PROVIDED "AS IS" WITHOUT WARRANTY.
+
+Repository: https://github.com/Devisione/the-guild-1410-russifier
+Full disclaimer: see DISCLAIMER.md in the repository
+
+If you are a rights holder with concerns, please contact us via GitHub Issues.
+We will address takedown requests promptly.
+
+================================================================================

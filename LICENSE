@@ -1,0 +1,73 @@
+MIT License — Community Localization Tools
+==========================================
+
+Copyright (c) 2026 Contributors of this repository
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTICE — Unofficial Fan Localization (Not Affiliated with the Game)
+=================================================================
+
+This project is an **unofficial, non-commercial, volunteer fan localization**
+for "The Guild - Europa 1410". Its sole purpose is to help players who
+**already legally own the game** experience it in Russian.
+
+**This is NOT:**
+
+- Piracy, cracking, or DRM circumvention
+- A game dump, repack, or substitute for purchasing the game
+- Hacking, cheating, or modification of game executable code
+- An official or endorsed product of the publisher or developer
+
+**This IS:**
+
+- A community translation overlay (text localization mod files)
+- Free fan work with **no commercial claims**
+- A mod that requires a legitimate game installation to function
+
+**Intellectual property:**
+
+All rights to "The Guild - Europa 1410", including but not limited to
+trademarks, characters, story, audio, visuals, and original English text,
+belong exclusively to the respective rights holders (including THQ Nordic
+and associated parties).
+
+Contributors to this project **claim no ownership** of any game intellectual
+property. Only community-created Russian translations and build scripts are
+shared here.
+
+**Repository contents:** build tools and translation data. No game binaries.
+
+**Release archives:** localization mod files only (`.pak`, `.ucas`, `.utoc`)
+plus a disclaimer. The game itself is never distributed.
+
+**User obligations:**
+
+1. Own a legal copy of the game before using this mod.
+2. Use for personal, non-commercial purposes only.
+3. Do not redistribute game assets obtained from the installation.
+
+**Takedown policy:**
+
+Rights holders may contact us via GitHub Issues. We will review and comply
+with valid requests promptly.
+
+See [DISCLAIMER.md](DISCLAIMER.md) for the full statement in Russian and English.

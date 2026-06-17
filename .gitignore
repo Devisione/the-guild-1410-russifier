@@ -1,0 +1,41 @@
+# Сгенерированные артефакты сборки
+build/
+dist/
+release/*.zip
+tmp_*/
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+
+# Локальная конфигурация с путями к игре
+config.json
+
+# Отчёт валидации (пересоздаётся)
+validation_report.txt
+
+# Бинарные инструменты — скачиваются отдельно (см. tools/README.md)
+tools/repak.exe
+tools/oo2core_9_win64.dll
+
+# Файлы, извлечённые из игры (не являются частью этого репозитория)
+source/
+
+# Архивы релизов
+*.zip
+*.7z
+
+# IDE / ОС
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Виртуальное окружение Python
+.venv/
+venv/
+env/
