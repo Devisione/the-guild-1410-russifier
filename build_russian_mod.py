@@ -697,9 +697,9 @@ RELEASE_README = """THE GUILD - EUROPA 1410 — русский перевод (�
    Europa1410\\Content\\Paks\\RussianLocalization_P.pak
    Europa1410\\Content\\Paks\\RussianLocalization_P.ucas
    Europa1410\\Content\\Paks\\RussianLocalization_P.utoc
-3. Запустите игру → Settings → Language → Text Language.
-   Выберите «русский». Если такого пункта нет — выберите Deutsch
-   (немецкий текстовый язык в моде заменён на русский).
+3. Чтобы перевод включился, откройте Settings → Language → Text Language
+   и выберите Deutsch (немецкий). Мод подменяет немецкий текст русским —
+   без этого шага интерфейс останется на английском.
 4. Полностью перезапустите игру, чтобы язык применился.
 
 Нужна легально купленная копия игры. Это не взлом и не пиратство —
