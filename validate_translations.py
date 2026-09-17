@@ -179,9 +179,9 @@ def validate_built_locres(report: Report) -> None:
         return
 
     rel_files = [
-        "Game/en/Game.locres",
-        "Game_VO/en/Game_VO.locres",
-        "Uncategorized Texts/en/Uncategorized Texts.locres",
+        "Game/ru/Game.locres",
+        "Game_VO/ru/Game_VO.locres",
+        "Uncategorized Texts/ru/Uncategorized Texts.locres",
     ]
 
     total = 0

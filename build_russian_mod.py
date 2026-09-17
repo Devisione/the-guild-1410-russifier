@@ -2,13 +2,15 @@
 """Rebuild Russian localization mod with context-aware translation rules."""
 from __future__ import annotations
 
+import csv
 import json
 import re
 import shutil
 import subprocess
+import zipfile
 from pathlib import Path
 
-from pylocres import LocresFile
+from pylocres import LocmetaFile, LocresFile
 from pylocres.locres import Entry, Namespace
 
 from locmod_lib import (
@@ -42,6 +44,10 @@ LOC_FILES = [
     "Uncategorized Texts/en/Uncategorized Texts.locres",
 ]
 
+# Official game locmeta already lists ru. Writing de as well so the existing
+# German menu entry also becomes Russian if the extra culture is hidden.
+OUTPUT_CULTURES = ("ru", "de")
+
 MANUAL = PATHS.manual
 
 # Host/Start live in ST_General -> Game.locres; Join Game was only gathered into
@@ -52,6 +58,7 @@ EXTRA_GAME_LOC_ENTRIES = (
 
 MOD_SUPPORT_FILES = (
     "Europa1410/Content/Localization/Game/Game.locmeta",
+    "Europa1410/Content/Localization/Game_VO/Game_VO.locmeta",
     "Europa1410/Content/Localization/Uncategorized Texts/Uncategorized Texts.locmeta",
     "Europa1410/Config/DefaultGame.ini",
 )
@@ -63,11 +70,14 @@ HASH_TEXT_RE = re.compile(rb"([0-9A-F]{32})([\x20-\x7e]{4,160})")
 
 ST_NAMESPACE_BY_FILE: dict[str, str] = {
     "ST_Actions.csv": "Actions",
+    "ST_AmbientBackstories.csv": "AmbientBackstories",
+    "ST_Backstories.csv": "Backstories",
     "ST_BuildingImprovements.csv": "Building Improvements",
     "ST_BuildingNamePools.csv": "Building Name Pools",
     "ST_BuildingRooms.csv": "Building Rooms",
     "ST_Buildings.csv": "Buildings",
     "ST_Carts.csv": "Carts",
+    "ST_Challenges.csv": "Challenges",
     "ST_Character.csv": "Character",
     "ST_CharacterNamePools.csv": "Character Name Pools",
     "ST_Cities.csv": "Cities",
@@ -76,8 +86,9 @@ ST_NAMESPACE_BY_FILE: dict[str, str] = {
     "ST_Effects.csv": "Effects",
     "ST_Events.csv": "Events",
     "ST_General.csv": "General",
-    "ST_HistoricalEvents.csv": "Historical Events",
+    "ST_HistoricalEvents.csv": "HistoricalEvents",
     "ST_Items.csv": "Items",
+    "ST_LoadingTips.csv": "LoadingTips",
     "ST_Notifications.csv": "Notifications",
     "ST_Politics.csv": "Politics",
     "ST_Professions.csv": "Professions",
@@ -180,11 +191,13 @@ def export_manual(entries: list[LocEntry], cache: dict[str, str]) -> None:
     MANUAL.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def ensure_string_tables() -> None:
-    if (STRING_TABLES_DIR / "ST_General.csv").exists():
+def ensure_source_assets() -> None:
+    locres_ok = (SOURCE / "Game/en/Game.locres").exists()
+    tables_ok = (STRING_TABLES_DIR / "ST_General.csv").exists()
+    if locres_ok and tables_ok:
         return
 
-    tmp = WORK / "tmp_string_tables"
+    tmp = WORK / "tmp_source_extract"
     if tmp.exists():
         shutil.rmtree(tmp)
     tmp.mkdir(parents=True)
@@ -194,19 +207,35 @@ def ensure_string_tables() -> None:
             "unpack",
             str(GAME_PAKS / "Europa1410-Windows.pak"),
             "--include",
+            "Europa1410/Content/Localization/",
+            "--include",
             "Europa1410/Content/StringTables/",
             "--output",
             str(tmp),
         ],
         check=True,
     )
-    src = tmp / "Europa1410/Content/StringTables"
-    STRING_TABLES_DIR.parent.mkdir(parents=True, exist_ok=True)
-    if STRING_TABLES_DIR.exists():
-        shutil.rmtree(STRING_TABLES_DIR)
-    shutil.copytree(src, STRING_TABLES_DIR)
+
+    extracted_root = tmp / "Europa1410/Content"
+    if not locres_ok:
+        src = extracted_root / "Localization"
+        SOURCE.parent.mkdir(parents=True, exist_ok=True)
+        if SOURCE.exists():
+            shutil.rmtree(SOURCE)
+        shutil.copytree(src, SOURCE)
+        print(f"Extracted localization to {SOURCE}", flush=True)
+    if not tables_ok:
+        src = extracted_root / "StringTables"
+        STRING_TABLES_DIR.parent.mkdir(parents=True, exist_ok=True)
+        if STRING_TABLES_DIR.exists():
+            shutil.rmtree(STRING_TABLES_DIR)
+        shutil.copytree(src, STRING_TABLES_DIR)
+        print(f"Extracted string tables to {STRING_TABLES_DIR}", flush=True)
     shutil.rmtree(tmp)
-    print(f"Extracted string tables to {STRING_TABLES_DIR}", flush=True)
+
+
+def ensure_string_tables() -> None:
+    ensure_source_assets()
 
 
 def parse_st_csv(path: Path) -> list[tuple[str, str]]:
@@ -442,6 +471,19 @@ def drop_english_cache_entries(cache: dict[str, str], entries: list[LocEntry]) -
     return dropped
 
 
+def culture_output_rel(rel: str, culture: str) -> str:
+    parts = Path(rel).parts
+    if len(parts) < 3:
+        raise ValueError(f"Unexpected locres path: {rel}")
+    return str(Path(parts[0]) / culture / parts[-1])
+
+
+def write_locres(loc: LocresFile, rel: str) -> None:
+    out = MOD_ROOT / "Europa1410/Content/Localization" / rel
+    out.parent.mkdir(parents=True, exist_ok=True)
+    loc.write(str(out))
+
+
 def build_locres(rel: str, cache: dict[str, str]) -> int:
     loc, entries, handles = collect_entries(rel)
     print(f"Building {rel} ({len(entries)} entries)...", flush=True)
@@ -456,10 +498,36 @@ def build_locres(rel: str, cache: dict[str, str]) -> int:
     elif rel == "Uncategorized Texts/en/Uncategorized Texts.locres":
         added += inject_ucas_hash_entries(loc, cache, UCAS_HASH_ENTRIES)
 
-    out = MOD_ROOT / "Europa1410/Content/Localization" / rel
-    out.parent.mkdir(parents=True, exist_ok=True)
-    loc.write(str(out))
+    for culture in OUTPUT_CULTURES:
+        write_locres(loc, culture_output_rel(rel, culture))
+        print(f"  wrote {culture_output_rel(rel, culture)}", flush=True)
     return len(entries) + added
+
+
+def patch_locmeta(path: Path, extra_cultures: tuple[str, ...]) -> None:
+    meta = LocmetaFile()
+    meta.read(str(path))
+    cultures = list(meta.compiled_cultures or [])
+    reader = getattr(meta, "reader", None)
+    if reader is not None:
+        reader.close()
+        meta.reader = None
+
+    changed = False
+    for culture in extra_cultures:
+        if culture not in cultures:
+            cultures.append(culture)
+            changed = True
+    if not changed:
+        return
+
+    meta.compiled_cultures = cultures
+    meta.write(str(path))
+    writer = getattr(meta, "writer", None)
+    if writer is not None:
+        writer.close()
+        meta.writer = None
+    print(f"Added cultures {list(extra_cultures)} to {path.name}", flush=True)
 
 
 def stage_mod_support_files() -> None:
@@ -481,16 +549,32 @@ def stage_mod_support_files() -> None:
         check=True,
     )
 
-    for rel_path in (
+    locmeta_files = (
         "Europa1410/Content/Localization/Game/Game.locmeta",
+        "Europa1410/Content/Localization/Game_VO/Game_VO.locmeta",
         "Europa1410/Content/Localization/Uncategorized Texts/Uncategorized Texts.locmeta",
-    ):
+    )
+    for rel_path in locmeta_files:
         src = tmp / rel_path
         if not src.exists():
             raise FileNotFoundError(f"Missing {src}")
         dst = MOD_ROOT / rel_path
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
+
+    patch_locmeta(
+        MOD_ROOT / "Europa1410/Content/Localization/Game/Game.locmeta",
+        OUTPUT_CULTURES,
+    )
+    patch_locmeta(
+        MOD_ROOT / "Europa1410/Content/Localization/Game_VO/Game_VO.locmeta",
+        OUTPUT_CULTURES,
+    )
+    patch_locmeta(
+        MOD_ROOT
+        / "Europa1410/Content/Localization/Uncategorized Texts/Uncategorized Texts.locmeta",
+        OUTPUT_CULTURES,
+    )
 
     ini_src = tmp / "Europa1410/Config/DefaultGame.ini"
     if not ini_src.exists():
@@ -499,12 +583,14 @@ def stage_mod_support_files() -> None:
     extra_paths = (
         "+LocalizationPaths=%GAMEDIR%Content/Localization/Game",
         "+LocalizationPaths=%GAMEDIR%Content/Localization/Uncategorized Texts",
+        "+CulturesToStage=ru",
     )
-    if not all(line in ini_text for line in extra_paths):
-        marker = "[Internationalization]"
-        if marker not in ini_text:
-            raise RuntimeError("DefaultGame.ini is missing [Internationalization] section")
-        insertion = marker + "\n" + "\n".join(extra_paths)
+    marker = "[Internationalization]"
+    if marker not in ini_text:
+        raise RuntimeError("DefaultGame.ini is missing [Internationalization] section")
+    missing = [line for line in extra_paths if line not in ini_text]
+    if missing:
+        insertion = marker + "\n" + "\n".join(missing)
         ini_text = ini_text.replace(marker, insertion, 1)
 
     ini_dst = MOD_ROOT / "Europa1410/Config/DefaultGame.ini"
@@ -512,6 +598,43 @@ def stage_mod_support_files() -> None:
     ini_dst.write_text(ini_text, encoding="utf-8")
     shutil.rmtree(tmp)
     print("Staged locmeta and DefaultGame.ini overrides", flush=True)
+
+
+def write_translated_string_tables(cache: dict[str, str]) -> int:
+    dest_dir = MOD_ROOT / "Europa1410/Content/StringTables"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    written = 0
+    replaced = 0
+    for csv_name, namespace in ST_NAMESPACE_BY_FILE.items():
+        src = STRING_TABLES_DIR / csv_name
+        if not src.exists():
+            continue
+        with src.open(encoding="utf-8-sig", newline="") as handle:
+            rows = list(csv.reader(handle))
+        if not rows:
+            continue
+        out_rows = [rows[0]]
+        for row in rows[1:]:
+            if len(row) < 2 or not row[0]:
+                out_rows.append(row)
+                continue
+            entry = LocEntry(namespace, row[0], row[1])
+            russian = resolve(entry, cache)
+            new_row = list(row)
+            if russian != row[1]:
+                replaced += 1
+            new_row[1] = russian
+            out_rows.append(new_row)
+        dest = dest_dir / csv_name
+        with dest.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.writer(handle, quoting=csv.QUOTE_ALL, lineterminator="\n")
+            writer.writerows(out_rows)
+        written += 1
+    print(
+        f"Staged {written} string tables with {replaced} translated SourceString cells",
+        flush=True,
+    )
+    return written
 
 
 def pack_mod() -> Path:
@@ -563,13 +686,57 @@ def publish_dist(install: bool) -> None:
         print(f"Installed {name}", flush=True)
 
 
+RELEASE_README = """THE GUILD - EUROPA 1410 — русский перевод (неофициальный)
+
+Поддержать автора: https://www.donationalerts.com/r/link_it
+
+Установка:
+1. Распакуйте этот архив в папку игры, например:
+   C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Guild - Europa 1410
+2. В итоге должны появиться файлы:
+   Europa1410\\Content\\Paks\\RussianLocalization_P.pak
+   Europa1410\\Content\\Paks\\RussianLocalization_P.ucas
+   Europa1410\\Content\\Paks\\RussianLocalization_P.utoc
+3. Запустите игру → Settings → Language → Text Language.
+   Выберите «русский». Если такого пункта нет — выберите Deutsch
+   (немецкий текстовый язык в моде заменён на русский).
+4. Полностью перезапустите игру, чтобы язык применился.
+
+Нужна легально купленная копия игры. Это не взлом и не пиратство —
+только текстовая локализация поверх вашей установки Steam.
+"""
+
+
+def make_release_zip() -> Path:
+    release_dir = WORK / "release"
+    release_dir.mkdir(parents=True, exist_ok=True)
+    zip_path = release_dir / "Europa1410-RussianLocalization.zip"
+    if zip_path.exists():
+        zip_path.unlink()
+
+    readme_path = release_dir / "README.txt"
+    readme_path.write_text(RELEASE_README, encoding="utf-8")
+    disclaimer_src = release_dir / "DISCLAIMER.txt"
+    if not disclaimer_src.exists():
+        raise FileNotFoundError(f"Missing {disclaimer_src}")
+
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        archive.write(readme_path, "README.txt")
+        archive.write(disclaimer_src, "DISCLAIMER.txt")
+        for name in MOD_FILES:
+            archive.write(DIST_PAKS / name, f"Europa1410/Content/Paks/{name}")
+    print(f"Release zip: {zip_path} ({zip_path.stat().st_size} bytes)", flush=True)
+    return zip_path
+
+
 def main() -> None:
     import argparse
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--force", action="store_true", help="Retranslate all entries via API")
-    parser.add_argument("--batch-size", type=int, default=50)
+    parser.add_argument("--batch-size", type=int, default=12)
     parser.add_argument("--pause", type=float, default=0.4)
+    parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--skip-translate", action="store_true", help="Only rebuild pak from cache")
     parser.add_argument(
         "--refresh-ucas-hash",
@@ -580,6 +747,11 @@ def main() -> None:
         "--no-install",
         action="store_true",
         help="Build dist only, do not copy files into the game folder",
+    )
+    parser.add_argument(
+        "--no-zip",
+        action="store_true",
+        help="Do not create the user-facing zip archive",
     )
     args = parser.parse_args()
 
@@ -639,6 +811,8 @@ def main() -> None:
             batch_size=args.batch_size,
             pause=args.pause,
             force=args.force,
+            workers=args.workers,
+            on_progress=save_cache,
         )
         save_cache(cache)
 
@@ -653,10 +827,13 @@ def main() -> None:
         total += build_locres(rel, cache)
 
     stage_mod_support_files()
+    write_translated_string_tables(cache)
     pack_mod()
     setup_iostore()
     install = PATHS.install_mod_after_build and not args.no_install
     publish_dist(install=install)
+    if not args.no_zip:
+        make_release_zip()
     print(f"Done. {total} entries.", flush=True)
 
 

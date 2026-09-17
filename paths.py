@@ -8,7 +8,7 @@ from pathlib import Path
 
 DEFAULT_GAME_PAKS = (
     Path(r"C:/Program Files (x86)/Steam/steamapps/common")
-    / "The Guild - Europa 1410 Demo/Europa1410/Content/Paks"
+    / "The Guild - Europa 1410/Europa1410/Content/Paks"
 )
 
 

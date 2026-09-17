@@ -2,6 +2,9 @@
   THE GUILD - EUROPA 1410 — RUSSIAN LOCALIZATION (UNOFFICIAL FAN MOD)
 ================================================================================
 
+Support the author: https://www.donationalerts.com/r/link_it
+
+
 This archive contains ONLY Russian localization files for the game
 "The Guild - Europa 1410". It does NOT contain the game itself.
 
