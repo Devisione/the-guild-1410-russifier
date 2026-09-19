@@ -1,5 +1,11 @@
 {
   "game_paks_dir": "C:/Program Files (x86)/Steam/steamapps/common/The Guild - Europa 1410/Europa1410/Content/Paks",
   "work_dir": null,
-  "install_mod_after_build": true
+  "install_mod_after_build": true,
+  "translation_backend": "gemini",
+  "gemini_api_key": "",
+  "local_api_base": "http://127.0.0.1:1234/v1",
+  "local_model": "llama-3-8b-lexi-uncensored",
+  "local_enable_thinking": true,
+  "local_api_key": ""
 }

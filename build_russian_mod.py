@@ -14,9 +14,17 @@ from pylocres import LocmetaFile, LocresFile
 from pylocres.locres import Entry, Namespace
 
 from locmod_lib import (
+    GLOSSARY_BY_KEY,
+    INLINE_GLOSSARY,
     LocEntry,
+    NS_HINTS,
+    PLACEHOLDER_RE,
+    cyrillic_ratio,
     find_cached_translation,
+    is_opaque_encoded_text,
     remember_cache_translation,
+    repair_translation_placeholders,
+    review_translation_drafts,
     resolve,
     should_keep_english,
     translate_entries,
@@ -31,6 +39,9 @@ DIST_PAKS = PATHS.dist_paks
 REPAK = PATHS.repak
 CACHE = PATHS.cache
 MOD_ROOT = PATHS.mod_root
+REVIEW_REPORT = WORK / "translation_review.csv"
+GLOSSARY_REPORT = WORK / "translation_glossary.json"
+REVIEW_STATE = WORK / "translation_review_state.json"
 
 MOD_FILES = (
     "RussianLocalization_P.pak",
@@ -138,6 +149,93 @@ def save_cache(cache: dict[str, str]) -> None:
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def load_review_state() -> set[str]:
+    if not REVIEW_STATE.exists():
+        return set()
+    try:
+        values = json.loads(REVIEW_STATE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set()
+    return {str(value) for value in values} if isinstance(values, list) else set()
+
+
+def save_review_state(values: set[str]) -> None:
+    REVIEW_STATE.write_text(
+        json.dumps(sorted(values), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def write_translation_glossary() -> None:
+    payload = {
+        "game": "The Guild - Europa 1410",
+        "style": "literary medieval economic strategy UI",
+        "terms_by_key": GLOSSARY_BY_KEY,
+        "inline_terms": INLINE_GLOSSARY,
+        "namespace_hints": NS_HINTS,
+    }
+    GLOSSARY_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    GLOSSARY_REPORT.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
+def write_translation_review(entries: list[LocEntry], cache: dict[str, str]) -> None:
+    rows: list[dict[str, str]] = []
+    for entry in entries:
+        cached = find_cached_translation(entry, cache)
+        cache_hit = entry.cache_id in cache
+        if cached is None and not cache_hit:
+            prefix = f"{entry.stable_cache_id}\x1f"
+            cache_hit = any(
+                key.startswith(prefix)
+                and key.split("\x1f", 2)[-1].strip() == entry.english.strip()
+                for key in cache
+            )
+        russian = resolve(entry, cache)
+        flags: list[str] = []
+        if not cache_hit:
+            status = "pending"
+            flags = []
+        else:
+            status = "ok"
+        if sorted(PLACEHOLDER_RE.findall(entry.english)) != sorted(
+            PLACEHOLDER_RE.findall(russian)
+        ):
+            flags.append("placeholder_mismatch")
+        if (
+            not should_keep_english(entry)
+            and russian.strip() == entry.english.strip()
+        ):
+            flags.append("untranslated")
+        if not cache_hit:
+            status = "pending"
+        elif should_keep_english(entry):
+            status = "protected"
+        elif flags:
+            status = "review"
+        else:
+            status = "ok"
+        rows.append(
+            {
+                "namespace": entry.namespace,
+                "key": entry.key,
+                "english": entry.english,
+                "russian": russian,
+                "status": status,
+                "flags": ",".join(flags),
+                "cyrillic_ratio": f"{cyrillic_ratio(russian):.3f}",
+            }
+        )
+    rows.sort(key=lambda row: (row["status"], row["namespace"], row["key"]))
+    REVIEW_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    with REVIEW_REPORT.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    write_translation_glossary()
+
+
 def load_manual_map() -> dict[str, str]:
     if not MANUAL.exists():
         return {}
@@ -155,6 +253,11 @@ def apply_manual_overrides(cache: dict[str, str], entries: list[LocEntry]) -> in
     for entry in entries:
         russian = manual.get(entry.english)
         if not russian or not russian.strip():
+            continue
+        current = cache.get(entry.cache_id) or find_cached_translation(entry, cache)
+        if current and current.strip() != entry.english.strip():
+            continue
+        if is_opaque_encoded_text(entry.english):
             continue
         if russian.strip() == entry.english.strip():
             continue
@@ -178,7 +281,11 @@ def export_manual(entries: list[LocEntry], cache: dict[str, str]) -> None:
             continue
         seen.add(entry.english)
         english = entry.english
-        russian = existing.get(english)
+        russian = resolve(entry, cache)
+        if not russian or not russian.strip() or russian.strip() == english.strip():
+            russian = existing.get(english)
+        if is_opaque_encoded_text(english):
+            russian = english
         if (
             not russian
             or not russian.strip()
@@ -618,10 +725,18 @@ def write_translated_string_tables(cache: dict[str, str]) -> int:
             if len(row) < 2 or not row[0]:
                 out_rows.append(row)
                 continue
-            entry = LocEntry(namespace, row[0], row[1])
+            source_english = row[1]
+            lookup_english = (
+                source_english.replace("\\r\\n", "\n")
+                .replace("\\n", "\n")
+                .replace('\\"', '""')
+            )
+            entry = LocEntry(namespace, row[0], lookup_english)
             russian = resolve(entry, cache)
+            if lookup_english != source_english and russian == lookup_english:
+                russian = source_english
             new_row = list(row)
-            if russian != row[1]:
+            if russian != source_english:
                 replaced += 1
             new_row[1] = russian
             out_rows.append(new_row)
@@ -739,6 +854,27 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--skip-translate", action="store_true", help="Only rebuild pak from cache")
     parser.add_argument(
+        "--review-existing",
+        action="store_true",
+        help="Actively review risky cached translations with the local editor",
+    )
+    parser.add_argument(
+        "--review-all",
+        action="store_true",
+        help="Review every non-protected cached translation with the local editor",
+    )
+    parser.add_argument(
+        "--review-batch-size",
+        type=int,
+        default=32,
+        help="Number of translations per local-editor request",
+    )
+    parser.add_argument(
+        "--reset-review-state",
+        action="store_true",
+        help="Forget completed review fingerprints and audit every entry again",
+    )
+    parser.add_argument(
         "--refresh-ucas-hash",
         action="store_true",
         help="Rescan Europa1410-Windows.ucas for uncategorized hash strings",
@@ -800,6 +936,19 @@ def main() -> None:
     cache = {} if args.force else load_cache()
     locme = sum(1 for entry in all_entries if entry.english.startswith("(LocMe)"))
     print(f"Collected {len(all_entries)} entries, LocMe kept in English: {locme}", flush=True)
+    write_translation_glossary()
+
+    def save_progress(
+        current_cache: dict[str, str],
+        changed_entries: list[LocEntry] | None = None,
+    ) -> None:
+        if changed_entries:
+            review_translation_drafts(changed_entries, current_cache)
+        save_cache(current_cache)
+        try:
+            write_translation_review(all_entries, current_cache)
+        except OSError as exc:
+            print(f"Review report deferred: {exc}", flush=True)
 
     if not args.skip_translate:
         dropped = drop_english_cache_entries(cache, all_entries)
@@ -812,13 +961,45 @@ def main() -> None:
             pause=args.pause,
             force=args.force,
             workers=args.workers,
-            on_progress=save_cache,
+            on_progress=save_progress,
         )
-        save_cache(cache)
+        save_progress(cache)
 
     manual_applied = apply_manual_overrides(cache, all_entries)
     print(f"Manual overrides applied: {manual_applied}", flush=True)
+    if args.review_existing or args.review_all:
+        reviewed_fingerprints = (
+            set()
+            if args.reset_review_state
+            else load_review_state() if args.review_all else set()
+        )
+
+        def save_review_progress(current_cache: dict[str, str]) -> None:
+            save_cache(current_cache)
+            if args.review_all:
+                save_review_state(reviewed_fingerprints)
+
+        reviewed, edited = review_translation_drafts(
+            all_entries,
+            cache,
+            batch_size=args.review_batch_size,
+            review_all=args.review_all,
+            reviewed_fingerprints=reviewed_fingerprints if args.review_all else None,
+            on_progress=save_review_progress,
+        )
+        print(f"Existing translation review: {reviewed} checked, {edited} edited", flush=True)
+        save_cache(cache)
+    checked_placeholders, fixed_placeholders = repair_translation_placeholders(
+        all_entries, cache
+    )
+    if checked_placeholders:
+        print(
+            f"Placeholder repair: {checked_placeholders} checked, "
+            f"{fixed_placeholders} fixed",
+            flush=True,
+        )
     save_cache(cache)
+    write_translation_review(all_entries, cache)
 
     export_manual(all_entries, cache)
 

@@ -17,6 +17,10 @@ config.json
 
 # Отчёт валидации (пересоздаётся)
 validation_report.txt
+translation_review.csv
+translation_glossary.json
+translation_review_state.json
+translation_review_overrides.json
 
 # Бинарные инструменты — скачиваются отдельно (см. tools/README.md)
 tools/repak.exe
