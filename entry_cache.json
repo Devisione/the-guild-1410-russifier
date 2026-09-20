@@ -3487,7 +3487,7 @@
   "Workers\u001fRank_Description\u001fEvery worker starts as an Apprentice and can be promoted as they gain experience. \n\nRanks from lowest to highest: \n• {Apprentice} \n• {Journeyman} \n• {Master} \n• {Expert} \n\nJourneymen are more efficient, while Masters and Experts can keep the shop running in your absence.": "Каждый работник начинает с должности ученика и может повышаться по мере приобретения опыта. \n\nРанги от низшего к высшему: \n• {Apprentice} \n• {Journeyman} \n• {Master} \n• {Expert} \n\nПодмастерья более эффективны, а мастера и эксперты могут поддерживать работу магазина в ваше отсутствие.",
   "Workers\u001fRank_Expert_DisplayName\u001fExpert": "Эксперт",
   "Workers\u001fTreatment_Exploitation_DisplayName\u001fExploitation": "Эксплуатация",
-  "Workers\u001fFireEmployee_Prompt\u001fFire": "Огонь",
+  "Workers\u001fFireEmployee_Prompt\u001fFire": "Уволить",
   "Workers\u001fFireEmployee_DisplayName\u001fFire Worker": "пожарный работник",
   "Workers\u001fFireEmployee_Confirmation_Prompt\u001fFire {WorkerName}?": "Пожар {WorkerName}?",
   "Workers\u001fSalary_OneTimeBonusAction_Description\u001fGive the workers a little extra. Let them think they've found something worth staying for.": "Дайте работникам немного больше. Пусть они думают, что нашли то, ради чего стоит остаться.",
