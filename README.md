@@ -20,11 +20,18 @@
 C:\Program Files (x86)\Steam\steamapps\common\The Guild - Europa 1410
 ```
 
-3. **Чтобы перевод включился**, в игре откройте **Settings → Language → Text Language** и выберите **Deutsch (немецкий)**.
-   Мод подменяет немецкий текст русским — без этого шага интерфейс останется на английском.
-4. **Полностью перезапустите** игру.
+3. **Чтобы перевод включился**, в игре откройте **Settings → Language → Text Language** и выберите **Русский**.
+   Отдельного слота `ru` в меню нет — игра показывает только вшитые языки. Пункт **Русский** стоит на месте Deutsch, с русским текстом и окончаниями 1/2/5.
+4. В Steam: игра → **Свойства** → **Параметры запуска**. Вставьте как есть:
 
-В архиве только файлы локализации (`.pak` / `.ucas` / `.utoc`). Сама игра в архив не входит.
+```
+CheckTranslationUpdate.cmd %command%
+```
+
+   Кнопка **Играть** в Steam сначала откроет лаунчер перевода: можно скачать обновление, запустить игру или **отключить перевод на сутки**, если он мешает.
+5. **Полностью перезапустите** игру.
+
+В архиве только файлы локализации (`.pak` / `.ucas` / `.utoc`) и этот проверщик. Сама игра в архив не входит.
 
 ## Что внутри
 
@@ -32,6 +39,8 @@ C:\Program Files (x86)\Steam\steamapps\common\The Guild - Europa 1410
 |--------------|------------|
 | `build_russian_mod.py` | Главный скрипт: перевод, сборка `.pak`, zip-архив |
 | `locmod_lib.py` | Логика перевода, глоссарий, кэш |
+| `check_translation_update.ps1` | Лаунчер: обновление, запуск игры, отключение перевода на сутки |
+| `CheckTranslationUpdate.cmd` | Точка входа для параметров запуска Steam |
 | `validate_translations.py` | Проверка качества переводов перед релизом |
 | `paths.py` | Разрешение путей из конфига / переменных окружения |
 | `translation_manual.json` | Ручные правки перевода (главный файл для редакторов) |
@@ -54,8 +63,12 @@ Europa1410/Content/Paks/Europa1410-Windows.pak
 | `Content/Localization/Uncategorized Texts/en/` | Собранные UI-строки |
 | `Content/StringTables/ST_*.csv` | Исходные таблицы строк |
 
-В `Game.locmeta` разработчики уже заранее прописали культуру `ru`. Мод параллельно
-подменяет немецкий `de` русским текстом, поэтому в игре нужно выбрать **Deutsch**.
+В `Game.locmeta` разработчики заранее прописали `ru`, но в меню языков игра
+показывает только культуры, которые реально вшили при сборке (`en`, `de`, `ash`, `pt-BR`).
+Мод пишет русский **только** в слот `de` (и запасной `ru`), подписывает Deutsch как
+**Русский** и подменяет немецкие плюралы ICU русскими, чтобы работали окончания 1/2/5.
+Английские `en` locres и `StringTables` не трогаем. `Game_VO` тоже не перекрываем —
+озвучка остаётся оригинальной, по умолчанию English.
 
 ## Требования для сборки
 
@@ -184,14 +197,19 @@ python validate_translations.py
 
 ## Установка мода в игру
 
-После успешной сборки в папку игры копируются три файла:
+После успешной сборки в папку игры копируются файлы перевода и проверщик обновлений:
 
 ```
 Europa1410/Content/Paks/
   RussianLocalization_P.pak
   RussianLocalization_P.ucas
   RussianLocalization_P.utoc
+  RussianLocalization.version
+CheckTranslationUpdate.cmd
+check_translation_update.ps1
 ```
+
+Номер версии задаётся константой `MOD_VERSION` в `build_russian_mod.py` (или флагом `--mod-version`). Перед публикацией GitHub Release его нужно поднять, чтобы проверщик у игроков видел новую сборку.
 
 Готовый zip лежит в `release/Europa1410-RussianLocalization.zip`.
 Распакуйте его в корень папки игры.
@@ -206,6 +224,8 @@ Europa1410/Content/Paks/
 - `Europa1410/Content/Paks/RussianLocalization_P.pak`
 - `Europa1410/Content/Paks/RussianLocalization_P.ucas`
 - `Europa1410/Content/Paks/RussianLocalization_P.utoc`
+- `Europa1410/Content/Paks/RussianLocalization.version` — номер версии перевода
+- `CheckTranslationUpdate.cmd` / `check_translation_update.ps1` — проверка обновлений
 - `README.txt` — установка
 - `DISCLAIMER.txt` — правовая информация
 
@@ -246,8 +266,13 @@ the-guild-1410-russifier/
 | `repak.exe` not found | Скачайте в `tools/` — см. tools/README.md |
 | `Missing source file: Game.locres` | Запустите без `--skip-translate` — скрипт извлечёт файлы |
 | Игра не на диске C: | Укажите путь в `config.json` |
-| Перевод не применился | Выберите **Deutsch** в Language → Text Language и полностью перезапустите игру |
+| Перевод не применился | Выберите **Русский** в Language → Text Language и полностью перезапустите игру |
+| English тоже на русском | Слот English больше не перекрывается. Выберите Text Language = English и перезапустите |
+| Озвучка стала «Русский» | Audio Language оставьте **English**. Пункт Русский в озвучке — тот же слот Deutsch, русской речи нет |
 | Перевод не применился | Проверьте `translation_manual.json`, затем `--skip-translate` |
+| Проверщик обновлений не запускается | Правый клик по `CheckTranslationUpdate.cmd` → «Запуск от имени администратора», если папка игры в Program Files |
+| Игра из Steam не проверяет перевод | В свойствах игры в параметрах запуска должна быть строка с `CheckTranslationUpdate.cmd` и `%command%` |
+| Перевод ломает игру | В лаунчере нажмите **Отключить перевод на сутки** — файлы прячутся, игра идёт на языке из настроек |
 
 ## Лицензия
 

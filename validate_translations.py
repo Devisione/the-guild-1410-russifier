@@ -12,6 +12,7 @@ from pathlib import Path
 
 from locmod_lib import (
     ARTIFACT_PATTERNS,
+    GENDER_RE,
     KEEP_ENGLISH_EXACT,
     LOCME_PREFIXES,
     LocEntry,
@@ -63,6 +64,34 @@ def load_character_names() -> set[str]:
     return names
 
 
+def character_name_visible_parts(text: str) -> list[str]:
+    """Name text only, without Unreal {Gender}|gender(...) wrappers."""
+    parts: list[str] = []
+
+    def take_gender(match: re.Match[str]) -> str:
+        parts.append(match.group(1).strip())
+        parts.append(match.group(2).strip())
+        return " "
+
+    remainder, _tokens = protect(GENDER_RE.sub(take_gender, text))
+    remainder = re.sub(r"__PH\d+__", " ", remainder)
+    leftover = remainder.strip("() ,|")
+    if leftover:
+        parts.append(leftover)
+    return parts or [text]
+
+
+def character_name_has_latin(text: str) -> bool:
+    return any(LATIN_RE.search(part) for part in character_name_visible_parts(text))
+
+
+def character_name_is_done(name: str, manual: dict[str, str]) -> bool:
+    if name.strip() in KEEP_ENGLISH_EXACT:
+        return True
+    russian = (manual.get(name) or manual.get(f"{name} ") or "").strip()
+    return bool(russian) and russian != name
+
+
 def placeholder_keys(text: str) -> list[str]:
     return PLACEHOLDER_RE.findall(text)
 
@@ -99,12 +128,16 @@ def validate_manual(report: Report) -> dict[str, str]:
             continue
 
         if english.strip() == russian.strip():
-            if english in char_names:
+            if english in char_names and english.strip() not in KEEP_ENGLISH_EXACT:
                 report.error(f"Character name not transliterated: {english!r}")
             elif not english.startswith(LOCME_PREFIXES) and english not in KEEP_ENGLISH_EXACT:
                 same_unexpected += 1
 
-        if english in char_names and LATIN_RE.search(russian):
+        if (
+            english in char_names
+            and english.strip() not in KEEP_ENGLISH_EXACT
+            and character_name_has_latin(russian)
+        ):
             char_latin += 1
             report.error(f"Character name still has latin letters: {english!r} -> {russian!r}")
 
@@ -133,12 +166,7 @@ def validate_manual(report: Report) -> dict[str, str]:
     report.stats["character_names_cyrillic"] = len(char_names) - char_latin
 
     translated_names = sum(
-        1
-        for name in char_names
-        if (
-            (manual.get(name) or manual.get(f"{name} ") or "").strip()
-            and (manual.get(name) or manual.get(f"{name} ") or "").strip() != name
-        )
+        1 for name in char_names if character_name_is_done(name, manual)
     )
     report.stats["character_names_translated"] = translated_names
     if translated_names != len(char_names):
@@ -179,10 +207,22 @@ def validate_built_locres(report: Report) -> None:
         return
 
     rel_files = [
-        "Game/ru/Game.locres",
-        "Game_VO/ru/Game_VO.locres",
-        "Uncategorized Texts/ru/Uncategorized Texts.locres",
+        "Game/de/Game.locres",
+        "Uncategorized Texts/de/Uncategorized Texts.locres",
     ]
+    forbidden = [
+        "Game/en/Game.locres",
+        "Game_VO/en/Game_VO.locres",
+        "Game_VO/de/Game_VO.locres",
+        "Game_VO/ru/Game_VO.locres",
+        "Uncategorized Texts/en/Uncategorized Texts.locres",
+    ]
+    for rel in forbidden:
+        if (BUILD_LOC / rel).exists():
+            report.error(f"English/audio overlay must not be staged: {rel}")
+    st_dir = PATHS.mod_root / "Europa1410/Content/StringTables"
+    if st_dir.exists():
+        report.error("StringTables overlay must not be staged (it rewrites English)")
 
     total = 0
     untranslated = 0
@@ -211,7 +251,7 @@ def validate_built_locres(report: Report) -> None:
                 elif text and any(c.isascii() and c.isalpha() for c in text):
                     if text.strip() in KEEP_ENGLISH_EXACT:
                         continue
-                    if text in char_names and LATIN_RE.search(text):
+                    if text in char_names and character_name_has_latin(text):
                         report.error(
                             f"Built locres latin name: {ns_name}/{entry.key} -> {text!r}"
                         )

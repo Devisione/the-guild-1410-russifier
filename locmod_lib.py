@@ -19,7 +19,7 @@ PLACEHOLDER_RE = re.compile(
 INLINE_TAG_RE = re.compile(r"(\{[A-Z0-9_]+\})([^{}]+?)(\{##\})")
 GENDER_RE = re.compile(r"\{Gender\}\|gender\(([^,]+),([^)]+)\)", re.IGNORECASE)
 PLURAL_RE = re.compile(
-    r"\|plural\((one=([^,]+),other=([^)]+))\)",
+    r"\|plural\(([^)]+)\)",
     re.IGNORECASE,
 )
 LOCME_PREFIXES = ("(LocMe)", "(LocMe?)")
@@ -69,7 +69,7 @@ GLOSSARY_BY_KEY: dict[str, str] = {
     "General/GameModeMultiplayer_Label": "Сетевая игра",
     "General/General_Button_HostGame": "Хост-игра",
     "General/General_Button_StartGame": "Начать игру",
-    "General/General_Button_JoinGame": "Присоединиться к игре",
+    "General/General_Button_JoinGame": "Подключиться",
     "General/General_Button_Previous": "Назад",
     "General/General_Button_Next": "Далее",
     "Settings/Option_On": "Вкл.",
@@ -79,15 +79,49 @@ GLOSSARY_BY_KEY: dict[str, str] = {
     "Settings/Option_Large": "Крупный",
     "Settings/Language_TextLanguage_Name": "Язык текста",
     "Settings/Language_AudioLanguage_Name": "Язык озвучки",
+    "General/CurrentLevel_DisplayName": "Текущий уровень",
+    "General/CurrentLevel_Label": "Текущий уровень",
+    "General/Current_Level": "Текущий уровень",
+    "Buildings/CurrentLevel_DisplayName": "Текущий уровень",
+    "Buildings/CurrentLevel_Label": "Текущий уровень",
+    "Actions/CurrentLevel_DisplayName": "Текущий уровень",
+    "Settings/CurrentLevel_DisplayName": "Текущий уровень",
+    "UObjectDisplayNames/CurrentLevel": "Текущий уровень",
+    "/Current Level": "Текущий уровень",
+    "/CurrentLevel": "Текущий уровень",
     "Settings/Language_Collection_Name": "Язык",
     "Settings/Language_Changed_Warning_Message": "Чтобы все изменения языка вступили в силу, игру нужно полностью перезапустить.",
     "Settings/Language_SystemDefaultLanguage": "Системный ({0})",
-    "General/General_MainMenu_JoinGame": "Присоединиться к игре",
+    "General/Turn_DisplayName": "Ход",
+    "General/Parameter_Integrity_DisplayName": "Целостность",
+    "General/Parameter_IntegrityDecay_DisplayName": "Снижение целостности",
+    "General/Parameter_IntegrityMax_DisplayName": "Максимальная целостность",
+    "Cities/Quarter_DisplayName": "Квартал",
+    "Cities/Quarter_DisplayName_plural": "Кварталы",
+    "General/General_MainMenu_JoinGame": "Подключиться",
+    "General/General_Button_Close": "Закрыть",
+    "General/GameModeMultiplayer_Prompt": "Открыть для мультиплеера",
+    "Cities/NumDynasties": (
+        "{NumDynasties} {NumDynasties}|plural("
+        "one={CHAR_DYN_C}династия{##},"
+        "few={CHAR_DYN_C}династии{##},"
+        "many={CHAR_DYN_C}династий{##},"
+        "other={CHAR_DYN_C}династий{##})"
+    ),
+    "General/Benefits_Office_None": "Вы не занимаете должность.",
+    "Cities/Quarter_Zeal_DisplayName": "Вера",
+    "Cities/Quarter_Unrest_DisplayName": "Волнения",
+    "Cities/Quarter_Devastation_DisplayName": "Разруха",
+    "Actions/BuildingUpgrade_DisplayName": "Улучшить",
+    "Buildings/Upgrade_DisplayName": "Улучшить",
+    "Combat/CombatEncounter_DisplayName": "Бой",
+    "Actions/LowerUnrest_DisplayName": "Подавить волнения",
+    "Workers/Hiring_HireSelectedWorker_Prompt": "Нанять",
     "Settings/Control_InputInfo_Collection_Name": "Подсказки управления",
     "General/General_Button_Back": "Назад",
     "General/SpeedControl_Normal_DisplayName": "Обычная скорость",
     "General/SpeedControl_Pause_DisplayName": "Пауза",
-    "Actions/Begging_DisplayName": "Попрошайничество",
+    "Actions/Begging_DisplayName": "Просить милостыню",
     "Actions/Espionage_DisplayName": "Шпионаж",
     "Actions/ApplyForOffice_DisplayName": "Подать заявку на должность",
     "Building Rooms/Guild_Office_DisplayName": "Кабинет",
@@ -143,10 +177,19 @@ KEEP_ENGLISH_EXACT: set[str] = {
 }
 
 INLINE_GLOSSARY: dict[str, str] = {
+    "Current Level": "Текущий уровень",
     "Wealth": "Богатство",
     "Title": "Титул",
     "Titles": "Титулы",
     "Turn": "Ход",
+    "Zeal": "Вера",
+    "Unrest": "Волнения",
+    "unrest": "волнения",
+    "Upgrade": "Улучшить",
+    "smithy": "кузница",
+    "Smithy": "Кузница",
+    "combat encounter": "бой",
+    "combat encounters": "бои",
     "Energy": "Энергия",
     "Standing": "Репутация",
     "offices": "должности",
@@ -158,7 +201,7 @@ INLINE_GLOSSARY: dict[str, str] = {
     "heir": "наследник",
     "dynasty": "династия",
     "evidence": "улики",
-    "Integrity": "Прочность",
+    "Integrity": "Целостность",
     "Town Hall": "Ратуша",
     "Town Servant": "Городской служитель",
     "lampoons": "пасквили",
@@ -188,6 +231,7 @@ INLINE_GLOSSARY: dict[str, str] = {
 # Longer phrases first. Injected into English before MT so "cart" cannot
 # become "карта" or "корзина".
 SOURCE_GLOSSARY: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"\bCurrent Level\b"), "текущий уровень"),
     (re.compile(r"\bGoat Carts\b"), "козьи телеги"),
     (re.compile(r"\bGoat Cart\b"), "козья телега"),
     (re.compile(r"\bDonkey Carts\b"), "ослиные телеги"),
@@ -229,13 +273,15 @@ SOURCE_GLOSSARY: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bquarter\b"), "квартал"),
     (re.compile(r"\bStanding\b"), "репутация"),
     (re.compile(r"\bstanding\b"), "репутация"),
-    (re.compile(r"\bIntegrity\b"), "прочность"),
-    (re.compile(r"\bintegrity\b"), "прочность"),
+    (re.compile(r"\bIntegrity\b"), "целостность"),
+    (re.compile(r"\bintegrity\b"), "целостность"),
     (re.compile(r"\bEscorts\b"), "сопровождение"),
     (re.compile(r"\bescort\b"), "сопровождение"),
     (re.compile(r"\bEscort\b"), "сопровождение"),
     (re.compile(r"\bWealth\b"), "богатство"),
     (re.compile(r"\bwealth\b"), "богатство"),
+    (re.compile(r"\bUnrest\b"), "волнения"),
+    (re.compile(r"\bunrest\b"), "волнения"),
     (re.compile(r"\bDynasty\b"), "династия"),
     (re.compile(r"\bdynasty\b"), "династия"),
     (re.compile(r"\bWorkers\b"), "рабочие"),
@@ -254,7 +300,7 @@ NS_HINTS: dict[str, str] = {
     "Professions": "Речь о ремёслах и цехах XV века.",
     "Workers": "Worker — работник в мастерской.",
     "Titles": "Title — дворянский титул.",
-    "Character": "Standing — репутация, Integrity — прочность здания.",
+    "Character": "Standing — репутация, Integrity — целостность здания.",
     "Actions": "Речь о действиях персонажа в средневековом городе.",
 }
 
@@ -271,6 +317,205 @@ def restore_syntax(text: str) -> str:
         text.replace("|GENDERFUNC(", "|gender(")
         .replace("|PLURALFUNC(", "|plural(")
     )
+
+
+PLURAL_FORM_SPLIT_RE = re.compile(
+    r"(?i)\s*(one|few|many|other|zero|один|одна|одно|другие|другой|несколько|много)\s*="
+)
+LAST_CYR_WORD_RE = re.compile(r"([А-Яа-яЁё]+)(?=[^А-Яа-яЁё]*$)")
+PLURAL_KEY_ALIASES = {
+    "one": "one",
+    "один": "one",
+    "одна": "one",
+    "одно": "one",
+    "few": "few",
+    "несколько": "few",
+    "many": "many",
+    "много": "many",
+    "other": "other",
+    "другие": "other",
+    "другой": "other",
+    "zero": "zero",
+}
+# nominative singular -> (few / 2-4, many / 5+)
+RU_COUNT_IRREGULAR: dict[str, tuple[str, str]] = {
+    "бой": ("боя", "боёв"),
+    "боец": ("бойца", "бойцов"),
+    "год": ("года", "лет"),
+    "горожанин": ("горожанина", "горожан"),
+    "день": ("дня", "дней"),
+    "династия": ("династии", "династий"),
+    "комната": ("комнаты", "комнат"),
+    "человек": ("человека", "человек"),
+    "ход": ("хода", "ходов"),
+    "игрок": ("игрока", "игроков"),
+    "минута": ("минуты", "минут"),
+    "минуту": ("минуты", "минут"),
+    "навык": ("навыка", "навыков"),
+    "очко": ("очка", "очков"),
+    "отсек": ("отсека", "отсеков"),
+    "поездка": ("поездки", "поездок"),
+    "преступление": ("преступления", "преступлений"),
+    "рабочий": ("рабочего", "рабочих"),
+    "рабочего": ("рабочего", "рабочих"),
+    "раз": ("раза", "раз"),
+    "ребёнок": ("ребёнка", "детей"),
+    "ребенок": ("ребенка", "детей"),
+    "телега": ("телеги", "телег"),
+    "член": ("члена", "членов"),
+    "чиновник": ("чиновника", "чиновников"),
+    "ячейка": ("ячейки", "ячеек"),
+}
+
+
+def _preserve_word_case(sample: str, replacement: str) -> str:
+    if sample[:1].isupper():
+        return replacement[:1].upper() + replacement[1:]
+    return replacement
+
+
+def _ru_genitive_singular(word: str) -> str:
+    low = word.lower()
+    if low in RU_COUNT_IRREGULAR:
+        return _preserve_word_case(word, RU_COUNT_IRREGULAR[low][0])
+    if low.endswith("ия"):
+        return _preserve_word_case(word, low[:-2] + "ии")
+    if low.endswith("ие"):
+        return _preserve_word_case(word, low[:-2] + "ия")
+    if low.endswith("а"):
+        stem = low[:-1]
+        ending = "и" if stem[-1:] in "гкхжчшщ" else "ы"
+        return _preserve_word_case(word, stem + ending)
+    if low.endswith("я"):
+        return _preserve_word_case(word, low[:-1] + "и")
+    if low.endswith("й"):
+        return _preserve_word_case(word, low[:-1] + "я")
+    if low.endswith("ь"):
+        return _preserve_word_case(word, low[:-1] + "я")
+    if low.endswith("о"):
+        return _preserve_word_case(word, low[:-1] + "а")
+    if low.endswith("е"):
+        return _preserve_word_case(word, low[:-1] + "я")
+    return _preserve_word_case(word, low + "а")
+
+
+def _ru_genitive_plural(word: str) -> str:
+    low = word.lower()
+    if low in RU_COUNT_IRREGULAR:
+        return _preserve_word_case(word, RU_COUNT_IRREGULAR[low][1])
+    if low.endswith(("ия", "ие")):
+        return _preserve_word_case(word, low[:-2] + "ий")
+    if low.endswith("а"):
+        stem = low[:-1]
+        if stem.endswith(("ж", "ч", "ш", "щ")):
+            return _preserve_word_case(word, stem + "ей")
+        if stem.endswith("к") and len(stem) > 1 and stem[-2] in "уеыаоэяиюё":
+            return _preserve_word_case(word, stem[:-1] + "ек")
+        return _preserve_word_case(word, stem)
+    if low.endswith("я"):
+        return _preserve_word_case(word, low[:-1] + "ь")
+    if low.endswith("й"):
+        return _preserve_word_case(word, low[:-1] + "ев")
+    if low.endswith("ь"):
+        return _preserve_word_case(word, low[:-1] + "ей")
+    if low.endswith(("о", "е")):
+        return _preserve_word_case(word, low[:-1])
+    return _preserve_word_case(word, low + "ов")
+
+
+def _replace_last_cyr_word(text: str, new_word: str) -> str:
+    match = LAST_CYR_WORD_RE.search(text)
+    if not match:
+        return text
+    return text[: match.start()] + _preserve_word_case(match.group(1), new_word) + text[match.end() :]
+
+
+def _last_cyr_word(text: str) -> str | None:
+    match = LAST_CYR_WORD_RE.search(text)
+    return match.group(1) if match else None
+
+
+def _parse_plural_forms(body: str) -> dict[str, str]:
+    matches = list(PLURAL_FORM_SPLIT_RE.finditer(body))
+    forms: dict[str, str] = {}
+    for index, match in enumerate(matches):
+        alias = match.group(1).lower()
+        key = PLURAL_KEY_ALIASES.get(alias)
+        if key is None:
+            continue
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        forms[key] = body[start:end].strip().rstrip(",")
+    return forms
+
+
+def _format_plural(forms: dict[str, str]) -> str:
+    parts = []
+    for key in ("one", "few", "many", "other", "zero"):
+        value = forms.get(key)
+        if value:
+            parts.append(f"{key}={value}")
+    return "|plural(" + ",".join(parts) + ")"
+
+
+def expand_russian_plurals(text: str) -> str:
+    """Fill few/many so Russian ICU 1/2/5 endings have words to show."""
+    if not text or "|plural(" not in text.lower():
+        return text
+    result = text
+    search_from = 0
+    while True:
+        lower = result.lower()
+        start = lower.find("|plural(", search_from)
+        if start < 0:
+            break
+        body_start = start + len("|plural(")
+        depth = 1
+        index = body_start
+        while index < len(result) and depth:
+            char = result[index]
+            if char == "(":
+                depth += 1
+            elif char == ")":
+                depth -= 1
+            index += 1
+        body = result[body_start : index - 1]
+        forms = _parse_plural_forms(body)
+        one = forms.get("one", "")
+        other = forms.get("other", "")
+        if one and other and re.search(r"[А-Яа-яЁё]", one):
+            one_word = _last_cyr_word(one)
+            other_word = _last_cyr_word(other)
+            if one_word:
+                few_word = _ru_genitive_singular(one_word)
+                many_word = _ru_genitive_plural(one_word)
+                same_word = bool(other_word) and other_word.lower() == one_word.lower()
+                irregular = one_word.lower() in RU_COUNT_IRREGULAR
+                if "few" not in forms:
+                    if other_word and other_word.lower() == few_word.lower():
+                        forms["few"] = other
+                    elif same_word and not irregular:
+                        forms["few"] = one
+                    else:
+                        forms["few"] = _replace_last_cyr_word(one, few_word)
+                if "many" not in forms:
+                    if other_word and other_word.lower() == many_word.lower():
+                        forms["many"] = other
+                    elif irregular:
+                        forms["many"] = _replace_last_cyr_word(one, many_word)
+                    elif other_word and not same_word:
+                        forms["many"] = other
+                    elif same_word:
+                        forms["many"] = other
+                    else:
+                        forms["many"] = _replace_last_cyr_word(one, many_word)
+                forms.setdefault("other", forms["many"])
+                replacement = _format_plural(forms)
+                result = result[:start] + replacement + result[index:]
+                search_from = start + len(replacement)
+                continue
+        search_from = index
+    return result
 
 
 def apply_source_glossary(text: str) -> str:
@@ -438,7 +683,7 @@ def decompose_text(text: str) -> tuple[str, list[str], list[str]]:
         segments.append(value.strip())
         return token
 
-    working = protect_syntax(text)
+    working = text
 
     gender_match = GENDER_RE.search(working)
     if gender_match:
@@ -447,12 +692,17 @@ def decompose_text(text: str) -> tuple[str, list[str], list[str]]:
         replacement = f"{{Gender}}|gender({male},{female})"
         working = working[: gender_match.start()] + replacement + working[gender_match.end() :]
 
-    plural_match = PLURAL_RE.search(working)
-    if plural_match:
-        one = add(plural_match.group(2))
-        other = add(plural_match.group(3))
-        replacement = f"|plural(one={one},other={other})"
+    for plural_match in list(PLURAL_RE.finditer(working))[::-1]:
+        parts = []
+        for piece in plural_match.group(1).split(","):
+            if "=" not in piece:
+                continue
+            key, val = piece.split("=", 1)
+            parts.append(f"{key.strip()}={add(val.strip())}")
+        replacement = "|plural(" + ",".join(parts) + ")"
         working = working[: plural_match.start()] + replacement + working[plural_match.end() :]
+
+    working = protect_syntax(working)
 
     def inline_repl(match: re.Match[str]) -> str:
         inner = match.group(2).strip()
@@ -942,8 +1192,8 @@ def translate_entries(
 def resolve(entry: LocEntry, cache: dict[str, str]) -> str:
     glossary = glossary_lookup(entry)
     if glossary is not None:
-        return glossary
+        return expand_russian_plurals(glossary)
     cached = find_cached_translation(entry, cache)
     if cached is not None:
-        return cached
-    return entry.english
+        return expand_russian_plurals(cached)
+    return expand_russian_plurals(entry.english)

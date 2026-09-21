@@ -24,12 +24,12 @@
     "russian": " • {ListItem}"
   },
   {
-    "english": "\"\"Hello world!\"\"",
-    "russian": "\"\"Hello world!\"\""
+    "english": "\"Hello world!\"",
+    "russian": "\"Привет мир!\""
   },
   {
-    "english": "\"\"If intelligence were an art, you'd be an empty canvas\"\". Whether such speech should be punishable is ruled by this law.",
-    "russian": "Если бы интеллект был искусством, вы были бы пустым холстом»». Вопрос о том, должно ли такое высказывание наказываться, определяется этим законом."
+    "english": "\"If intelligence were an art, you'd be an empty canvas\". Whether such speech should be punishable is ruled by this law.",
+    "russian": "Если бы интеллект был искусством, вы были бы пустым холстом». Вопрос о том, должно ли такое высказывание наказываться, определяется этим законом."
   },
   {
     "english": "(LocMe)Dreams01",
@@ -1129,7 +1129,7 @@
   },
   {
     "english": "Accidents happen — just less often with better {B_PARAM_ACCPRO_C}prevention{##}. You can also {A_TRAWORSKI_C}train your workers' skills{##}, which not only improves {CHAR_PRO_C}productivity{##} but also reduces the {ACC_CHAACC_C}chance of accidents{##}.",
-    "russian": "Несчастные случаи случаются, но реже, если приняты меры {B_PARAM_ACCPRO_C}предосторожности{##}. Вы также можете {A_TRAWORSKI_C}обучать рабочих навыкам{##}, что не только повысит {CHAR_PRO_C}продуктивность{##}, но и снизит {ACC_CHAACC_C}риск несчастных случаев{##}."
+    "russian": "Несчастные случаи бывают — но реже, если лучше {B_PARAM_ACCPRO_C}профилактика{##}. Можно также {A_TRAWORSKI_C}обучать рабочих навыкам{##}: это повышает {CHAR_PRO_C}производительность{##} и снижает {ACC_CHAACC_C}риск несчастных случаев{##}."
   },
   {
     "english": "Accommodations",
@@ -1961,7 +1961,7 @@
   },
   {
     "english": "Any family member may inherit the dynasty, provided they are at least {heir_min_age} {heir_min_age}|plural(one=year,other=years) old.",
-    "russian": "Любой член семьи может унаследовать династию, если ему исполнилось не менее {heir_min_age} {heir_min_age}|plural(one=year,other=years)."
+    "russian": "Любой член семьи может унаследовать династию, если ему исполнилось не менее {heir_min_age} {heir_min_age}|plural(one=года,few=лет,many=лет,other=лет)."
   },
   {
     "english": "Any Key",
@@ -2733,7 +2733,7 @@
   },
   {
     "english": "Beg",
-    "russian": "Попрошайничество"
+    "russian": "Просить милостыню"
   },
   {
     "english": "Beggary",
@@ -2909,7 +2909,7 @@
   },
   {
     "english": "Blackmail for Coin",
-    "russian": "Шантаж за монету"
+    "russian": "Шантаж за деньги"
   },
   {
     "english": "Blackmail to Force Resignation",
@@ -3289,7 +3289,7 @@
   },
   {
     "english": "Buildings and carts wear down over time. Lost integrity means lost {B_PARAM_VAL_C}value{##}. Since your {CHAR_WEA_C}wealth{##} is measured by what you own, every crack and splinter lowers it.",
-    "russian": "Здания и телеги со временем изнашиваются. Потеря прочности означает потерю {B_PARAM_VAL_C}стоимость{##}. Поскольку ваше {CHAR_WEA_C}богатство{##} измеряется тем, чем вы владеете, каждая трещина и щепка уменьшают его."
+    "russian": "Здания и телеги со временем изнашиваются. Потеря целостности означает потерю {B_PARAM_VAL_C}ценности{##}. Поскольку ваше {CHAR_WEA_C}богатство{##} считается по имуществу, каждая трещина его уменьшает."
   },
   {
     "english": "Buildings each serve a role in the city. Some support {P_C}professions{##}, others serve the public. Most can be upgraded and fitted with improvements.",
@@ -3581,7 +3581,7 @@
   },
   {
     "english": "Can construct {NumRoom} {NumRoom}|plural(one=extra room,other=extra rooms)",
-    "russian": "Можно построить {NumRoom} {NumRoom}|plural(one=дополнительная комната,other=дополнительные комнаты)"
+    "russian": "Можно построить {NumRoom} {NumRoom}|plural(one=дополнительная комната,few=дополнительные комнаты,many=дополнительная комнат,other=дополнительные комнаты)"
   },
   {
     "english": "Can craft",
@@ -4489,7 +4489,7 @@
   },
   {
     "english": "Close",
-    "russian": "Закрывать"
+    "russian": "Закрыть"
   },
   {
     "english": "Close All Windows",
@@ -4637,7 +4637,7 @@
   },
   {
     "english": "Combat Encounter",
-    "russian": "Боевая встреча"
+    "russian": "Бой"
   },
   {
     "english": "Combat Equipment",
@@ -4820,8 +4820,8 @@
     "russian": "Поздравить"
   },
   {
-    "english": "Congratulations! The victory condition \"\"{victorycondition}\"\" has been achieved. You may now choose to continue shaping your legacy or retire with honor. The choice is yours.",
-    "russian": "Поздравляем! Условие победы \"\"{victorycondition}\"\" достигнуто. Теперь вы можете выбрать: продолжить формирование своего наследия или уйти в отставку с честью. Выбор за вами."
+    "english": "Congratulations! The victory condition \"{victorycondition}\" has been achieved. You may now choose to continue shaping your legacy or retire with honor. The choice is yours.",
+    "russian": "Поздравляем! Условие победы «{victorycondition}» достигнуто. Теперь вы можете выбрать: продолжить формирование своего наследия или уйти в отставку с честью. Выбор за вами."
   },
   {
     "english": "Congratulations! You are being wed to {charactername}.",
@@ -5330,6 +5330,10 @@
   {
     "english": "Current holder",
     "russian": "Текущий владелец"
+  },
+  {
+    "english": "Current Level",
+    "russian": "Текущий уровень"
   },
   {
     "english": "Current Prices to Buy",
@@ -6649,7 +6653,7 @@
   },
   {
     "english": "Erases {NumCrime} {CO_COM_C}{NumCrime}|plural(one=crime,other=crimes){##} from record",
-    "russian": "Удаляет {NumCrime} {CO_COM_C}{NumCrime}|plural(one=преступление,other=преступлений){##} из дела"
+    "russian": "Удаляет {NumCrime} {CO_COM_C}{NumCrime}|plural(one=преступление,few=преступления,many=преступлений,other=преступлений){##} из дела"
   },
   {
     "english": "Erik",
@@ -7549,11 +7553,11 @@
   },
   {
     "english": "Forgives one {CR_SEV_C}minor crime{##} every {C_TRN_C}turn{##}",
-    "russian": "Прощает одно {CR_SEV_C}незначительное преступление{##} каждый {C_TRN_C}Ход{##}"
+    "russian": "Прощает одно {CR_SEV_C}незначительное преступление{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "Forgives one {CR_SEV_C}trivial crime{##} every {C_TRN_C}turn{##}",
-    "russian": "Прощает одно {CR_SEV_C}мелкое преступление{##} каждый {C_TRN_C}Ход{##}"
+    "russian": "Прощает одно {CR_SEV_C}мелкое преступление{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "Former Apothecary",
@@ -8853,7 +8857,7 @@
   },
   {
     "english": "Have {number} {number}|plural(one=child,other=children)",
-    "russian": "Иметь {number} {number}|plural(one=ребенок,other=детей)"
+    "russian": "Иметь {number} {number}|plural(one=ребёнка,few=детей,many=детей,other=детей)"
   },
   {
     "english": "Haven't you ever heard that {CR_CRI_C}crime{##} doesn't pay? In fact, crime definitely pays, but not for you, it seems. You have been {CR_TRIPUN_C}sentenced{##} to jail time according to the {CR_SEV_C}severity of your crime{##} and how {L_LAWSEV_C}harsh{##} the current law is.",
@@ -9008,8 +9012,8 @@
     "russian": "Праздник героев"
   },
   {
-    "english": "Hey, thanks for jumping in!\nWe genuinely appreciate you giving our game a try.\n\nThis is an <text fontface=\"\"bold\"\">early build</>, so some things may be missing or break. We're eager to hear your thoughts — so don't forget to fill out the <text fontface=\"\"bold\"\">feedback survey</>. It helps us build a better version!\n \nIf anything feels confusing, check the guide for a smoother experience.\nJoin our <text fontface=\"\"bold\"\">private Discord</> server to discuss with other playtesters and us devs!",
-    "russian": "Приветствуем! Спасибо, что решили сыграть в нашу игру!\nМы очень ценим ваше участие.\n\nПеред вами <text fontface=\"\"bold\"\">ранняя версия</>, поэтому некоторые функции могут отсутствовать или работать с ошибками. Мы с нетерпением ждем ваших отзывов — обязательно заполните <text fontface=\"\"bold\"\">анкету обратной связи</>. Это поможет нам сделать игру лучше!\n\nЕсли что-то покажется непонятным, загляните в руководство. Заходите и на наш <text fontface=\"\"bold\"\">закрытый Discord-сервер</>, чтобы пообщаться с разработчиками и другими участниками тестирования!"
+    "english": "Hey, thanks for jumping in!\nWe genuinely appreciate you giving our game a try.\n\nThis is an <text fontface=\"bold\">early build</>, so some things may be missing or break. We're eager to hear your thoughts — so don't forget to fill out the <text fontface=\"bold\">feedback survey</>. It helps us build a better version!\n \nIf anything feels confusing, check the guide for a smoother experience.\nJoin our <text fontface=\"bold\">private Discord</> server to discuss with other playtesters and us devs!",
+    "russian": "Hey, thanks for jumping in!\nWe genuinely appreciate you giving our game a try.\n\nThis is an <text fontface=\"bold\">early build</>, so some things may be missing or break. We're eager to hear your thoughts — so don't forget to fill out the <text fontface=\"bold\">feedback survey</>. It helps us build a better version!\n \nIf anything feels confusing, check the guide for a smoother experience.\nJoin our <text fontface=\"bold\">private Discord</> server to discuss with other playtesters and us devs!"
   },
   {
     "english": "Hey, thanks for jumping in!\nWe genuinely appreciate you trying out our game.\n\nThis is a demo version, offering a glimpse of what The Guild 1 Remake: Europa 1410 has to offer. We hope you enjoy building your business and shaping your story.\n\nDon't forget to wishlist the game on Steam so you don't miss the full release.",
@@ -9117,7 +9121,7 @@
   },
   {
     "english": "Higher-level buildings usually have higher Maximum Integrity.",
-    "russian": "Здания более высокого уровня обычно обладают более высокой максимальной прочностью."
+    "russian": "У зданий более высокого уровня обычно выше максимальная целостность."
   },
   {
     "english": "Highlight Options",
@@ -9149,7 +9153,7 @@
   },
   {
     "english": "Hire",
-    "russian": "Нанимать"
+    "russian": "Нанять"
   },
   {
     "english": "Hire a dubious pair of eyes to sniff out some {CR_EVI_C}evidence{##}. Cheap, but not exactly reassuring.",
@@ -9613,7 +9617,7 @@
   },
   {
     "english": "If the buildings are not repaired, they will become unsafe, increasing the chance of work accidents and overall {QUA_DEV_C}devastation{##} in the area. Our city's {QUA_REP_C}reputation{##} will drop and the empire will hesitate to fill the city treasury, which will only make things worse.",
-    "russian": "Если здания не отремонтировать, они станут небезопасными, что увеличит вероятность несчастных случаев на производстве и в целом {QUA_DEV_C}опустошение{##} в этом районе. {QUA_REP_C}репутация{##} нашего города упадет, и империя не решится наполнить городскую казну, что только усугубит ситуацию."
+    "russian": "Если здания не отремонтировать, они станут небезопасными, что увеличит вероятность несчастных случаев на производстве и в целом {QUA_DEV_C}разруха{##} в этом районе. {QUA_REP_C}репутация{##} нашего города упадет, и империя не решится наполнить городскую казну, что только усугубит ситуацию."
   },
   {
     "english": "If they are watching, we are winning. If they are paying, even better.",
@@ -9677,55 +9681,55 @@
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the building becomes {ST_STR_DES_C}Desolate{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, здание становится {ST_STR_DES_C}Пустынный{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, здание становится {ST_STR_DES_C}Пустынный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the building becomes {ST_STR_RUI_C}Ruined{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, здание становится {ST_STR_RUI_C}Разрушенный{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, здание становится {ST_STR_RUI_C}Разрушенный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the building becomes {ST_STR_TERMAI_C}Dilapidated{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, здание становится {ST_STR_TERMAI_C}Полуразрушенный{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, здание становится {ST_STR_TERMAI_C}Полуразрушенный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the cart becomes {ST_CAR_BRO_C}Broken Beyond Use{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, телега становится {ST_CAR_BRO_C}Сломанной, неиспользованной{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, телега становится {ST_CAR_BRO_C}Сломанной, неиспользованной{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the cart becomes {ST_CAR_TERMAI_C}Run-Down{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, телега становится {ST_CAR_TERMAI_C}Наезжать{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, телега становится {ST_CAR_TERMAI_C}Наезжать{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} falls below {value}%, the cart becomes {ST_CAR_WRE_C}Wrecked{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} падает ниже {value}%, телега становится {ST_CAR_WRE_C}Разбитой{##}."
+    "russian": "Если {B_HP_C}целостность{##} падает ниже {value}%, телега становится {ST_CAR_WRE_C}Разбитой{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the building becomes {ST_STR_BADMAI_C}Neglected{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, здание станет {ST_STR_BADMAI_C}Заброшенный{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, здание станет {ST_STR_BADMAI_C}Заброшенный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the building becomes {ST_STR_RUI_C}Ruined{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, здание станет {ST_STR_RUI_C}Разрушенный{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, здание станет {ST_STR_RUI_C}Разрушенный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the building becomes {ST_STR_TERMAI_C}Dilapidated{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, здание станет {ST_STR_TERMAI_C}Полуразрушенный{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, здание станет {ST_STR_TERMAI_C}Полуразрушенный{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the cart becomes {ST_CAR_BADMAI_C}Neglected{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, телега станет {ST_CAR_BADMAI_C}Заброшенной{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, телега станет {ST_CAR_BADMAI_C}Заброшенной{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the cart becomes {ST_CAR_TERMAI_C}Run-Down{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, телега станет {ST_CAR_TERMAI_C}Наезжать{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, телега станет {ST_CAR_TERMAI_C}Наезжать{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, the cart becomes {ST_CAR_WRE_C}Wrecked{##}.",
-    "russian": "Если {B_HP_C}Прочность{##} превысит {value}%, телега станет {ST_CAR_WRE_C}Разбитой{##}."
+    "russian": "Если {B_HP_C}целостность{##} превысит {value}%, телега станет {ST_CAR_WRE_C}Разбитой{##}."
   },
   {
     "english": "If {B_HP_C}Integrity{##} rises above {value}%, this status is removed.",
-    "russian": "Если {B_HP_C}Прочность{##} превышает {value}%, этот статус снимается."
+    "russian": "Если {B_HP_C}целостность{##} превышает {value}%, этот статус снимается."
   },
   {
     "english": "If {S_RHE_C}rhetoric{##} is your forte, words can do what coin cannot.",
@@ -9985,7 +9989,7 @@
   },
   {
     "english": "In the left sidebar, click {HB_MYBUS} My Business to center the camera on your {B_OCC_SMI_C}smithy{##}. Then click the door handle to step inside, or zoom in for a better look and double-click the building to enter.",
-    "russian": "В левой боковой панели нажмите {HB_MYBUS} «Мое предприятие», чтобы навести камеру на ваш {B_OCC_SMI_C}кузница{##}. Затем нажмите на ручку двери, чтобы войти внутрь, или приблизьте вид и дважды щелкните по зданию для входа."
+    "russian": "В левой боковой панели нажмите {HB_MYBUS} «Моё предприятие», чтобы навести камеру на вашу {B_OCC_SMI_C}кузницу{##}. Затем нажмите на ручку двери, чтобы войти внутрь, или приблизьте вид и дважды щелкните по зданию для входа."
   },
   {
     "english": "In the speed controls at the top of the screen, use a button or a key such as Space bar to resume the game at a speed that feels comfortable for you.\n\nAlways keep an eye on the timeline and {HB_UPCOMEVE}Upcoming Events to stay informed about your workers' {WORHOU_C}working hours{##} and never miss an election.",
@@ -10253,11 +10257,11 @@
   },
   {
     "english": "Integrity",
-    "russian": "Честность"
+    "russian": "Целостность"
   },
   {
     "english": "Integrity Decay",
-    "russian": "Снижение прочности"
+    "russian": "Снижение целостности"
   },
   {
     "english": "Inter-target",
@@ -10289,7 +10293,7 @@
   },
   {
     "english": "Intervene to contain unrest and restore public calm.",
-    "russian": "Вмешайтесь, чтобы сдержать беспорядки и восстановить общественное спокойствие."
+    "russian": "Вмешайтесь, чтобы сдержать волнения и вернуть улицам спокойствие."
   },
   {
     "english": "Invalid Password",
@@ -10629,7 +10633,7 @@
   },
   {
     "english": "Join Game",
-    "russian": "Присоединиться к игре"
+    "russian": "Подключиться"
   },
   {
     "english": "Join Server",
@@ -12449,7 +12453,7 @@
   },
   {
     "english": "Maximum Integrity",
-    "russian": "Максимальная прочность"
+    "russian": "Максимальная целостность"
   },
   {
     "english": "Maximum number of candidates reached.",
@@ -13453,7 +13457,7 @@
   },
   {
     "english": "Not all things are built alike. Maximum Integrity determines how much {B_HP_DEC_C}damage{##} a building or cart can endure before it fully deteriorates.",
-    "russian": "Не все вещи одинаковы. Максимальная прочность определяет, какой {B_HP_DEC_C}урон{##} может выдержать здание или телега, прежде чем окончательно придет в негодность."
+    "russian": "Не всё строится одинаково. Максимальная целостность показывает, сколько {B_HP_DEC_C}урона{##} здание или телега выдержит, прежде чем совсем развалится."
   },
   {
     "english": "Not available in the demo",
@@ -13921,7 +13925,7 @@
   },
   {
     "english": "On the left, click {HB_MKT} Marketplace to open the market. To buy an item for yourself, {CC_LMB} left-click it, then {CC_LMB} left-click an empty slot in your {HB_INV} {CHAR_PERINV_C}Personal Inventory{##}.",
-    "russian": "Слева нажмите {HB_MKT} Рынок, чтобы открыть торговую площадь. Чтобы купить предмет для себя, {CC_LMB} щелкните по нему левой кнопкой мыши, а затем {CC_LMB} щелкните левой кнопкой мыши по пустой ячейке в вашей {HB_INV} {CHAR_PERINV_C}Личный инвентарь{##}Рынок__PH6__"
+    "russian": "Слева нажмите {HB_MKT} рынок, чтобы открыть торговлю. Чтобы купить предмет для себя, {CC_LMB} кликните по нему, затем {CC_LMB} по пустому слоту в вашем {HB_INV} {CHAR_PERINV_C}личном инвентаре{##}."
   },
   {
     "english": "On the left, open {HB_ALLCHA} Townsfolk and locate your target. {CC_RMB} Right-click their portrait and select {A_BRI_C}Bribe{##}. You can also access their portrait through their character details and, in some cases, from other places such as Politics.",
@@ -13945,7 +13949,7 @@
   },
   {
     "english": "On the next {NumTurns} {NumTurns}|plural(one=turn,other=turns)",
-    "russian": "На следующем {NumTurns} {NumTurns}|plural(one=поворот,other=поворот)"
+    "russian": "Через {NumTurns} {NumTurns}|plural(one=ход,few=хода,many=ходов,other=ходов)"
   },
   {
     "english": "On the way to {BuildingName} ({Progress})",
@@ -13965,7 +13969,7 @@
   },
   {
     "english": "Once activated, some items provide effects that last for a set number of {C_TRN_C}turns{##}, while {I_TYP_COMEQU_C}combat equipment{##} lasts for a set number of {CO_COMENC_C}combat encounters{##}.",
-    "russian": "После активации некоторые предметы дают эффекты, которые длятся установленное количество {C_TRN_C}поворачивается{##}, а {I_TYP_COMEQU_C}боевая техника{##} — определенное количество {CO_COMENC_C}боевые столкновения{##}."
+    "russian": "После активации одни предметы действуют несколько {C_TRN_C}ходов{##}, а {I_TYP_COMEQU_C}боевое снаряжение{##} выдерживает несколько {CO_COMENC_C}боёв{##}."
   },
   {
     "english": "Once Crushed a Cart",
@@ -14201,7 +14205,7 @@
   },
   {
     "english": "Open to Multiplayer",
-    "russian": "Открыть для многопользовательской игры"
+    "russian": "Открыть для мультиплеера"
   },
   {
     "english": "Open Worker Context Menu",
@@ -14217,7 +14221,7 @@
   },
   {
     "english": "Operates a {B_OCC_TAI_C}Tailor's Workshop{##}, producing garments and {A_ACT_SEWCLO_C}refining attire{##} for paying clients.",
-    "russian": "Управляет {B_OCC_TAI_C}Портновская мастерская{##} по производству одежды и {A_ACT_SEWCLO_C}усовершенствование наряда{##} для платных клиентов."
+    "russian": "Держит {B_OCC_TAI_C}портновскую мастерскую{##}: шьёт одежду и {A_ACT_SEWCLO_C}усовершенствует наряды{##} для клиентов."
   },
   {
     "english": "Operates an {B_OCC_ALC_C}Alchemist's Lab{##}, researching mixtures, remedies, and {A_ACT_PESCON_C}pest-control{##} concoctions.",
@@ -15653,7 +15657,7 @@
   },
   {
     "english": "Quarter",
-    "russian": "Район"
+    "russian": "Квартал"
   },
   {
     "english": "Quarter Accident Risk",
@@ -15685,7 +15689,7 @@
   },
   {
     "english": "Quell Unrest",
-    "russian": "Подавить беспорядки"
+    "russian": "Подавить волнения"
   },
   {
     "english": "Questionable Aroma",
@@ -15729,7 +15733,7 @@
   },
   {
     "english": "Rabbles of grumbling citizens are rioting in the streets, and they can't even agree on their demands. Have our esteemed officials truly been so blind to the {QUA_UNR_C}unrest{##} troubling our fair city?",
-    "russian": "Толпы недовольных горожан бунтуют на улицах, и они даже не могут прийти к согласию насчет своих требований. Неужели наши уважаемые должностные лица были настолько слепы к {QUA_UNR_C}беспорядки{##}, терзающим наш прекрасный город?"
+    "russian": "Толпы недовольных горожан бунтуют на улицах и даже не могут договориться о своих требованиях. Неужели наши уважаемые должностные лица были настолько слепы к {QUA_UNR_C}волнениям{##}, терзающим наш прекрасный город?"
   },
   {
     "english": "Rabí",
@@ -15889,7 +15893,7 @@
   },
   {
     "english": "Read a {I_SKIBOOI_C}skill book{##} or invest in home improvements to {A_IMPSKI_C}hone your skills{##} without leaving the house.",
-    "russian": "Прочтите {I_SKIBOOI_C}книга навыков{##} или инвестируйте в благоустройство дома до {A_IMPSKI_C}отточить свои навыки{##}, не выходя из дома."
+    "russian": "Прочтите {I_SKIBOOI_C}книгу навыков{##} или вложитесь в улучшения дома, чтобы {A_IMPSKI_C}оттачивать навыки{##}, не выходя из дома."
   },
   {
     "english": "Ready",
@@ -15969,7 +15973,7 @@
   },
   {
     "english": "Reflects how quickly and effectively a worker completes their {A_ACT_C}tasks{##}. \nWorkers are more productive when assigned to tasks that match their {S_C}skills{##}. And the higher the {CHAR_ENE_C}energy{##}, the more productive they become.",
-    "russian": "Отражает, насколько быстро и эффективно работник выполняет {A_ACT_C}задачи{##}. \nРаботники более продуктивны, если им поручают задачи, соответствующие их {S_C}навыки{##}. И чем выше {CHAR_ENE_C}Энергия{##}, тем продуктивнее они становятся."
+    "russian": "Показывает, насколько быстро и споро рабочий выполняет {A_ACT_C}задания{##}.\nОн продуктивнее на работах, которые совпадают с его {S_C}навыками{##}. Чем выше {CHAR_ENE_C}энергия{##}, тем он производительнее."
   },
   {
     "english": "Reflects the gravity of each offense, classifying {CR_CRI_C}crimes{##} into five distinct levels. The higher the level, the harsher the {CR_TRIPUN_C}punishment{##}.",
@@ -16169,7 +16173,7 @@
   },
   {
     "english": "Represents the tension felt in a {C_QUA_C}quarter{##} — {QUA_CRI_C}crime{##}, {QUA_DEV_C}ruin and filth{##}, and dissatisfaction that can escalate into riots if left unchecked.",
-    "russian": "Отражает уровень напряжения в {C_QUA_C}квартале{##} — {QUA_CRI_C}преступность{##}, {QUA_DEV_C}разруха и грязь{##}, а также недовольство, которое может перерасти в бунт, если оставить это без внимания."
+    "russian": "Отражает уровень напряжения в {C_QUA_C}квартале{##} — {QUA_CRI_C}преступность{##}, {QUA_DEV_C}разруха{##}, а также недовольство, которое может перерасти в бунт, если оставить это без внимания."
   },
   {
     "english": "Represents your likelihood of producing an {CHAR_HEI_C}heir{##}. It is influenced by both partners' {CHAR_FER_C}fertility{##} and the quality of your {CHAR_STA_C}relationship{##}.",
@@ -16301,7 +16305,7 @@
   },
   {
     "english": "Revelation 3:15-16\nIf {QUA_ZEA_C}Zeal{##} rises above {value}, the quarter becomes {ST_QTR_ZEA_1_C}Piously Inclined{##}.",
-    "russian": "Откровение 3:15-16\nЕсли {QUA_ZEA_C}Рвение{##} поднимется выше {value}, квартал станет {ST_QTR_ZEA_1_C}Набожный{##}."
+    "russian": "Откровение 3:15-16\nЕсли {QUA_ZEA_C}Вера{##} поднимется выше {value}, квартал станет {ST_QTR_ZEA_1_C}Набожный{##}."
   },
   {
     "english": "Revived by a forbidden deal. Still walking. Technically dead.",
@@ -16645,7 +16649,7 @@
   },
   {
     "english": "Ruin & Filth",
-    "russian": "Руины и грязь"
+    "russian": "Разруха"
   },
   {
     "english": "Ruined",
@@ -16653,7 +16657,7 @@
   },
   {
     "english": "Rumor has it that the caravan is filled to the brim with gold and extravagant goods, though it may not be for much longer, as many of our fair citizens are likely headed that way to… lend a hand and reduce waste.",
-    "russian": "Ходят слухи, что караван доверху набит золотом и роскошными товарами, хотя, возможно, уже ненадолго, ведь многие из наших честных горожан наверняка направляются туда, чтобы… протянуть руку помощи и сократить отходы."
+    "russian": "Ходят слухи, что караван доверху набит золотом и роскошными товарами — хотя, возможно, уже ненадолго: многие честные горожане наверняка спешат туда… просить милостыню и поубавить «лишнего»."
   },
   {
     "english": "Rumor says there will be a grand procession to the church, with heraldry, priests, candles, and enough solemn dignity to bankrupt a smaller household. Naturally, it is not only a funeral. It is a declaration. The old head may be gone, but the dynasty, in case anyone was wondering, remains terribly alive.",
@@ -16669,7 +16673,7 @@
   },
   {
     "english": "Run-Down",
-    "russian": "Наезжать"
+    "russian": "Ветхий"
   },
   {
     "english": "Running Your Business",
@@ -17213,11 +17217,11 @@
   },
   {
     "english": "Select up to {NumCitizens} {NumCitizens}|plural(one=citizen,other=citizens)",
-    "russian": "Выберите до {NumCitizens} {NumCitizens}|plural(one=горожанина,other=горожан)"
+    "russian": "Выберите до {NumCitizens} {NumCitizens}|plural(one=горожанина,few=горожанины,many=горожан,other=горожан)"
   },
   {
     "english": "Select up to {NumWorkers} {NumWorkers}|plural(one=worker,other=workers)",
-    "russian": "Выберите до {NumWorkers} {NumWorkers}|plural(one=рабочего,other=рабочих)"
+    "russian": "Выберите до {NumWorkers} {NumWorkers}|plural(one=рабочего,few=рабочего,many=рабочих,other=рабочих)"
   },
   {
     "english": "Select who will receive the information",
@@ -17233,7 +17237,7 @@
   },
   {
     "english": "Select {NumCitizens} {NumCitizens}|plural(one=citizen,other=citizens)",
-    "russian": "Выберите {NumCitizens} {NumCitizens}|plural(one=горожанина,other=горожан)"
+    "russian": "Выберите {NumCitizens} {NumCitizens}|plural(one=горожанина,few=горожанины,many=горожан,other=горожан)"
   },
   {
     "english": "Selected character {ARROW} Victim: {DEC} {CHAR_STA}",
@@ -17369,7 +17373,7 @@
   },
   {
     "english": "Send guards to patrol a {C_QUA_C}quarter{##}. A visible presence tends to lower {QUA_CRI_C}crime rate{##} and calm rising {QUA_UNR_C}unrest{##}.",
-    "russian": "Отправьте охрану патрулировать {C_QUA_C}Район{##}. Видимое присутствие имеет тенденцию к понижению {QUA_CRI_C}уровень преступности{##} и спокойному повышению {QUA_UNR_C}беспорядки{##}."
+    "russian": "Отправьте стражу патрулировать {C_QUA_C}квартал{##}. Заметное присутствие обычно снижает {QUA_CRI_C}уровень преступности{##} и успокаивает растущие {QUA_UNR_C}волнения{##}."
   },
   {
     "english": "Send in a professional. If there is {CR_EVI_C}evidence{##} to be found, they will find it, and probably learn far more than you paid them to.",
@@ -17429,7 +17433,7 @@
   },
   {
     "english": "Send your workers to someone's home to take their measurements and craft a personalized style. \n\nWith skilled {S_HAN_C}handicraft{##}, that touch of refinement can lift their {CHAR_STA_C}reputation{##} in the eyes of the town.",
-    "russian": "Отправьте своих рабочих в чей-то дом, чтобы снять мерки и создать индивидуальный наряд. \n\nБлагодаря искусной {S_HAN_C}ручной работе{##}, эти утончённые штрихи могут поднять их {CHAR_STA_C}репутацию{##} в глазах горожан."
+    "russian": "Отправьте рабочих в чей-то дом: они снимут мерки и сошьют индивидуальный наряд.\n\nПри умелом {S_HAN_C}ремесле{##} такая отделка может поднять {CHAR_STA_C}репутацию{##} заказчика в глазах города."
   },
   {
     "english": "Send your {S_COM_C}toughest{##} guards to protect the Town Hall. The council rewards the service — more generously when the quarter's {QUA_REP_C}reputation{##} is worth protecting.",
@@ -17761,7 +17765,7 @@
   },
   {
     "english": "Shows the level of damage and neglect in a {C_QUA_C}quarter{##} — crumbling buildings, filth, and unsafe conditions that increase {B_PARAM_ACCPRO_ACC}accidents{##}, {QUAPEREFF_ILL_C}sickness{##}, and {QUA_UNR_C}unrest{##}.",
-    "russian": "Показывает уровень разрухи и запущенности в {C_QUA_C}квартале{##} — ветхие здания, грязь и опасные условия, которые усиливают {B_PARAM_ACCPRO_ACC}несчастные случаи{##}, {QUAPEREFF_ILL_C}болезни{##} и {QUA_UNR_C}беспорядки{##}."
+    "russian": "Показывает уровень разрухи и запущенности в {C_QUA_C}квартале{##} — ветхие здания, грязь и опасные условия, которые усиливают {B_PARAM_ACCPRO_ACC}несчастные случаи{##}, {QUAPEREFF_ILL_C}болезни{##} и {QUA_UNR_C}волнения{##}."
   },
   {
     "english": "Shrank from a {A_DUECHA_C}duel{##}",
@@ -17945,7 +17949,7 @@
   },
   {
     "english": "Skills are the measure of a man — in trade, in craft, and in service to one's lord. \nThey sharpen your tongue for a good {PM_CITSKILL_NEG_C}deal{##}, help you choose the right workers for each {A_ACT_C}task{##}, persuade others, and even give you a knack for {CR_CRI_C}crime{##}.",
-    "russian": "Навыки — мерило человека: в торговле, ремесле и на службе у своего господина. \nОни оттачивают ваш язык для заключения выгодной {PM_CITSKILL_NEG_C}сделка{##}, помогают подобрать нужных рабочих для каждого {A_ACT_C}задача{##}, убеждать других и даже дают склонность к {CR_CRI_C}преступление{##}."
+    "russian": "Навыки — мерило человека: в торговле, в ремесле и на службе господину.\nОни оттачивают язык для выгодной {PM_CITSKILL_NEG_C}сделки{##}, помогают подобрать нужных рабочих для каждой {A_ACT_C}работы{##}, убеждать других и даже дают склонность к {CR_CRI_C}преступлению{##}."
   },
   {
     "english": "skip",
@@ -19109,7 +19113,7 @@
   },
   {
     "english": "Subdivisions within {C_DIS_C}Districts{##}, forming a cluster of roads. \nWhen choosing where to build, location matters. Some quarters {ST_QTR_ZEA_3_C}pray{##}, some {ST_QTR_CRI_3_C}scheme{##}, some just {ST_QTR_DEV_3_C}smell bad and kill you slowly{##}.",
-    "russian": "Подразделения внутри {C_DIS_C}Районы{##}, образующие группу дорог. \nПри выборе места для строительства местоположение имеет значение. Некоторые четверти {ST_QTR_ZEA_3_C}молиться{##}, некоторые {ST_QTR_CRI_3_C}схема{##}, некоторые просто {ST_QTR_DEV_3_C}плохо пахнуть и медленно убивать тебя{##}."
+    "russian": "Части {C_DIS_C}округов{##}: сеть улиц и дорог.\nМесто для строительства важно. В одних кварталах {ST_QTR_ZEA_3_C}молятся{##}, в других {ST_QTR_CRI_3_C}плетут интриги{##}, а где-то просто {ST_QTR_DEV_3_C}грязно и опасно для жизни{##}."
   },
   {
     "english": "Subjected to torture",
@@ -19560,8 +19564,8 @@
     "russian": "Испытания ({S_RHE_C}красноречие{##})"
   },
   {
-    "english": "Text\nspanning\nmu\"\"ltip\"\"le\n\"\"lines\"\"",
-    "russian": "Text\nspanning\nmu\"\"ltip\"\"le\n\"\"lines\"\""
+    "english": "Text\nspanning\nmu\"ltip\"le\n\"lines\"",
+    "russian": "Text\nspanning\nmu\"ltip\"le\n\"lines\""
   },
   {
     "english": "Text\nspanning\nmultiple\nlines",
@@ -19572,8 +19576,8 @@
     "russian": "Язык текста"
   },
   {
-    "english": "Text with one word in \"\"double\"\" quotes",
-    "russian": "Text with one word in \"\"double\"\" quotes"
+    "english": "Text with one word in \"double\" quotes",
+    "russian": "Text with one word in \"double\" quotes"
   },
   {
     "english": "Text with one word in 'single' quotes",
@@ -19877,7 +19881,7 @@
   },
   {
     "english": "The city is orderly and free from pestilence.\nIf {QUA_DEV_C}Filth and Ruin{##} rises above {value}, the quarter becomes {ST_QTR_DEV_1_C}Poorly Maintained{##}.",
-    "russian": "В квартале порядок, болезней нет.\nЕсли {QUA_DEV_C}Грязь и разорение{##} поднимется выше {value}, квартал станет {ST_QTR_DEV_1_C}Плохое состояние{##}."
+    "russian": "В квартале порядок, болезней нет.\nЕсли {QUA_DEV_C}Разруха{##} поднимется выше {value}, квартал станет {ST_QTR_DEV_1_C}Плохое состояние{##}."
   },
   {
     "english": "The city officials recommend that all newcomers direct their first efforts to establishing a business in Herle before moving to the big city and becoming entangled in the many demands of business, influence, and personal affairs.",
@@ -19889,7 +19893,7 @@
   },
   {
     "english": "The city's common fund, managed by officials.",
-    "russian": "Общий фонд города, управляемый должностными лицами."
+    "russian": "Общая городская казна, которой распоряжаются должностные лица."
   },
   {
     "english": "The city's total funds after revenue and expenses.",
@@ -20465,7 +20469,7 @@
   },
   {
     "english": "The higher the Maximum Integrity, the longer it takes to wear down completely, provided it is kept in good condition.",
-    "russian": "Чем выше максимальная прочность, тем дольше здание будет приходить в негодность, при условии, что оно содержится в хорошем состоянии."
+    "russian": "Чем выше максимальная целостность, тем дольше объект держится, если его ремонтировать."
   },
   {
     "english": "The Highwaymen's Roost",
@@ -20881,7 +20885,7 @@
   },
   {
     "english": "The people are content.\nIf {QUA_UNR_C}Unrest{##} rises above {value}, the quarter becomes {ST_QTR_UNR_1_C}Restless{##}.",
-    "russian": "Люди довольны.\nЕсли {QUA_UNR_C}Беспорядки{##} поднимется выше {value}, квартал станет {ST_QTR_UNR_1_C}Неспокойный{##}."
+    "russian": "Люди довольны.\nЕсли {QUA_UNR_C}волнения{##} поднимутся выше {value}, квартал станет {ST_QTR_UNR_1_C}неспокойным{##}."
   },
   {
     "english": "The people are restless, the streets are tense — and the buildings are falling apart twice as fast.",
@@ -20949,7 +20953,7 @@
   },
   {
     "english": "The quarter is burdened by {QUA_DEV_C}ruin and filth{##}. Improving {B_PARAM_HYG_C}sanitation{##} can ease the worst of it — but some risks remain.",
-    "russian": "Квартал страдает от {QUA_DEV_C}разрухи и грязи{##}. Улучшение {B_PARAM_HYG_C}санитарии{##} может облегчить ситуацию, но некоторые риски останутся."
+    "russian": "Квартал страдает от {QUA_DEV_C}разрухи{##}. Улучшение {B_PARAM_HYG_C}санитарии{##} может облегчить ситуацию, но некоторые риски останутся."
   },
   {
     "english": "The quarter looks better for your trouble. A few less ruins, a little less filth, and considerably more dignity.",
@@ -20981,7 +20985,7 @@
   },
   {
     "english": "The removal takes effect next {C_TRN_C}turn{##}.",
-    "russian": "Увольнение вступит в силу в следующий {C_TRN_C}Ход{##}."
+    "russian": "Увольнение вступит в силу в следующий {C_TRN_C}ход{##}."
   },
   {
     "english": "The Renovator",
@@ -21261,7 +21265,7 @@
   },
   {
     "english": "The successor to your {T_C}titles{##}, property, and {CHAR_WEA_C}wealth{##}. Your heir carries the legacy forward and keeps your {CHAR_DYN_C}dynasty{##} alive. Must be {heir_min_age} {heir_min_age}|plural(one=year,other=years) or older.",
-    "russian": "Преемник вашего {T_C}титулы{##}, имущества и {CHAR_WEA_C}Богатство{##}. Ваш наследник продолжает наследие и сохраняет вашу {CHAR_DYN_C}династию{##}. Должно быть {heir_min_age} {heir_min_age}|plural(one=год,other=лет) или старше."
+    "russian": "Преемник вашего {T_C}титулы{##}, имущества и {CHAR_WEA_C}Богатство{##}. Ваш наследник продолжает наследие и сохраняет вашу {CHAR_DYN_C}династию{##}. Должно быть {heir_min_age} {heir_min_age}|plural(one=год,few=года,many=лет,other=лет) или старше."
   },
   {
     "english": "The sum of all levies and dues decreed in the lawbook.",
@@ -21408,8 +21412,8 @@
     "russian": "Улучшение вашего здания завершено."
   },
   {
-    "english": "The use of this item is regulated by the law \"\"{lawname}.\"\"",
-    "russian": "Использование этого предмета регулируется законом \"\"{lawname}."
+    "english": "The use of this item is regulated by the law \"{lawname}.\"",
+    "russian": "Использование этого предмета регулируется законом «{lawname}»."
   },
   {
     "english": "The verdict? Not guilty. The real crime? Thinking no one would notice the forgery.",
@@ -21489,7 +21493,7 @@
   },
   {
     "english": "The {B_HP_C}Integrity{##} of a building affects {B_PARAM_ACCPRO_C}safety{##} and {B_PARAM_PROBON_C}productivity{##}, so don't skimp out on repairs. Rooms and Improvements in your building help your business and unlock {A_ACT_C}tasks for your workers{##}, as well as new actions for you or your clients.",
-    "russian": "{B_HP_C}Прочность{##} здания влияет на {B_PARAM_ACCPRO_C}безопасность{##} и {B_PARAM_PROBON_C}производительность{##}, поэтому не экономьте на ремонте. Комнаты и улучшения в вашем здании помогают вашему делу и открывают {A_ACT_C}задачи для ваших рабочих{##}, а также новые действия для вас или ваших клиентов."
+    "russian": "{B_HP_C}целостность{##} здания влияет на {B_PARAM_ACCPRO_C}безопасность{##} и {B_PARAM_PROBON_C}производительность{##}, поэтому не экономьте на ремонте. Комнаты и улучшения в вашем здании помогают вашему делу и открывают {A_ACT_C}задачи для ваших рабочих{##}, а также новые действия для вас или ваших клиентов."
   },
   {
     "english": "The {CHAR_PRO_C}productivity{##} of workers who got {ST_CHR_KNODOW_C}tired{##} or {ST_INJ_C}hurt{##} is sure to plummet, as is the profitability of their employers. No need to worry though, as surely you've employed only upstanding members of society's lower ranks.",
@@ -21561,7 +21565,7 @@
   },
   {
     "english": "There are {NumCarts} {NumCarts}|plural(one=cart,other=carts) parked here.",
-    "russian": "Здесь припарковано {NumCarts} {NumCarts}|plural(one=телега,other=телеги)."
+    "russian": "Здесь стоит {NumCarts} {NumCarts}|plural(one=телега,few=телеги,many=телег,other=телег)."
   },
   {
     "english": "There is evidence linking you to a crime you didn't commit. Violating {law}, they say. Good luck proving it never happened.",
@@ -21625,7 +21629,7 @@
   },
   {
     "english": "These include:",
-    "russian": "К ним относятся"
+    "russian": "Среди них:"
   },
   {
     "english": "They are like nails. But wooden.",
@@ -21845,7 +21849,7 @@
   },
   {
     "english": "This turn",
-    "russian": "Этот поворот"
+    "russian": "Этот ход"
   },
   {
     "english": "Those living in a {C_QUA_C}quarter{##} blessed with a {B_PUB_FOU_C}fountain{##} recover even faster.",
@@ -21873,7 +21877,7 @@
   },
   {
     "english": "Thrive for {NumYears} {NumYears}|plural(one=year,other=years)",
-    "russian": "Процветайте в течение {NumYears} {NumYears}|plural(one=года,other=лет)"
+    "russian": "Процветайте {NumYears} {NumYears}|plural(one=год,few=года,many=лет,other=лет)"
   },
   {
     "english": "Through {S_NEG_C}negotiation{##}, you saved {savings_amount} on this purchase.",
@@ -21913,7 +21917,7 @@
   },
   {
     "english": "Time advances in turns.\nEach turn represents a full cycle of daily activity, from morning to night.\nWith every turn, the season and year progress.",
-    "russian": "Время движется по очереди.\nКаждый ход представляет собой полный цикл ежедневной деятельности, с утра до ночи.\nС каждым поворотом сезон и год прогрессируют."
+    "russian": "Время идёт ходами.\nКаждый ход — полный суточный цикл, с утра до ночи.\nС каждым ходом продвигаются сезон и год."
   },
   {
     "english": "Time and weather ruin most things — except this.",
@@ -21921,7 +21925,7 @@
   },
   {
     "english": "Time is a patient vandal. Buildings slowly lose {B_HP_C}integrity{##} as the years pass.",
-    "russian": "Время — терпеливый разрушитель. Здания постепенно теряют {B_HP_C}прочность{##} с течением лет."
+    "russian": "Время — терпеливый вандал. Здания год за годом теряют {B_HP_C}целостность{##}."
   },
   {
     "english": "Time Keeps Count Society",
@@ -21929,7 +21933,7 @@
   },
   {
     "english": "Time remaining: {Minutes}|plural(one=1 minute, other={Minutes} minutes)",
-    "russian": "Оставшееся время: {Minutes}|plural(one=1 минута, other={Minutes} минут)"
+    "russian": "Оставшееся время: {Minutes}|plural(one=1 минута,few=1 минуты,many={Minutes} минут,other={Minutes} минут)"
   },
   {
     "english": "Time runs out and you have the higher {CO_SCO_C}score{##}.",
@@ -22561,7 +22565,7 @@
   },
   {
     "english": "Turn",
-    "russian": "Повернуть"
+    "russian": "Ход"
   },
   {
     "english": "Turn away",
@@ -22917,7 +22921,7 @@
   },
   {
     "english": "Unlocks the service to {A_ACT_SEWCLO_C}refine someone's attire{##}",
-    "russian": "Открывает услугу: {A_ACT_SEWCLO_C}улучшить чей-либо наряд{##}"
+    "russian": "Открывает услугу {A_ACT_SEWCLO_C}усовершенствовать чей-то наряд{##}."
   },
   {
     "english": "Unlocks the service to {A_ACT_STRBAR_C}reinforce security{##}",
@@ -22981,7 +22985,7 @@
   },
   {
     "english": "Unrest",
-    "russian": "Беспорядки"
+    "russian": "Волнения"
   },
   {
     "english": "Unruly population",
@@ -23021,15 +23025,15 @@
   },
   {
     "english": "Up to {NumCitizens} {NumCitizens}|plural(one= random {CHAR_CITVSWOR_C}citizen{##},other=random {CHAR_CITVSWOR_C}citizens{##})",
-    "russian": "До {NumCitizens} {NumCitizens}|plural(one=случайный {CHAR_CITVSWOR_C}горожанин{##},other=случайных {CHAR_CITVSWOR_C}горожане{##})"
+    "russian": "До {NumCitizens} {NumCitizens}|plural(one=случайный {CHAR_CITVSWOR_C}горожанин{##},few=случайный {CHAR_CITVSWOR_C}горожанина{##},many=случайный {CHAR_CITVSWOR_C}горожан{##},other=случайных {CHAR_CITVSWOR_C}горожане{##})"
   },
   {
     "english": "Up to {NumCitizens} {NumCitizens}|plural(one= random {CHAR_CITVSWOR_C}citizen{##},other=random {CHAR_CITVSWOR_C}citizens{##}) {ARROW} {YOU}: {VALUE}{CHAR_STA}",
-    "russian": "До {NumCitizens} {NumCitizens}|plural(one=случайный {CHAR_CITVSWOR_C}горожанин{##},other=случайных {CHAR_CITVSWOR_C}горожане{##}) {ARROW} {YOU}: {VALUE}{CHAR_STA}"
+    "russian": "До {NumCitizens} {NumCitizens}|plural(one=случайный {CHAR_CITVSWOR_C}горожанин{##},few=случайный {CHAR_CITVSWOR_C}горожанина{##},many=случайный {CHAR_CITVSWOR_C}горожан{##},other=случайных {CHAR_CITVSWOR_C}горожане{##}) {ARROW} {YOU}: {VALUE}{CHAR_STA}"
   },
   {
     "english": "Up to {NumCitizens} {NumCitizens}|plural(one= {CHAR_CITVSWOR_C}citizen{##},other={CHAR_CITVSWOR_C}citizens{##})",
-    "russian": "До {NumCitizens} {NumCitizens}|plural(one={CHAR_CITVSWOR_C}горожанин{##},other={CHAR_CITVSWOR_C}горожане{##})"
+    "russian": "До {NumCitizens} {NumCitizens}|plural(one={CHAR_CITVSWOR_C}горожанин{##},few={CHAR_CITVSWOR_C}горожанина{##},many={CHAR_CITVSWOR_C}горожан{##},other={CHAR_CITVSWOR_C}горожане{##})"
   },
   {
     "english": "Upcoming Events",
@@ -23041,7 +23045,7 @@
   },
   {
     "english": "Upgrade",
-    "russian": "Обновление"
+    "russian": "Улучшить"
   },
   {
     "english": "Upgrade this building to unlock new actions, improvements, and additional opportunities.",
@@ -23053,7 +23057,7 @@
   },
   {
     "english": "Upgrades",
-    "russian": "Обновления"
+    "russian": "Улучшения"
   },
   {
     "english": "Upscaling is disabled.",
@@ -23076,12 +23080,12 @@
     "russian": "Использовать"
   },
   {
-    "english": "Use <text color=\\\\\"\"FFFFFFFF\\\\\"\" fontface=\\\\\"\"black\\\\\"\">{0}</> to adjust the brightness",
-    "russian": "Используйте <text color=\\\\\"\"FFFFFFFF\\\\\"\" fontface=\\\\\"\"black\\\\\"\">{0}</> для регулировки яркости."
+    "english": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the brightness",
+    "russian": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the brightness"
   },
   {
-    "english": "Use <text color=\\\\\"\"FFFFFFFF\\\\\"\" fontface=\\\\\"\"black\\\\\"\">{0}</> to adjust the corners so it lines up with the edges of your display.",
-    "russian": "Используйте <text color=\\\\\"\"FFFFFFFF\\\\\"\" fontface=\\\\\"\"black\\\\\"\">{0}</>, чтобы отрегулировать углы так, чтобы они совпадали с краями дисплея."
+    "english": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the corners so it lines up with the edges of your display.",
+    "russian": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the corners so it lines up with the edges of your display."
   },
   {
     "english": "Use a {B_IMP_SPY_C}spyglass{##} in your home to {A_SPYPER_C}spy{##} on others, or hire a professional at the {B_OCC_THI_C}Hideout{##}.",
@@ -23121,11 +23125,11 @@
   },
   {
     "english": "Use {CR_EVI_C}evidence{##} to demand payment in exchange for silence. {CR_EVISTR_C}Greater proof{##} demands greater payment.",
-    "russian": "Используйте {CR_EVI_C}улики{##}, чтобы потребовать оплату в обмен на молчание. {CR_EVISTR_C}Большее доказательство{##} требует большей оплаты."
+    "russian": "Используйте {CR_EVI_C}улики{##}, чтобы потребовать плату за молчание. {CR_EVISTR_C}Весомее доказательства{##} — выше сумма."
   },
   {
     "english": "Use {CR_EVI_C}evidence{##} to press charges. A {CR_TRI_C}trial{##} against the accused will begin next {C_TRN_C}turn{##}.",
-    "russian": "Используйте {CR_EVI_C}улики{##}, чтобы выдвинуть обвинения. В следующем {C_TRN_C}Ход{##} начнется {CR_TRI_C}пробный{##} против обвиняемого."
+    "russian": "Используйте {CR_EVI_C}улики{##}, чтобы выдвинуть обвинения. В следующем {C_TRN_C}ходе{##} начнется {CR_TRI_C}пробный{##} против обвиняемого."
   },
   {
     "english": "Use {ItemName}",
@@ -23741,7 +23745,7 @@
   },
   {
     "english": "Welcome to our beautiful city! A person of your {P_C}Profession{##} will find no shortage of opportunities here. Do it well to earn {CHAR_MON_C}Money{##}, professional {P_MASGRA_C}Mastery{##}, {CHAR_WEA_C}Wealth{##}, and {CHAR_REN_C}Renown{##}, so you can climb the {T_C}ranks of society{##}.",
-    "russian": "Добро пожаловать в наш прекрасный город! Человеку вашего {P_C}Профессия{##} здесь представится множество возможностей. Старайтесь зарабатывать {CHAR_MON_C}Деньги{##}, профессиональную {P_MASGRA_C}Мастерство{##}, {CHAR_WEA_C}Богатство{##} и {CHAR_REN_C}Известность{##}, чтобы вы могли подняться по {T_C}социальные слои{##}Дворянский титул__PH12__."
+    "russian": "Добро пожаловать в наш прекрасный город! Человеку вашей {P_C}профессии{##} здесь найдётся немало возможностей. Трудитесь, чтобы заработать {CHAR_MON_C}деньги{##}, профессиональное {P_MASGRA_C}мастерство{##}, {CHAR_WEA_C}богатство{##} и {CHAR_REN_C}известность{##} — и подняться по {T_C}ступеням общества{##}."
   },
   {
     "english": "Welcome to the Matchmaking Fair. Take a look around and get acquainted with the hopeful faces gathered here. They are all looking for much the same thing as you: L-O-V-E.",
@@ -24232,8 +24236,8 @@
     "russian": "Имея на руках достаточно монет, ваш мастер снова тратит деньги."
   },
   {
-    "english": "With great honor, the Guild hereby bestows upon you the title of \"\"{professionrank}\"\".",
-    "russian": "С большой честью Гильдия присуждает вам звание «{professionrank}»."
+    "english": "With great honor, the Guild hereby bestows upon you the title of \"{professionrank}\".",
+    "russian": "С великой честью гильдия жалует вам звание «{professionrank}»."
   },
   {
     "english": "with high-class citizens",
@@ -24673,11 +24677,11 @@
   },
   {
     "english": "You can build {numroom} {numroom}|plural(one=additional room,other=additional rooms)",
-    "russian": "Вы можете построить {numroom} {numroom}|plural(one=дополнительная комната,other=дополнительные комнаты)"
+    "russian": "Вы можете построить {numroom} {numroom}|plural(one=дополнительная комната,few=дополнительные комнаты,many=дополнительная комнат,other=дополнительные комнаты)"
   },
   {
     "english": "You can keep up to {NumManual} {NumManual}|plural(one=manual save,other=manual saves) and {NumAuto} {NumAuto}|plural(one=autosave,other=autosaves) — tracked separately for singleplayer and multiplayer. Once you hit the limit, saving again will overwrite the oldest slot.",
-    "russian": "Вы можете хранить до {NumManual} {NumManual}|plural(one=ручного сохранения,other=ручных сохранений) и {NumAuto} {NumAuto}|plural(one=автосохранение,other=автосохранений) — они отслеживаются отдельно для одиночной и многопользовательской игры. Как только вы достигнете лимита, новое сохранение перезапишет самый старый слот."
+    "russian": "Можно хранить до {NumManual} {NumManual}|plural(one=ручного сохранения,few=ручных сохранений,many=ручных сохранений,other=ручных сохранений) и {NumAuto} {NumAuto}|plural(one=автосохранения,few=автосохранений,many=автосохранений,other=автосохранений) — отдельно для одиночной и сетевой игры. При превышении лимита новое сохранение затрёт самый старый слот."
   },
   {
     "english": "You can load {I_TYP_INVITE_C}inventory items{##} into your personal inventory, either from the Marketplace or from your own business.",
@@ -24737,7 +24741,7 @@
   },
   {
     "english": "You currently hold no office position.",
-    "russian": "В данный момент вы не занимаете никакой городской должности."
+    "russian": "Вы не занимаете должность."
   },
   {
     "english": "You declare an heir. May they honor the family name or die trying!",
@@ -24897,7 +24901,7 @@
   },
   {
     "english": "You managed to uncover {NumEvidences} {NumEvidences}|plural(one=piece of {CR_EVI_C}evidence{##},other=pieces of {CR_EVI_C}evidence{##}) in total. Enough to drag {charactername} before the {CR_TRI_C}court{##}.",
-    "russian": "Всего вам удалось найти {NumEvidences} {NumEvidences}|plural(one=кусок {CR_EVI_C}улики{##},other=кусочек {CR_EVI_C}улики{##}). Достаточно перетащить {charactername} перед {CR_TRI_C}суд{##}."
+    "russian": "Всего вам удалось найти {NumEvidences} {NumEvidences}|plural(one=кусок {CR_EVI_C}улики{##},few=кусок {CR_EVI_C}улики{##},many=кусочек {CR_EVI_C}улики{##},other=кусочек {CR_EVI_C}улики{##}). Достаточно перетащить {charactername} перед {CR_TRI_C}суд{##}."
   },
   {
     "english": "You married into wealth. May comfort never dull the fire that got you here.",
@@ -25325,7 +25329,7 @@
   },
   {
     "english": "Your building's {B_HP_C}integrity{##} affects its value, and if {ST_STR_BADMAI_C}neglected{##}, the damage will affect almost every aspect of it. Your workers will become less {CHAR_PRO_C}productive{##} and more prone to accidents, so don't let your building fall into disrepair.\n\nAt one of your buildings, click {IC_REP} Repair near the integrity bar.",
-    "russian": "{B_HP_C}Прочность{##} вашего здания влияет на его стоимость, а при {ST_STR_BADMAI_C}запущенности{##} повреждения затронут практически все аспекты его работы. Ваши рабочие станут менее {CHAR_PRO_C}продуктивными{##} и более подвержены несчастным случаям, поэтому не позволяйте зданию приходить в негодность.\n\nВ одном из ваших зданий нажмите {IC_REP} Ремонт рядом с индикатором прочности."
+    "russian": "{B_HP_C}целостность{##} вашего здания влияет на его стоимость, а при {ST_STR_BADMAI_C}запущенности{##} повреждения затронут практически все аспекты его работы. Ваши рабочие станут менее {CHAR_PRO_C}продуктивными{##} и более подвержены несчастным случаям, поэтому не позволяйте зданию приходить в негодность.\n\nВ одном из ваших зданий нажмите {IC_REP} Ремонт рядом с индикатором целостности."
   },
   {
     "english": "Your building’s been sabotaged. ",
@@ -25897,7 +25901,7 @@
   },
   {
     "english": "Your {CHAR_ENE_C}energy{##} regenerates every hour, and a good night's sleep restores a good portion of it, so each {C_TRN_C}turn{##} begins refreshed.",
-    "russian": "Ваша {CHAR_ENE_C}Энергия{##} восстанавливается каждый час, а хороший ночной сон восстанавливает большую её часть, поэтому каждый {C_TRN_C}Ход{##} начинается с новыми силами."
+    "russian": "Ваша {CHAR_ENE_C}Энергия{##} восстанавливается каждый час, а хороший ночной сон восстанавливает большую её часть, поэтому каждый {C_TRN_C}ход{##} начинается с новыми силами."
   },
   {
     "english": "Your {CHAR_STA_C}opinion{##} of {Character}",
@@ -26025,7 +26029,7 @@
   },
   {
     "english": "Zeal",
-    "russian": "Рвение"
+    "russian": "Вера"
   },
   {
     "english": "Zelený",
@@ -26165,7 +26169,7 @@
   },
   {
     "english": "{buildingtype} has been upgraded to Level {lvl}. The upgrade brings new potential and expanded features.",
-    "russian": "{buildingtype} повышен до уровня {lvl}. Обновление открывает новые возможности и расширяет возможности."
+    "russian": "{buildingtype} повышен до уровня {lvl}. Улучшение открывает новые действия и возможности."
   },
   {
     "english": "{BuildingType} has run out of materials needed to produce {ItemType}.",
@@ -26261,11 +26265,11 @@
   },
   {
     "english": "{CHAR_REN_C}Renown{##} every {C_TRN_C}turn{##}",
-    "russian": "{CHAR_REN_C}известность{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{CHAR_REN_C}известность{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{CHAR_STA_C}opinion{##} per {C_TRN_C}turn{##}",
-    "russian": "{CHAR_STA_C}мнение{##} за {C_TRN_C}Ход{##}"
+    "russian": "{CHAR_STA_C}мнение{##} за {C_TRN_C}ход{##}"
   },
   {
     "english": "{CHAR_XP_C}Experience{##} is earned exclusively in your Active Profession and used to advance its {P_MASGRA_C}Mastery Grades{##}.",
@@ -26421,7 +26425,7 @@
   },
   {
     "english": "{CV_({NumSkills})} {NumSkills}|plural(one=random {S_C}skill{##},other=random {S_C}skills{##})",
-    "russian": "{CV_({NumSkills})} {NumSkills}|plural(one=случайный {S_C}навык{##},other=случайные {S_C}навыки{##})"
+    "russian": "{CV_({NumSkills})} {NumSkills}|plural(one=случайный {S_C}навык{##},few=случайный {S_C}навыка{##},many=случайный {S_C}навыков{##},other=случайные {S_C}навыки{##})"
   },
   {
     "english": "{CV_({Value})} chance to detect illegal goods",
@@ -26449,11 +26453,11 @@
   },
   {
     "english": "{CV_({Value})} {CHAR_STA_C}opinion{##} with {NumCitizens} {NumCitizens}|plural(one= random {CHAR_CITVSWOR_C}citizen{##},other=random {CHAR_CITVSWOR_C}citizens{##})",
-    "russian": "{CV_({Value})} {CHAR_STA_C}мнение{##} с {NumCitizens} {NumCitizens}|plural(one= случайным {CHAR_CITVSWOR_C}горожанин{##},other=случайными {CHAR_CITVSWOR_C}горожане{##})"
+    "russian": "{CV_({Value})} {CHAR_STA_C}мнение{##} с {NumCitizens} {NumCitizens}|plural(one=случайным {CHAR_CITVSWOR_C}горожанин{##},few=случайным {CHAR_CITVSWOR_C}горожанина{##},many=случайным {CHAR_CITVSWOR_C}горожан{##},other=случайными {CHAR_CITVSWOR_C}горожане{##})"
   },
   {
     "english": "{CV_({Value})} {icon} every {C_TRN_C}turn{##}",
-    "russian": "{CV_({Value})} {icon} каждые {C_TRN_C}Ход{##}"
+    "russian": "{CV_({Value})} {icon} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{CV_({Value})} {icon}/h",
@@ -26469,11 +26473,11 @@
   },
   {
     "english": "{CV_({Value})} {icon}/{C_TRN_C}turn{##}",
-    "russian": "{CV_({Value})} {icon}/{C_TRN_C}Ход{##}"
+    "russian": "{CV_({Value})} {icon}/{C_TRN_C}ход{##}"
   },
   {
     "english": "{CV_({Value})} {S_HAN_C}handicraft{##} for every {NumTrip} {A_ACT_GATING_C}{NumTrip}|plural(one=trip,other=trips){##}",
-    "russian": "{CV_({Value})} {S_HAN_C}ремесло{##} за каждые {NumTrip} {A_ACT_GATING_C}{NumTrip}|plural(one=поездка,other=поездки){##}"
+    "russian": "{CV_({Value})} {S_HAN_C}ремесло{##} за каждые {NumTrip} {A_ACT_GATING_C}{NumTrip}|plural(one=поездка,few=поездки,many=поездок,other=поездки){##}"
   },
   {
     "english": "{CV_({Value})} {S_STE_C}roguery{##} out of {WORHOU_C}working hours{##}",
@@ -26617,11 +26621,11 @@
   },
   {
     "english": "{hour} {hourAbbreviation}|plural(one=hr, other=hrs)",
-    "russian": "{hour} {hourAbbreviation}|plural(one=ч., few=ч., many=ч., other=ч.)"
+    "russian": "{hour} {hourAbbreviation}|plural(one=ч.,few=ч.,many=ч.,other=ч.)"
   },
   {
     "english": "{I_TYP_COMEQU_C}Combat equipment{##} lasts {NumCombat} more {CO_COMENC_C}{NumCombat}|plural(one=combat encounter,other=combat encounters){##}",
-    "russian": "{I_TYP_COMEQU_C}Боевое снаряжение{##} длится на {NumCombat} больше {CO_COMENC_C}{NumCombat}|plural(one=боевое столкновение,other=боевых столкновений){##}"
+    "russian": "{I_TYP_COMEQU_C}Боевое снаряжение{##} хватает ещё на {NumCombat} {CO_COMENC_C}{NumCombat}|plural(one=бой,few=боя,many=боёв,other=боёв){##}"
   },
   {
     "english": "{I_TYP_INVITE_C}Inventory Items{##} (Marketplace)",
@@ -26653,23 +26657,23 @@
   },
   {
     "english": "{MyBusiness}|plural(one=My Business, other=My Businesses)",
-    "russian": "{MyBusiness}|plural(one=Мой бизнес, другой=Мои бизнесы)"
+    "russian": "{MyBusiness}|plural(one=Моё предприятие,few=Мои предприятия,many=Мои предприятия,other=Мои предприятия)"
   },
   {
     "english": "{MyPersonal}|plural(one=My Property, other=My Properties)",
-    "russian": "{MyPersonal}|plural(one=Моя собственность,other=Моя собственность)"
+    "russian": "{MyPersonal}|plural(one=Моё имущество,few=Моё имущество,many=Моё имущество,other=Моё имущество)"
   },
   {
     "english": "{NumAlive}/{NumAll} {NumAll}|plural(one=member,other=members) ({NumDead}{deadicon})",
-    "russian": "{NumAlive}/{NumAll} {NumAll}|plural(one=member,other=members) ({NumDead}{deadicon})"
+    "russian": "{NumAlive}/{NumAll} {NumAll}|plural(one=член,few=члена,many=членов,other=членов) ({NumDead}{deadicon})"
   },
   {
     "english": "{NumAll} {NumAll}|plural(one=member,other=members)",
-    "russian": "{NumAll} {NumAll}|plural(one=member,other=members)"
+    "russian": "{NumAll} {NumAll}|plural(one=член,few=члена,many=членов,other=членов)"
   },
   {
     "english": "{NumCargoSlots} {NumCargoSlots}|plural(one=cargo compartment,other=cargo compartments)",
-    "russian": "{NumCargoSlots} {NumCargoSlots}|plural(one=cargo compartment,other=cargo compartments)"
+    "russian": "{NumCargoSlots} {NumCargoSlots}|plural(one=грузовой отсек,few=грузовых отсека,many=грузовых отсеков,other=грузовых отсеков)"
   },
   {
     "english": "{NumCarts} owned",
@@ -26677,7 +26681,7 @@
   },
   {
     "english": "{NumCombatants} {CO_COM_C}{NumCombatants}|plural(one=combatant,other=combatants){##}",
-    "russian": "{NumCombatants} {CO_COM_C}{NumCombatants}|plural(one=combatant,other=combatants){##}"
+    "russian": "{NumCombatants} {CO_COM_C}{NumCombatants}|plural(one=боец,few=бойца,many=бойцов,other=бойцов){##}"
   },
   {
     "english": "{NumCombat} remaining",
@@ -26685,27 +26689,27 @@
   },
   {
     "english": "{NumCombat} {CO_COMENC_C}{NumCombat}|plural(one=combat encounter,other=combat encounters){##}",
-    "russian": "{NumCombat} {CO_COMENC_C}{NumCombat}|plural(one=combat encounter,other=combat encounters){##}"
+    "russian": "{NumCombat} {CO_COMENC_C}{NumCombat}|plural(one=бой,few=боя,many=боёв,other=боёв){##}"
   },
   {
     "english": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}dynasty{##},other={CHAR_DYN_C}dynasties{##})",
-    "russian": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}династия{##},other={CHAR_DYN_C}династий{##})"
+    "russian": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}династия{##},few={CHAR_DYN_C}династии{##},many={CHAR_DYN_C}династий{##},other={CHAR_DYN_C}династий{##})"
   },
   {
     "english": "{NumPlayers} {NumPlayers}|plural(one=player,other=players)",
-    "russian": "{NumPlayers} {NumPlayers}|plural(one=player,other=players)"
+    "russian": "{NumPlayers} {NumPlayers}|plural(one=игрок,few=игрока,many=игроков,other=игроков)"
   },
   {
     "english": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=random official,other=random officials)",
-    "russian": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=random official,other=random officials)"
+    "russian": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=случайный чиновник,few=случайных чиновника,many=случайных чиновников,other=случайных чиновников)"
   },
   {
     "english": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=random opposite-gender official,other=random opposite-gender officials)",
-    "russian": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=random opposite-gender official,other=random opposite-gender officials)"
+    "russian": "{NumRandomOfficials} {NumRandomOfficials}|plural(one=случайный чиновник противоположного пола,few=случайных чиновника противоположного пола,many=случайных чиновников противоположного пола,other=случайных чиновников противоположного пола)"
   },
   {
     "english": "{NumStorage} {B_STOROO_C}{NumStorage}|plural(one=storeroom slot,other=storeroom slots){##}",
-    "russian": "{NumStorage} {B_STOROO_C}{NumStorage}|plural(one=storeroom slot,other=storeroom slots){##}"
+    "russian": "{NumStorage} {B_STOROO_C}{NumStorage}|plural(one=ячейка склада,few=ячейки склада,many=ячеек склада,other=ячеек склада){##}"
   },
   {
     "english": "{NumTurns} remaining",
@@ -26713,11 +26717,11 @@
   },
   {
     "english": "{NumTurns} {C_TRN_C}{NumTurns}|plural(one=turn,other=turns){##}",
-    "russian": "{NumTurns} {C_TRN_C}{NumTurns}|plural(one=turn,other=turns){##}"
+    "russian": "{NumTurns} {C_TRN_C}{NumTurns}|plural(one=ход,few=хода,many=ходов,other=ходов){##}"
   },
   {
     "english": "{NumTurns} {NumTurns}|plural(one=turn,other=turns) remaining",
-    "russian": "{NumTurns} {NumTurns}|plural(one=поворот,other=поворот) осталось"
+    "russian": "Осталось {NumTurns} {NumTurns}|plural(one=ход,few=хода,many=ходов,other=ходов)"
   },
   {
     "english": "{O_TYP_CIVOFF_C}Political authority{##} is divided among six chambers, each hierarchically organized with its own powers and duties.",
@@ -26769,31 +26773,31 @@
   },
   {
     "english": "{QUA_CRI_C}Crime Rate{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_CRI_C}Уровень преступности{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_CRI_C}Уровень преступности{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{QUA_DEV_C}Filth and devastation{##} increase the risk of {ST_CHR_SIC_C}illness{##} for you, your loved ones, and your workers.",
-    "russian": "{QUA_DEV_C}Грязь и разруха{##} увеличивает риск {ST_CHR_SIC_C}болезнь{##} для вас, ваших близких и ваших работников."
+    "russian": "{QUA_DEV_C}Разруха{##} увеличивает риск {ST_CHR_SIC_C}болезнь{##} для вас, ваших близких и ваших работников."
   },
   {
     "english": "{QUA_DEV_C}Ruin & Filth{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_DEV_C}Руины и грязь{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_DEV_C}Разруха{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{QUA_HYG_C}Sanitation{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_HYG_C}Санитария{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_HYG_C}Санитария{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{QUA_REP_C}Reputation{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_REP_C}Репутация{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_REP_C}Репутация{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{QUA_UNR_C}Unrest{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_UNR_C}Беспорядки{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_UNR_C}Волнения{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{QUA_ZEA_C}Zeal{##} every {C_TRN_C}turn{##}",
-    "russian": "{QUA_ZEA_C}Рвение{##} каждые {C_TRN_C}Ход{##}"
+    "russian": "{QUA_ZEA_C}Вера{##} каждый {C_TRN_C}ход{##}"
   },
   {
     "english": "{S_COM_C}Martial{##}",
@@ -26877,7 +26881,7 @@
   },
   {
     "english": "{value} per {duration}|plural(one={duration} minute, other={duration} minutes)",
-    "russian": "{value} за {duration}|plural(one={duration} минуту, other={duration} минуты)"
+    "russian": "{value} за {duration}|plural(one={duration} минуту,few={duration} минуты,many={duration} минут,other={duration} минуты)"
   },
   {
     "english": "{value} points in the selected child's {skill} skill",
