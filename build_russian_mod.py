@@ -618,10 +618,18 @@ def write_translated_string_tables(cache: dict[str, str]) -> int:
             if len(row) < 2 or not row[0]:
                 out_rows.append(row)
                 continue
-            entry = LocEntry(namespace, row[0], row[1])
+            source_english = row[1]
+            lookup_english = (
+                source_english.replace("\\r\\n", "\n")
+                .replace("\\n", "\n")
+                .replace('\\"', '""')
+            )
+            entry = LocEntry(namespace, row[0], lookup_english)
             russian = resolve(entry, cache)
+            if lookup_english != source_english and russian == lookup_english:
+                russian = source_english
             new_row = list(row)
-            if russian != row[1]:
+            if russian != source_english:
                 replaced += 1
             new_row[1] = russian
             out_rows.append(new_row)

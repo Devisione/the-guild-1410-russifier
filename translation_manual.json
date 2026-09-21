@@ -1061,7 +1061,7 @@
   },
   {
     "english": "AAAAAAAAAAAAAAAAAAAA",
-    "russian": "АААААААААААААААААААА"
+    "russian": "AAAAAAAAAAAAAAAAAAAA"
   },
   {
     "english": "AAAAAAAAPh",
@@ -1321,7 +1321,7 @@
   },
   {
     "english": "After applying for {O_TYP_CIVOFF_C}office{##}, check {HB_UPCOMEVE} Upcoming Events to see when the {O_ELE_C}election{##} will take place. Improve your {S_RHE_C}Rhetoric{##} or raise the appointers' {CHAR_STA_C}opinion{##} of you to increase your chances against the other candidates.",
-    "russian": "Подав заявку на {O_TYP_CIVOFF_C}Должность{##}, проверьте вкладку «Предстоящие события», чтобы узнать, когда состоится {O_ELE_C}выборы{##}. Улучшите свою {S_RHE_C}Риторика{##} или повысьте {CHAR_STA_C}репутация{##} у лиц, принимающих решения, чтобы увеличить свои шансы против других кандидатов."
+    "russian": "После подачи заявки на {O_TYP_CIVOFF_C}должность{##} проверьте {HB_UPCOMEVE} Предстоящие события, чтобы узнать, когда состоятся {O_ELE_C}выборы{##}. Улучшите навык {S_RHE_C}риторики{##} или повысьте {CHAR_STA_C}мнение{##} назначателей о вас, чтобы увеличить свои шансы в борьбе с другими кандидатами."
   },
   {
     "english": "After being found guilty in a {CR_TRI_C}trial{##}, the accused is punished accordingly. The penalty depends on the {CR_SEV_C}severity of the crime{##} and how {L_LAWSEV_C}harsh{##} the current law is.",
@@ -1645,7 +1645,7 @@
   },
   {
     "english": "Allows you to send guards to {A_ACT_TRASTEGUA_C}train roguery{##}",
-    "russian": "Позволяет отправлять охрану на {A_ACT_TRASTEGUA_C}жульничество в поезде{##}."
+    "russian": "Позволяет отправлять стражников на {A_ACT_TRASTEGUA_C}тренировку хитрости{##}"
   },
   {
     "english": "Allows you to send robbers to {A_ACT_TRACOMROB_C}train martial{##}",
@@ -3397,7 +3397,7 @@
   },
   {
     "english": "But just as your path dims, another may yet follow. Hopefully, you got your affairs in order well in advance, and your {CHAR_HEI_C}heir{##} is perfectly capable of taking over your {P_C}business{##} and {T_C}title{##}, ensuring your {CHAR_DYN_C}dynasty{##} thrives.",
-    "russian": "Но даже если ваш жизненный путь угасает, кто-то другой еще может пойти по нему. Будем надеяться, что вы заблаговременно привели свои дела в порядок, и ваш {CHAR_HEI_C}наследник{##} вполне способен взять на себя управление вашим{P_C}дело{##} и {T_C}дворянский титул{##}, обеспечив процветание вашей {CHAR_DYN_C}династия{##}."
+    "russian": "Но даже когда ваш путь затухает, другой может последовать за ним. Надеюсь, вы заранее наладили свои дела, и ваш {CHAR_HEI_C}наследник{##} вполне способен взять на себя ваше {P_C}дело{##} и {T_C}Титул{##}, обеспечив процветание вашей {CHAR_DYN_C}династии{##}."
   },
   {
     "english": "But mind who you put in charge.",
@@ -3565,7 +3565,7 @@
   },
   {
     "english": "Can be appointed to the Empire Authority office of",
-    "russian": "Может быть назначен в офис Управления Империи"
+    "russian": "Может быть назначен на должность в Имперской власти"
   },
   {
     "english": "Can be crafted here",
@@ -3881,7 +3881,7 @@
   },
   {
     "english": "CCCCCCCCCCCCCCCCCc",
-    "russian": "CCCCCCCCCCCCCCCCCCCc"
+    "russian": "CCCCCCCCCCCCCCCCCc"
   },
   {
     "english": "CCCCCCCCCCCCCCCCCCCB@BAB@AAj",
@@ -4137,11 +4137,11 @@
   },
   {
     "english": "Choose a member of your family to secure a {P_JOI_C}Joiner{##}'s License. They will then be able to serve as the {B_OCC_MGR_C}Master{##} of your {B_OCC_JOI_C}joiner's workshop{##}, while you turn your attention to other pursuits.",
-    "russian": "Выберите члена вашей семьи, чтобы получить лицензию столяра. Тогда он сможет стать {B_OCC_MGR_C}Мастер{##} вашей {B_OCC_JOI_C}столярная мастерская{##}, пока вы переключите внимание на другие дела."
+    "russian": "Выберите члена семьи, который получит лицензию {P_JOI_C}столяра{##}. После этого он сможет стать {B_OCC_MGR_C}мастером{##} в вашей {B_OCC_JOI_C}столярной мастерской{##}, пока вы занимаетесь другими делами."
   },
   {
     "english": "Choose a member of your family to secure a {P_MAS_C}Stone Mason{##}'s License. They will then be able to serve as the {B_OCC_MGR_C}Master{##} of your {B_OCC_MAS_C}masonry business{##}, while you turn your attention to other pursuits.",
-    "russian": "Выберите члена вашей семьи, чтобы получить лицензию мастера-каменщика. Тогда он сможет стать {B_OCC_MGR_C}Мастер{##} вашей {B_OCC_MAS_C}каменоломня{##}, пока вы переключите внимание на другие дела."
+    "russian": "Выберите члена семьи, который получит лицензию {P_MAS_C}каменщика{##}. После этого он сможет стать {B_OCC_MGR_C}мастером{##} в вашей {B_OCC_MAS_C}каменной мастерской{##}, пока вы занимаетесь другими делами."
   },
   {
     "english": "Choose a member of your family to secure a {P_PER_C}Perfumer{##}'s License. They will then be able to serve as the {B_OCC_MGR_C}Master{##} of your {B_OCC_PER_C}perfumery{##}, while you turn your attention to other pursuits.",
@@ -4513,7 +4513,7 @@
   },
   {
     "english": "Coin earned by holding an office position.",
-    "russian": "Монета, зарабатываемая за занятие офисной должности."
+    "russian": "Доход от занятия должности."
   },
   {
     "english": "Coin earned from {B_PARAM_ATT_C}customers{##} buying directly from the business {B_STOFRO_C}storefront{##}.",
@@ -5297,7 +5297,7 @@
   },
   {
     "english": "Crown Funding",
-    "russian": "Краудфандинг"
+    "russian": "Государственное финансирование"
   },
   {
     "english": "Crown-Favored",
@@ -5473,11 +5473,11 @@
   },
   {
     "english": "DDDDDDDDDDDDDDDDDD",
-    "russian": "ДДДДДДДДДДДДДДД"
+    "russian": "DDDDDDDDDDDDDDDDDD"
   },
   {
     "english": "DDDDDDDDDDDDDDDDDD*R",
-    "russian": "ДДДДДДДДДДДДДДД*Р"
+    "russian": "DDDDDDDDDDDDDDDDDD*R"
   },
   {
     "english": "DDDDDDDDO\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"*6\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
@@ -5505,7 +5505,7 @@
   },
   {
     "english": "Dead center, {ST_QTR_STRROA_C}passable roads{##}, minutes from the {B_PUB_MKT_C}marketplace{##} — your {B_OCC_ALC_01_C}lab's{##} location is as good as it gets. {A_ACT_GATING_C}The land itself stocks your shelves{##} and spares your coin. The one thorn: potion laws keep your craft in the shadows, but as long as the taxes arrive at year's end, the authorities care little for what is brewed — provided nobody {CR_CRI_C}drinks{##} it. Rise to {O_TYP_CIVOFF_C}deacon{##} someday, and perhaps you can change that. Alchemy is science. Make them see it!",
-    "russian": "Самый центр, {ST_QTR_STRROA_C}проезжие дороги{##}, в двух шагах от {B_PUB_MKT_C}рынка{##} — ваше {B_OCC_ALC_01_C}лаборатории{##} расположение трудно переоценить. {A_ACT_GATING_C}Сама земля наполняет ваши полки{##} и сбережет вашу монету. Единственный минус: законы об алхимии загоняют ваше ремесло в тени, но пока в конце года уплачены налоги, властям мало дела до того, что варится в котлах — если только кто-нибудь не {CR_CRI_C}пьет{##} это. Добейтесь в будущем {ST_QTR_STRROA_C}высокого титула{##}, и, возможно, это удастся изменить. Алхимия — это наука. Заставьте их признать это!"
+    "russian": "Самый центр города, {ST_QTR_STRROA_C}приличные дороги{##} и всего несколько минут до {B_PUB_MKT_C}рынка{##} — лучшего места для вашей {B_OCC_ALC_01_C}лаборатории{##} не найти. {A_ACT_GATING_C}Сама земля наполняет ваши полки{##}, позволяя экономить. Одна беда: законы о зельях вынуждают скрывать ремесло, но пока в конце года поступают налоги, властям безразлично, что вы варите, — лишь бы никто этого {CR_CRI_C}не пил{##}. Когда-нибудь вы станете {O_TYP_CIVOFF_C}диаконом{##} и, возможно, измените закон. Алхимия — наука. Докажите им это!"
   },
   {
     "english": "Deadly Nightshade",
@@ -6269,7 +6269,7 @@
   },
   {
     "english": "EBABBBBBB@@@@A@AA@A@>@@@A@A@@@@@??@@@?????@??????@@?@?>?>?????@>>??>>>???=>==?>?=>===========>=>===",
-    "russian": "EBABBBBBB@@@@A@AA@A@>@@@A@A@@@@@??@@@?????@??????@@?@?>?>?????@>>??>>>>???=>==?>?=>==========>=>==="
+    "russian": "EBABBBBBB@@@@A@AA@A@>@@@A@A@@@@@??@@@?????@??????@@?@?>?>?????@>>??>>>???=>==?>?=>===========>=>==="
   },
   {
     "english": "Eberhard",
@@ -6317,11 +6317,11 @@
   },
   {
     "english": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEE%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQI",
-    "russian": "ЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕ%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ"
+    "russian": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEE%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQI"
   },
   {
     "english": "EEEEEEEEEEEEEEEEEF",
-    "russian": "ЭЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕФ"
+    "russian": "EEEEEEEEEEEEEEEEEF"
   },
   {
     "english": "EEEEEEEEEEEoi",
@@ -6329,7 +6329,7 @@
   },
   {
     "english": "EEEGGHGGGGGHGHHHGGHG",
-    "russian": "ЭЭЭГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГГ"
+    "russian": "EEEGGHGGGGGHGHHHGGHG"
   },
   {
     "english": "Eeyore",
@@ -6405,11 +6405,11 @@
   },
   {
     "english": "Eligible for {O_TYP_CIVOFF_C}Office Chambers{##}",
-    "russian": "Имеет право на {O_TYP_CIVOFF_C}Офисные палаты{##}"
+    "russian": "Право заседать в {O_TYP_CIVOFF_C}палатах должностных лиц{##}"
   },
   {
     "english": "Eligible for {O_TYP_CIVOFF_C}Office Positions{##}",
-    "russian": "Имеет право на {O_TYP_CIVOFF_C}Должности офиса{##}"
+    "russian": "Право на {O_TYP_CIVOFF_C}должности{##}"
   },
   {
     "english": "Elisabeth",
@@ -6601,7 +6601,7 @@
   },
   {
     "english": "Enter {building}",
-    "russian": "Войти {building}"
+    "russian": "Войти в {building}"
   },
   {
     "english": "Epic",
@@ -7245,7 +7245,7 @@
   },
   {
     "english": "FEFEFFFFGGGGFFFEGGG",
-    "russian": "ФЕФЕФФФГГГГФФГГГ"
+    "russian": "FEFEFFFFGGGGFFFEGGG"
   },
   {
     "english": "Feign Torture",
@@ -7289,7 +7289,7 @@
   },
   {
     "english": "FFFFFFFFFFFFFFFFFF",
-    "russian": "ФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФ"
+    "russian": "FFFFFFFFFFFFFFFFFF"
   },
   {
     "english": "FFGFGFFFGGFFFFGFGGSSSSGS5FGFGGFGG--SSSSSSSZS",
@@ -7345,15 +7345,15 @@
   },
   {
     "english": "Find a high-{B_PARAM_VAL_C}value{##} building with little {B_PARAM_BURPRO_C}security{##}, and send your most {S_STE_C}roguish{##} robbers to take what they can carry.",
-    "russian": "Найдите ценное-{B_PARAM_VAL_C}ценность{##} здание со слабой {B_PARAM_BURPRO_C}безопасность{##} и отправьте своих самых {S_STE_C}воровской{##} разбойников унести всё, что смогут унести."
+    "russian": "Найдите здание с высокой {B_PARAM_VAL_C}ценностью{##}, слабой {B_PARAM_BURPRO_C}охраной{##} и отправьте туда самых {S_STE_C}ловких{##} разбойников, чтобы они забрали всё, что смогут унести."
   },
   {
     "english": "Find a high-{B_PARAM_VAL_C}value{##} building with little {B_PARAM_BURPRO_C}security{##}, and send your most {S_STE_C}roguish{##} rogues to take what they can carry.",
-    "russian": "Найдите высокое {B_PARAM_VAL_C}ценить{##} здание с маленькими {B_PARAM_BURPRO_C}безопасность{##} и отправьте своих самых {S_STE_C}мошеннический{##} разбойников забрать то, что они смогут унести."
+    "russian": "Найдите здание с высокой {B_PARAM_VAL_C}ценностью{##}, слабой {B_PARAM_BURPRO_C}охраной{##} и отправьте туда самых {S_STE_C}ловких{##} разбойников, чтобы они забрали всё, что смогут унести."
   },
   {
     "english": "Find a high-{B_PARAM_VAL_C}value{##} building with little {B_PARAM_BURPRO_C}security{##}, and send your most {S_STE_C}roguish{##} thieves to take what they can carry.",
-    "russian": "Найдите ценное-{B_PARAM_VAL_C}ценность{##} здание со слабой {B_PARAM_BURPRO_C}безопасность{##} и отправьте своих самых {S_STE_C}воровской{##} воров унести всё, что смогут унести."
+    "russian": "Найдите здание с высокой {B_PARAM_VAL_C}ценностью{##}, слабой {B_PARAM_BURPRO_C}охраной{##} и отправьте туда самых {S_STE_C}ловких{##} воров, чтобы они забрали всё, что смогут унести."
   },
   {
     "english": "Find It a New Home",
@@ -7401,11 +7401,11 @@
   },
   {
     "english": "Fire Worker",
-    "russian": "пожарный работник"
+    "russian": "Уволить рабочего"
   },
   {
     "english": "Fire {WorkerName}?\n\nExcept for crafting, any worker fired while performing a task will complete it before leaving their post permanently.",
-    "russian": "Пожар {WorkerName}?\n\nЗа исключением крафта, любой работник, уволенный во время выполнения задания, завершит его, прежде чем навсегда покинуть свой пост."
+    "russian": "Уволить {WorkerName}?\n\nЕсли рабочий выполняет задание (кроме создания предмета), он завершит его перед тем, как окончательно покинуть пост."
   },
   {
     "english": "Fired clay block, the foundation of almost every city ever built.",
@@ -10345,7 +10345,7 @@
   },
   {
     "english": "Iron Constitution",
-    "russian": "Железная Конституция"
+    "russian": "Крепкое здоровье"
   },
   {
     "english": "Iron Ingot",
@@ -10629,7 +10629,7 @@
   },
   {
     "english": "Join Game",
-    "russian": "Подключитсья"
+    "russian": "Присоединиться к игре"
   },
   {
     "english": "Join Server",
@@ -13829,7 +13829,7 @@
   },
   {
     "english": "Office Chamber",
-    "russian": "Офисная палата"
+    "russian": "Должностная палата"
   },
   {
     "english": "Office Chambers",
@@ -13837,11 +13837,11 @@
   },
   {
     "english": "Office Dismissal",
-    "russian": "Увольнение из офиса"
+    "russian": "Снятие с должности"
   },
   {
     "english": "Office Dismissals",
-    "russian": "Увольнения из офиса"
+    "russian": "Снятия с должности"
   },
   {
     "english": "Office Income",
@@ -13849,7 +13849,7 @@
   },
   {
     "english": "Office Position",
-    "russian": "Должность в офисе"
+    "russian": "Должность"
   },
   {
     "english": "Office progression is organized into ranks from {icon_01} to {icon_09}. \n\nIf you wish to take part in the political life of the town, you must first become a citizen. \n\nFrom there, you begin at rank {icon_01} and work your way upward, step by step.",
@@ -14017,7 +14017,7 @@
   },
   {
     "english": "Once you have obtained {CR_EVI_C}evidence{##}, use it to gain advantage over your opponents. Open {HB_CRIEVI} Crime and Evidence in the left sidebar, select {A_PRECHA_C}Press Charges{##}, and wait for the accused to go to trial.",
-    "russian": "Получив {CR_EVI_C}улики{##}, используйте их, чтобы получить преимущество над соперниками. Откройте «Преступления и улики» на левой панели, выберите {HB_CRIEVI}Выдвинуть обвинение{A_PRECHA_C} и дождитесь, пока обвиняемый отправится под суд."
+    "russian": "Получив {CR_EVI_C}улики{##}, используйте их, чтобы получить преимущество над соперниками. Откройте раздел {HB_CRIEVI} «Преступления и улики» в левой панели, выберите {A_PRECHA_C}«Предъявить обвинение»{##} и дождитесь, пока обвиняемый предстанет перед судом."
   },
   {
     "english": "Once you have reached the required {A_MASGRA_C}Mastery Grade{##} and saved enough money, you can upgrade your business. This unlocks more {A_ACT_C}tasks{##} for your workers and may also grant you new {A_C}actions{##}.",
@@ -15661,7 +15661,7 @@
   },
   {
     "english": "Quarter Impact",
-    "russian": "Четверть удара"
+    "russian": "Влияние на квартал"
   },
   {
     "english": "Quarter inhabitants",
@@ -15669,7 +15669,7 @@
   },
   {
     "english": "Quarter Metric",
-    "russian": "Четверть Метрическая"
+    "russian": "Показатель квартала"
   },
   {
     "english": "Quarters",
@@ -15977,7 +15977,7 @@
   },
   {
     "english": "Reflects the religious spirit of a {C_QUA_C}quarter{##} — how strongly people attend sermons, support the church, and follow moral expectations that discourage {QUA_CRI_C}crime{##}.",
-    "russian": "Отражает религиозный дух квартала — насколько усердно люди посещают проповеди, поддерживают церковь и следуют моральным устоям, которые осуждают {QUA_CRI_C}преступность{##}."
+    "russian": "Отражает религиозный дух {C_QUA_C}квартала{##} — насколько активно жители посещают проповеди, поддерживают церковь и следуют моральным нормам, сдерживающим {QUA_CRI_C}преступность{##}."
   },
   {
     "english": "Reflects the workers' loyalty and satisfaction with their working conditions. A low opinion suggests they are likely to seek service elsewhere soon.",
@@ -16157,7 +16157,7 @@
   },
   {
     "english": "Represents how unsafe a {C_QUA_C}quarter{##} is — how active {P_THI_C}thieves{##} and {P_ROB_C}robbers{##} are, and how effectively {P_GUA_C}guards{##} can keep order.",
-    "russian": "Отражает уровень безопасности в квартале — насколько активны {P_THI_C}воры{##} и {P_ROB_C}грабители{##}, а также насколько эффективно {P_GUA_C}стражники{##} поддерживают порядок."
+    "russian": "Показывает, насколько небезопасен {C_QUA_C}квартал{##}: активность {P_THI_C}воров{##} и {P_ROB_C}разбойников{##}, а также эффективность {P_GUA_C}стражи{##} в поддержании порядка."
   },
   {
     "english": "Represents the building's worth, adjusted by its current {B_HP_C}condition{##}.",
@@ -16189,7 +16189,7 @@
   },
   {
     "english": "Requires: Previous office rank {iconnumber}.",
-    "russian": "Требуется: предыдущий офисный ранг {iconnumber}."
+    "russian": "Требуется: предыдущий ранг должности {iconnumber}."
   },
   {
     "english": "Requires: {title}.",
@@ -16221,7 +16221,7 @@
   },
   {
     "english": "Resign from Office",
-    "russian": "Уйти из офиса"
+    "russian": "Уволиться с должности"
   },
   {
     "english": "Resolution",
@@ -21597,7 +21597,7 @@
   },
   {
     "english": "There's an office position open to you",
-    "russian": "Для вас открыта вакансия в офисе"
+    "russian": "Вам доступна открытая должность"
   },
   {
     "english": "There's enough money for another construction. More ventures, more coin—and a few risks that might be worth taking.",
@@ -22305,7 +22305,7 @@
   },
   {
     "english": "Train Handicraft",
-    "russian": "Поезд Ремесло"
+    "russian": "Обучение ремеслу"
   },
   {
     "english": "Train hard and improve your {S_COM_C}martial{##}.",
@@ -22317,19 +22317,19 @@
   },
   {
     "english": "Train Martial",
-    "russian": "Поезд Боевой"
+    "russian": "Боевая подготовка"
   },
   {
     "english": "Train Negotiation",
-    "russian": "Переговоры на поезде"
+    "russian": "Обучение переговорам"
   },
   {
     "english": "Train Rhetoric",
-    "russian": "Поезд Риторика"
+    "russian": "Обучение риторике"
   },
   {
     "english": "Train Roguery",
-    "russian": "Поезд Мошенничество"
+    "russian": "Обучение хитрости"
   },
   {
     "english": "Train Skill",
@@ -24685,7 +24685,7 @@
   },
   {
     "english": "You can obtain {CR_EVI_C}evidence{##} by {A_SPY_C}spying{##} on others, though you will need a {B_IMP_SPY_C}spyglass{##} to do so. Alternatively, you can {A_SNI_C}report rumors{##} to {O_CHA_INF_C}informants{##}. While closely observing the people around you and earning some money in the process, you may uncover evidence of crimes!\n\nOnce you have obtained evidence, open {HB_CRIEVI} Crime and Evidence on the left and select {A_PRECHA_C}Press Charges{##}.",
-    "russian": "Вы можете получить {CR_EVI_C}улики{##} путем {A_SPY_C}шпионаж{##} за другими, хотя для этого вам понадобится {B_IMP_SPY_C}подзорная труба{##}. Кроме того, вы можете {A_SNI_C}сообщать о слухах{##} для {O_CHA_INF_C}информаторы{##}. Внимательно наблюдая за окружающими и зарабатывая на этом деньги, вы можете обнаружить улики преступлений!\n\nПолучив улики, откройте раздел «Преступления и улики» слева и выберите {A_PRECHA_C}Выдвинуть обвинения{##}."
+    "russian": "Вы можете получить {CR_EVI_C}улики{##}, если будете {A_SPY_C}шпионить{##} за другими, для этого вам понадобится {B_IMP_SPY_C}подзорная труба{##}. Другой способ — {A_SNI_C}сообщать о слухах{##} {O_CHA_INF_C}информаторам{##}. Наблюдая за людьми вокруг и зарабатывая на этом, вы можете обнаружить доказательства преступлений!\n\nКогда у вас появятся улики, откройте раздел {HB_CRIEVI}«Преступления и улики» слева и выберите {A_PRECHA_C}«Предъявить обвинение»{##}."
   },
   {
     "english": "You can obtain {CR_EVI_C}evidence{##} by {A_SPY_C}spying{##} on others, though you will need to get a {B_IMP_SPY_C}spyglass{##} at your house to do so. Alternatively, you can {A_SNI_C}report rumors{##} to {O_CHA_INF_C}informants{##}, from whom you can earn some money while also having the chance to uncover evidence of crimes!\n\nIn the left sidebar, click {HB_TOWHAL} {B_PUB_TOWHAL_C}Town Hall{##} and select {A_SNI_C}Report Rumors{##}.",
@@ -24993,7 +24993,7 @@
   },
   {
     "english": "You qualify to run for an open office position. Submit your application before the candidate limit is reached. The election will take place next turn at {hournumber} AM.",
-    "russian": "Вы имеете право баллотироваться на вакансию открытого офиса. Подайте заявку до того, как будет достигнут лимит кандидатов. Выборы состоятся на следующем этапе в {hournumber} AM."
+    "russian": "Вы имеете право баллотироваться на открытую должность. Подайте заявку до достижения лимита кандидатов. Выборы состоятся в следующем ходу в {hournumber} утра."
   },
   {
     "english": "You ran out of crafting materials",
@@ -25325,7 +25325,7 @@
   },
   {
     "english": "Your building's {B_HP_C}integrity{##} affects its value, and if {ST_STR_BADMAI_C}neglected{##}, the damage will affect almost every aspect of it. Your workers will become less {CHAR_PRO_C}productive{##} and more prone to accidents, so don't let your building fall into disrepair.\n\nAt one of your buildings, click {IC_REP} Repair near the integrity bar.",
-    "russian": "Прочность вашего здания влияет на его стоимость, и если {ST_STR_BADMAI_C}заброшенном{##}, повреждения затронут практически все его аспекты. Ваши рабочие станут менее {CHAR_PRO_C}продуктивными{##} и будут чаще попадать в несчастные случаи, поэтому не доводите здание до плачевного состояния.\n\nВ одном из ваших зданий нажмите «Ремонт» рядом с полосой прочности."
+    "russian": "{B_HP_C}Прочность{##} вашего здания влияет на его стоимость, а при {ST_STR_BADMAI_C}запущенности{##} повреждения затронут практически все аспекты его работы. Ваши рабочие станут менее {CHAR_PRO_C}продуктивными{##} и более подвержены несчастным случаям, поэтому не позволяйте зданию приходить в негодность.\n\nВ одном из ваших зданий нажмите {IC_REP} Ремонт рядом с индикатором прочности."
   },
   {
     "english": "Your building’s been sabotaged. ",
@@ -26377,7 +26377,7 @@
   },
   {
     "english": "{CO_COMEQU_DAM_C}Damage{##} received{CO_SCOWAR_C}*{##}",
-    "russian": "{CO_COMEQU_DAM_C}Повреждать{##} получил{CO_SCOWAR_C}*{##}"
+    "russian": "{CO_COMEQU_DAM_C}Получаемый урон{##}{CO_SCOWAR_C}*{##}"
   },
   {
     "english": "{CO_ROU_C}Combat rounds{##} proceed in three phases — Ranged, Special, and Melee — each allowing only the corresponding weapons.",
@@ -26689,7 +26689,7 @@
   },
   {
     "english": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}dynasty{##},other={CHAR_DYN_C}dynasties{##})",
-    "russian": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}dynasty{##},other={CHAR_DYN_C}dynasties{##})"
+    "russian": "{NumDynasties} {NumDynasties}|plural(one={CHAR_DYN_C}династия{##},other={CHAR_DYN_C}династий{##})"
   },
   {
     "english": "{NumPlayers} {NumPlayers}|plural(one=player,other=players)",
