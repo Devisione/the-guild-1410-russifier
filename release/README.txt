@@ -1,6 +1,6 @@
 THE GUILD - EUROPA 1410 — русский перевод (неофициальный)
 
-Версия: v1.0.5
+Версия: v1.0.6
 Поддержать автора: https://www.donationalerts.com/r/link_it
 
 Установка:

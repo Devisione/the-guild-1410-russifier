@@ -1,59 +1,55 @@
 [
   {
     "key": "00000AA00A000BBBB3BB33BBBBDE1DDD",
-    "english": "F22222T2SSSSSSNSNNSSSSSSTNMMSSMNSMMMMNMMMMMTMMMMSMC???^^^^^"
+    "english": "F22222T2SSSSSSNSNNSSSSSSTNMMSSMNSMMMMNMMMMMTMMMMSMC???^^^^^BBB25"
   },
   {
-    "key": "0010100045111111122AABABBBBCBCCC",
-    "english": "CCCC.,,,CCC,C,,/,,,--,,,,,+,+((((-----,-,,D,"
-  },
-  {
-    "key": "06F0D1D04F4DE6818634C49767B6E52D",
-    "english": "Obtained via"
+    "key": "05CF95444529D30E56BEA79B14A899E1",
+    "english": "V2 aD"
   },
   {
     "key": "0743A74E4BE2F691D016209240CE1279",
     "english": "Sphere"
   },
   {
-    "key": "172CCB2044C16ACA35D3709B39AF05B7",
-    "english": "No o<"
+    "key": "184AAE5F4B7CC894C743608626A185EA",
+    "english": "Your Storu"
+  },
+  {
+    "key": "18746830456D4CC8F5059098704189FB",
+    "english": "Task"
   },
   {
     "key": "22AFF077423074B3F197DF91E95237EC",
     "english": "Fligh"
   },
   {
-    "key": "24D69778491443B7DD80A4986FA1A5B4",
-    "english": "Your Love Chose Another"
-  },
-  {
     "key": "291D9C7C42AFB974E1D569A5A08C2E7B",
     "english": "END OF TURN"
+  },
+  {
+    "key": "29AEBA334496BD31E50CFFB8852FDF80",
+    "english": "Task"
   },
   {
     "key": "2B035D814DB5EC0BA3D1C5B99B56B542",
     "english": "No  F"
   },
   {
-    "key": "2DC4DC4DC4DC4DC4DC4DC4DC4DC4DC4D",
-    "english": "C4DC4DC4DC4DC4DC4DC4DC"
+    "key": "2C247A69444A510C3611768AE62E2B84",
+    "english": "Game Rules"
   },
   {
     "key": "2DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
     "english": "DDDDDDDDDDDd"
   },
   {
+    "key": "2DE9D7D94E0124BE854B0D8C8461C20B",
+    "english": "Task"
+  },
+  {
     "key": "2ED4CBD34F895F51A13DBA89CC1259E5",
     "english": "IIion"
-  },
-  {
-    "key": "2EDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-    "english": "DDDDDDDDDDDd"
-  },
-  {
-    "key": "31312110110011112454514444441445",
-    "english": "F7AABBBBBBBAB=>=CB==>B=>>>>===C=BB===BD==D>>D=DBBBABEE"
   },
   {
     "key": "31BD8B254B5C27BC1500FF9F0E4BBEB6",
@@ -64,16 +60,16 @@
     "english": "ECustom"
   },
   {
+    "key": "3513FC204694C852C3AD90BBD6B59B19",
+    "english": "Kni Socks"
+  },
+  {
     "key": "382A6DA1408465EF239991BF0F4F263B",
     "english": "IIion"
   },
   {
     "key": "3BA537C94B8213E3C5089E9E9CA6AD1F",
     "english": "Close"
-  },
-  {
-    "key": "3D34155543B150E9ACF0CE910C3C06A4",
-    "english": "Obtained via"
   },
   {
     "key": "40F07A2F45A570A5532175AD8A461AC7",
@@ -84,36 +80,52 @@
     "english": "START OF TURN"
   },
   {
+    "key": "44444334433330000101111505511515",
+    "english": "KKK21?>>>>>@L?L?L?M"
+  },
+  {
     "key": "445444654666665656558FFFEFFFFFF8",
     "english": "FFGFGFFFGGFFFFGFGGSSSSGS5FGFGGFGG--SSSSSSSZS"
+  },
+  {
+    "key": "46CFB05D488DD87063C96B9BAF40D360",
+    "english": "All of following"
   },
   {
     "key": "4A7B9FBB4E0E437B427EDBAFF69DF309",
     "english": "LAYER NAME"
   },
   {
+    "key": "4C8D7E824E9C9D47D317E5BB10FF43EC",
+    "english": "Task"
+  },
+  {
     "key": "4DA9120145B7503DCDC30E8170F60CA3",
     "english": "Unset"
   },
   {
-    "key": "555555BBABBBBABABBBB77777CCCC8C8",
-    "english": "CC8C8<DD99:DD:::DD::4DDE;;;;EEEEEEFEEEFFFFGFFFF<G<===GGG=G===HH>>>I>?H>"
+    "key": "548E025044A047D3D2ABAFB8400AE91E",
+    "english": "Task"
   },
   {
     "key": "5DE2E3754324653C53997585CC8B24E9",
     "english": "Truncate"
   },
   {
+    "key": "642B43F448DDD8FEE63DFA9D74F38075",
+    "english": "Cur ."
+  },
+  {
     "key": "658DA3284A735595431233AA77CC02B5",
     "english": "IIion"
   },
   {
-    "key": "677F3AA9443FC07B81A33B8A0489D4F5",
-    "english": "Simulation"
+    "key": "659739D44DD9A3E908CCD8B2466CF25E",
+    "english": "Task"
   },
   {
-    "key": "678680FB47311A2FE34CDEBB2C3BE191",
-    "english": "Obtained via"
+    "key": "677F3AA9443FC07B81A33B8A0489D4F5",
+    "english": "Simulation"
   },
   {
     "key": "6C5A5E524C348D64581447B786256028",
@@ -128,16 +140,36 @@
     "english": "No o"
   },
   {
+    "key": "754ED2834DDFBAF47849FFA275FB24E6",
+    "english": "One of these e"
+  },
+  {
     "key": "764255ED46B1B2A5F5A6199540FEFA53",
     "english": "Test"
+  },
+  {
+    "key": "7B7777A7AAAA77BAAAABABAABABBBABC",
+    "english": "CBCBBCBBBC:CC::DBCDCBCCBB<88;:::::;;;AAA;>@A@@@AV@"
   },
   {
     "key": "7C8393034CE7618138CCB198E6DD1E76",
     "english": "X+X-Y+-es="
   },
   {
+    "key": "7CBB7992453EE7299FE830B445711EF7",
+    "english": "Task"
+  },
+  {
+    "key": "7EDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+    "english": "DDDDDDDDDDDDDDDDD"
+  },
+  {
     "key": "800A1BA74E548BA0A453109BD21FBD39",
     "english": "Go to the Marketp an buy c"
+  },
+  {
+    "key": "8156A00D428FAA79D0A6B185B04D5B52",
+    "english": "Task"
   },
   {
     "key": "81BDD7AA40A46B6AED993B886110D7FD",
@@ -146,6 +178,14 @@
   {
     "key": "81C14ACF42278016BF03B0993E4F16AA",
     "english": "Syste"
+  },
+  {
+    "key": "8878777777787797997879C7889999CA",
+    "english": "BAACCAABACCACBCCBDDCDD><C<CC=<<C>>=?>?>=?>==>?=?==>>?"
+  },
+  {
+    "key": "89800991110811110911110002111221",
+    "english": "K22212:::K:==I=>>,>:>I>I;KGH+LKHIK=UJGKHKHK>J=KJJIJLLLL;LL<LLLK"
   },
   {
     "key": "8DD821824C489058406FBCA6B68C5CC",
@@ -160,16 +200,28 @@
     "english": "Drop im her to throw it away"
   },
   {
+    "key": "90D8DC264A367E94DEDAF7BDC6CD4235",
+    "english": "Difficulty,W"
+  },
+  {
+    "key": "98A92584483B05FAD74941933DB8076C",
+    "english": "Task"
+  },
+  {
     "key": "9BDB945B45A1F2985D7DDD9DD4701762",
     "english": "Steel"
   },
   {
-    "key": "9CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCCCCCCCc{|d"
+    "key": "A0086F0543F1777EFE4A45B944C65C1F",
+    "english": "Task"
   },
   {
-    "key": "A5A2A1A5A6A2A6A5A7A7A5A8A9A8A5A9",
-    "english": "A;=A;A<A=7A8A;UFUF6AUF;VF;A=VFUFWFWFXFUFVFXFVF=AXFWFUFG%M%"
+    "key": "A04DEDF64E1017262C7931B8A79AEA1A",
+    "english": "Stone & Bee"
+  },
+  {
+    "key": "A5AA55AAAAAAACACBABBACCBCBDDDCDC",
+    "english": "CDCDDDDCDDCCCCCCD;DD;CDDEDED5EED<E<<EDD=<"
   },
   {
     "key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -180,52 +232,52 @@
     "english": "EBABBBBBB@@@@A@AA@A@>@@@A@A@@@@@??@@@?????@??????@@?@?>?>?????@>>??>>>???=>==?>?=>===========>=>==="
   },
   {
-    "key": "AABCBCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCCCCCCCCCCCCCCB@BAB@AAj"
+    "key": "ACC1C9AE4D7D52E3D9702D8AE6C7FFB8",
+    "english": "Task"
   },
   {
     "key": "ACCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCc"
-  },
-  {
-    "key": "ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-    "english": "DDDDDDDDDDDDDDDDDD*R"
+    "english": "CCCs"
   },
   {
     "key": "AEEA591D4777D40EC4FD3DB16329F628",
     "english": "Snow"
   },
   {
-    "key": "AEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-    "english": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEE%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQI"
+    "key": "AEEDADAAADADEEEEEDEDBFFFEFEEBFEC",
+    "english": "FCCDDCBDBBJKBK20B"
+  },
+  {
+    "key": "AFAEDEBDEBBBDBFDCEADFACBCABECCDC",
+    "english": "DDDCDGFEGEDDBDC;;::::::0;0000::00<<D<GGDFDG"
   },
   {
     "key": "BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "english": "AAAAAAAAAAAAAAAAAAAA"
   },
   {
+    "key": "BAAAEABAEBBEDBBEEEECEECFCCEFCFFE",
+    "english": "BFBFBFFBFF:FFFBFC::::"
+  },
+  {
     "key": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-    "english": "BBBBBBBBBBBBBBBBB"
+    "english": "BBBo"
   },
   {
     "key": "BBBBBBBEBBBCBBCBCBBBBCBCBEEEEEEE",
     "english": "FEFEFFFFGGGGFFFEGGG"
   },
   {
-    "key": "BBBBBCBCBBCCBCDCDADAAAAAADDCAABA",
-    "english": "ABBAABBBBBB~^~CDBvvvDBvvvvvvwwwwvzzwwvvvvvwvvwvwwwwwwvwwwwwyywywx"
-  },
-  {
     "key": "BBBBCBBBBBCCBACCCAACCCCBACCCACCC",
     "english": "CCCEEFEFEFEEFFGGFGFG"
   },
   {
-    "key": "BDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-    "english": "DDDDDDDDDDDDDDDDDD"
+    "key": "BCCBCBCBCCBBBBCBBDBBCBCCDCCCCCBD",
+    "english": "CCBBBBBCCDBBDDCDCD"
   },
   {
-    "key": "BDDDDEDDDEDDEDDDDDDEEDBCDDCDDCDC",
-    "english": "CDDDDDCDDDCCCCCCBBBBBAC@AAAAAAABABBAABA>>AAABBA@@@A@@A@AAA@@AA@@@AAA??@??>?????>?>>>>?====>>?==>===<"
+    "key": "BED3510D4EA42470B42DF7A79239F2E8",
+    "english": "Task"
   },
   {
     "key": "BF7E974245E2E7C2F8EC35963F02E54C",
@@ -236,12 +288,16 @@
     "english": "Circl"
   },
   {
-    "key": "C5C5D5D5CCCCDDBBBC66C6AA56666B6B",
-    "english": "BVBVCBCC77AA@@A@@@@@@@9999@999@@@@@V@VVAVAVYVYVYW;Y;YZ;AAVWWdRRRURRVV"
+    "key": "C6EF50B74CB2239FE59A21BC52FB0AE9",
+    "english": "Task"
   },
   {
     "key": "C76837D145AA5F7AE4BB5EAD6CEC0187",
     "english": "Random"
+  },
+  {
+    "key": "CABCBABCCACAABAACCACABBABCECCEBC",
+    "english": "DEBDDEDCECCCCCC%%DD%%7*8%*H"
   },
   {
     "key": "CCBCEECCECCCEBCDBEFFEFEFFDFFEFED",
@@ -249,23 +305,43 @@
   },
   {
     "key": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCc"
+    "english": "CCCs"
   },
   {
     "key": "CCCCCDCDCCDDDCDDDDCCDCDCCEEEEDEE",
     "english": "EEEGGHGGGGGHGHHHGGHG"
   },
   {
+    "key": "CDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+    "english": "DDDDDD4k"
+  },
+  {
+    "key": "CDFB944E4A386EE0E72B56B407D77E46",
+    "english": "Lucky Stone"
+  },
+  {
+    "key": "CEEECCCEEEDEEEDEECEEAEEDEDDEDEDD",
+    "english": "EEEE:EE9E99:999A9BABA"
+  },
+  {
     "key": "D1AC25B04688B393FC4B8D8A4E0FB7C1",
     "english": "Undefinied"
   },
   {
-    "key": "D4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4",
-    "english": "CD4CD4CD4CD4CD4CD4CY3Y3D4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD"
+    "key": "D44E037E4FCAA311F904C8B83D2740A3",
+    "english": "Quarter"
   },
   {
     "key": "D57AEE7145DC186F2C8F8D836A2C4983",
     "english": "IIion"
+  },
+  {
+    "key": "DAAEAEAEAAAABBBBABBBBBBBABBBAABA",
+    "english": "BBBHHBHHHHHHCBHHHHH"
+  },
+  {
+    "key": "DBBBBCBBCCBCCCECBDCCBCCBBCBCCCCC",
+    "english": "BCCJCCCCCJCCJKJKHJLKLKKLLLKKLKLMMMLLKLNNMNTMMTTMUULLULLUUONNNLNLLMUOUUUOOaMaaMaMaMaMaaabbbXcccWWXWWWWWWWYYY>Y"
   },
   {
     "key": "DBDBBCDDDCCCBCDDDDDDAABABBAABAAA",
@@ -273,71 +349,75 @@
   },
   {
     "key": "DCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCCCCCCCCCCCCc"
+    "english": "CCCCCCCCCCs"
   },
   {
-    "key": "DDDDDDDCCCDCCCCDDDDDDCDCCDCDDDDD",
-    "english": "CCCCCCACCCBCBCCDCD5@@C"
+    "key": "DCDDDCDDBBBBBBCCBCBABCBCBBBBBCAB",
+    "english": "BBAAABBBAA@BBABA@A@@@@@AA@@@@@A?@????A??????"
+  },
+  {
+    "key": "DDDDDCCCDCCCCDDDDDDCDCCDCDDDDDCC",
+    "english": "CCCCACCCBCBCCDCD5@@C"
   },
   {
     "key": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-    "english": "DDEk"
+    "english": "DDDd"
   },
   {
     "key": "DDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDD",
     "english": "DDDDDDDDO\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"*6\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
   },
   {
-    "key": "DDDDDDDDDDDDDFDDDDDDDDDDDDFDDDDD",
-    "english": "DDE^#o"
+    "key": "DDDDFFDDDDDDDDDDDDDDDDDDDDDDDDDD",
+    "english": "DDDDDDDDDDDDDDDDDDDS"
+  },
+  {
+    "key": "DE3C55A34FE8C6AE8A5CB38C82191D98",
+    "english": "Task"
   },
   {
     "key": "DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-    "english": "EEEEe**************"
+    "english": "EEEEEEEEEEEEEEEEEEE"
   },
   {
     "key": "DEEEEFFEFEEFEEEDEBBCCCBCBCBCCBCB",
     "english": "CBBCBCBCBC.--B--.B"
   },
   {
-    "key": "E2E98E71E2E4E54E6E6E474E2E7E67E8",
-    "english": "E56Ev^v^6Ew^v^ls5E5Elsnslsmsnsnsoos4Eosq4Eosnqs1Erqsnsmsnsmsp"
+    "key": "E0E760FB420E25F3BB456F816AFC3F1C",
+    "english": "Don't hav"
   },
   {
-    "key": "E5AB422F4EE142F95F9137B5038A5F5C",
-    "english": "Law"
-  },
-  {
-    "key": "EAAEDEEDEDEEDEDBBDBBBBBBBEBBFFFB",
-    "english": "CCDCECCCDCCDDDDGDDDDDDDGEGHEEHHHHHFH;FFI"
+    "key": "EAAFFFEFAFFFFFFAEABEBEEBBEEFEEEE",
+    "english": "EEEEBEEFFEEEEEBBB=G>>GGGGG>"
   },
   {
     "key": "ECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCc~>n"
+    "english": "CCCc"
   },
   {
     "key": "EDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-    "english": "DDDDDDDDDDd"
-  },
-  {
-    "key": "EEDEEEEEEDDEEFEFEEEEEEEDDDBDBBDB",
-    "english": "BBDDEBBBC<<;<;<C<;"
-  },
-  {
-    "key": "EEEEEEEEEEEEEEEEEEEEEEEE3EEEEEEE",
-    "english": "EEEEEEEEEEEEEEEEEF"
-  },
-  {
-    "key": "EEEEEEEEEEEEEEEEEEEEEEEED5EEEEEE",
-    "english": "EEEEEEEEEEEEEEEEEF"
+    "english": "DDDDDDDDDl"
   },
   {
     "key": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-    "english": "EEEEEEEEEEEoi"
+    "english": "EEEm"
   },
   {
-    "key": "EEFFEEEECCCBCBCCCDCDCDCDDDDBBCCC",
-    "english": "CCD==??BBC>BC<<>>"
+    "key": "EEFBBBBBCBBCBCBABBBBAABAABBBBBCB",
+    "english": "BBFFBFBFCFCCCCBDDDCCBBDCDDCCCDFCDCFDCFFFDDFDFKGKKJ?KDJEEEJKIJKJJJIKKILKLKLN"
+  },
+  {
+    "key": "EF99AFE04BDD6E84A3FCFCADD17EC27F",
+    "english": "Task"
+  },
+  {
+    "key": "EFEEEEEFDEDDDDDECDCCCCCDBCBBBBBC",
+    "english": "ABABAAAB@A@@@@@A?@?@???@>?>>?>>?=>=>>==><=<==<<="
+  },
+  {
+    "key": "F34BCF324696D83766A3D28D017AFEFD",
+    "english": "Task"
   },
   {
     "key": "F49A02F140C3472D8B73538C330F4188",
@@ -346,6 +426,10 @@
   {
     "key": "F6798CE443E04E615A66C4AFA0ECE6AF",
     "english": "IIion"
+  },
+  {
+    "key": "F8E103B34984BE5487B2C29E90CA2278",
+    "english": "Task"
   },
   {
     "key": "FAB1E9FF402FCE059EFCAF88A404CC93",
@@ -357,7 +441,11 @@
   },
   {
     "key": "FCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-    "english": "CCCCCCCCCCCCCCCCC"
+    "english": "CCCCCCCCCs"
+  },
+  {
+    "key": "FDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+    "english": "DDDDDDDDDDDDDDDDDDD"
   },
   {
     "key": "FDF633024495F12E213CC886605EF752",
@@ -368,7 +456,11 @@
     "english": "DDDd0"
   },
   {
+    "key": "FFFFFFEFFEEFDEEDEEDDDDDDCDDCCCCC",
+    "english": "C@AABAAA@@Ah??@??????>>>>>>==>EEEBBB"
+  },
+  {
     "key": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
-    "english": "FFFFFFFFFFFFFFFFFF"
+    "english": "FFFFFFFFFFFFFFFFFr"
   }
 ]

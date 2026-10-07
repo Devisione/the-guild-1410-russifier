@@ -174,6 +174,32 @@ KEEP_ENGLISH_EXACT: set[str] = {
     "lvl",
     "OK",
     "TBD",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10",
+    "F11",
+    "F12",
+    "Num Lock",
+    "PgUp",
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "G.O.A.T.",
+    "Štěpán",
 }
 
 INLINE_GLOSSARY: dict[str, str] = {
@@ -226,12 +252,34 @@ INLINE_GLOSSARY: dict[str, str] = {
     "Escort": "Сопровождение",
     "Ambush": "Засада",
     "Waylaying": "Нападение на дороге",
+    "Storefront": "Витрина",
+    "storefront": "витрина",
+    "Storeroom": "Кладовая",
+    "storeroom": "кладовая",
+    "Beehive": "Улей",
+    "Beehives": "Ульи",
+    "beehive": "улей",
+    "beehives": "ульи",
+    "Queen Bee": "Королева пчел",
+    "Beeswax": "Пчелиный воск",
+    "beeswax": "пчелиный воск",
+    "Honey": "Мед",
+    "honey": "мед",
 }
 
 # Longer phrases first. Injected into English before MT so "cart" cannot
 # become "карта" or "корзина".
 SOURCE_GLOSSARY: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bCurrent Level\b"), "текущий уровень"),
+    (re.compile(r"\bQueen Bee\b"), "королева пчел"),
+    (re.compile(r"\bBeehives\b"), "ульи"),
+    (re.compile(r"\bBeehive\b"), "улей"),
+    (re.compile(r"\bBeeswax\b"), "пчелиный воск"),
+    (re.compile(r"\bbeeswax\b"), "пчелиный воск"),
+    (re.compile(r"\bStorefront\b"), "витрина"),
+    (re.compile(r"\bstorefront\b"), "витрина"),
+    (re.compile(r"\bStoreroom\b"), "кладовая"),
+    (re.compile(r"\bstoreroom\b"), "кладовая"),
     (re.compile(r"\bGoat Carts\b"), "козьи телеги"),
     (re.compile(r"\bGoat Cart\b"), "козья телега"),
     (re.compile(r"\bDonkey Carts\b"), "ослиные телеги"),
@@ -289,6 +337,12 @@ SOURCE_GLOSSARY: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bWorker\b"), "рабочий"),
     (re.compile(r"\bTitles\b"), "титулы"),
     (re.compile(r"\bTitle\b"), "титул"),
+    (re.compile(r"\bhives\b"), "ульи"),
+    (re.compile(r"\bHives\b"), "Ульи"),
+    (re.compile(r"\bhive\b"), "улей"),
+    (re.compile(r"\bHive\b"), "Улей"),
+    (re.compile(r"\bHoney\b"), "мед"),
+    (re.compile(r"\bhoney\b"), "мед"),
 ]
 
 NS_HINTS: dict[str, str] = {
@@ -536,7 +590,8 @@ def wrap_for_mt(text: str, entry: LocEntry) -> str:
         "cart=телега, quarter=квартал, office=должность, guild=гильдия, "
         "standing=репутация, integrity=прочность, escort=сопровождение, "
         "wealth=богатство, title=титул, worker=рабочий, marketplace=рынок, "
-        "joiner=столяр. На «вы». "
+        "joiner=столяр, storefront=витрина, storeroom=кладовая, "
+        "beehive/hive=улей, honey=мед, beeswax=пчелиный воск. На «вы». "
         f"{extra}"
     )
     return f"{CONTEXT_MARK} {hint}\n{apply_source_glossary(text)}"
@@ -777,6 +832,12 @@ LLM_SYSTEM = """Ты переводчик полной версии игры The
 - joiner / joiners = столяр / столяры
 - dynasty = династия
 - turn = игровой ход, если речь про время в игре
+- storefront = витрина (прилавок мастерской). НЕ витрина магазина как отдельное здание, если речь о слоте продажи
+- storeroom = кладовая
+- beehive / hive / hives = улей / ульи. НИКОГДА не крапивница
+- honey = мед
+- beeswax = пчелиный воск
+- queen bee = королева пчел / пчелиная матка
 
 Правила:
 - Обращение к игроку на «вы».

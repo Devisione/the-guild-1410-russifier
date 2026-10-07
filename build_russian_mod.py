@@ -43,7 +43,7 @@ MOD_FILES = (
 )
 
 # Bump this before publishing a GitHub release.
-MOD_VERSION = "1.0.5"
+MOD_VERSION = "1.0.6"
 VERSION_FILE = "RussianLocalization.version"
 LAUNCHER_FILES = (
     "CheckTranslationUpdate.cmd",

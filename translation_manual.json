@@ -608,6 +608,10 @@
     "russian": "Утерянная святыня возвращена в Церковь. Кое-кто уже называет это чудом — а того, кто ее вернул, несомненно, вел сам Бог."
   },
   {
+    "english": "A lot can change in a year. A good harvest may fill the granaries, a growing city may empty them again, and yesterday's rarity may become tomorrow's common good. Prices change with the times.",
+    "russian": "За год многое может измениться. Хороший урожай наполнит амбары, растущий город может снова их опустошить, а вчерашняя диковинка завтра станет обычным товаром. Цены меняются со временем."
+  },
+  {
     "english": "A margraviate east of Bohemia, part of the {H_BOH_C}Bohemian Crown{##}, with its principal city at {H_BRN_C}Brno{##}.",
     "russian": "Маркграфство к востоку от Богемии, часть {H_BOH_C}Богемская Корона{##}, с главным городом {H_BRN_C}Брно{##}."
   },
@@ -666,6 +670,10 @@
   {
     "english": "A new improvement has been added to one of your buildings.",
     "russian": "К одному из ваших зданий добавлено новое улучшение."
+  },
+  {
+    "english": "A new member has joined your family.",
+    "russian": "В вашей семье пополнение."
   },
   {
     "english": "A new preacher has arrived in our city. Pious citizens who have heard him speak have nothing but respect for this person, whereas more secular citizens remain skeptical.",
@@ -1056,10 +1064,6 @@
     "russian": "{H_HUS_C}Гуситский{##} священник, сменивший {H_JANZIZ_C}Яна Жижку{##} на посту военачальника гуситов в 1424 году. Он разгромил ещё три армии крестоносцев и совершил опустошительные походы вглубь {H_EMP_C}Империи{##}, пока не пал в {H_BATOFLIP_C}битве при Липанах{##} в 1434 году."
   },
   {
-    "english": "A;=A;A<A=7A8A;UFUF6AUF;VF;A=VFUFWFWFXFUFVFXFVF=AXFWFUFG%M%",
-    "russian": "A;=A;A<A=7A8A;UFUF6AUF;VF;A=VFUFWFWFXFUFVFXFVF=AXFWFUFG%M%"
-  },
-  {
     "english": "AAAAAAAAAAAAAAAAAAAA",
     "russian": "AAAAAAAAAAAAAAAAAAAA"
   },
@@ -1072,12 +1076,12 @@
     "russian": "ААСА@Ап@"
   },
   {
-    "english": "Abandoned Hive",
-    "russian": "Заброшенный улей"
+    "english": "ABABAAAB@A@@@@@A?@?@???@>?>>?>>?=>=>>==><=<==<<=",
+    "russian": "ABABAAAB@A@@@@@A?@?@???@>?>>?>>?=>=>>==><=<==<<="
   },
   {
-    "english": "ABBAABBBBBB~^~CDBvvvDBvvvvvvwwwwvzzwwvvvvvwvvwvwwwwwwvwwwwwyywywx",
-    "russian": "АББААБББББ~^~CDBvvvDBvvvvvvwwwwvzzwwvvvvvwvvwvwwwwwwvwwwwwyywywx"
+    "english": "Abandoned Hive",
+    "russian": "Заброшенный улей"
   },
   {
     "english": "Abbey",
@@ -1278,6 +1282,14 @@
   {
     "english": "Admire It But Leave It Where It Belongs",
     "russian": "Полюбоваться, но оставить на месте"
+  },
+  {
+    "english": "Adopt a Young Child",
+    "russian": "Усыновить маленького ребенка"
+  },
+  {
+    "english": "Adopt an Older Child",
+    "russian": "Усыновить ребенка постарше"
   },
   {
     "english": "Adopt the child",
@@ -1520,6 +1532,14 @@
     "russian": "Все граждане того же {P_C}профессия{##}"
   },
   {
+    "english": "All crafted items go to the storefront.",
+    "russian": "Все изготовленные товары отправляются на витрину."
+  },
+  {
+    "english": "All crafted items go to the storeroom.",
+    "russian": "Все изготовленные товары отправляются в кладовую."
+  },
+  {
     "english": "All Fingers Present",
     "russian": "Все пальцы присутствуют"
   },
@@ -1562,6 +1582,10 @@
   {
     "english": "All Notifications",
     "russian": "Все уведомления"
+  },
+  {
+    "english": "All of following",
+    "russian": "Все из следующего"
   },
   {
     "english": "All office holders",
@@ -1832,6 +1856,10 @@
     "russian": "Древняя мудрость в форме бальзама, который залечивает раны и восстанавливает силы, превращая седые волосы в черные, когда никто не смотрит."
   },
   {
+    "english": "and others…",
+    "russian": "и другие…"
+  },
+  {
     "english": "And so, you are alone again. Back to the tedious process of courtship.",
     "russian": "И вот вы снова одни. Возвращаемся к утомительному процессу ухаживания."
   },
@@ -2078,6 +2106,10 @@
   {
     "english": "Are you sure?",
     "russian": "Вы уверены?"
+  },
+  {
+    "english": "Are your children ungrateful, useless, or showing no sign of becoming the respectable continuation of your dynasty you had hoped for? Perhaps you have no heir at all, or simply do not fancy waiting another decade for someone to become useful. An older child will not need quite so many years before they can pull their weight. Or perhaps you are simply feeling charitable. Either way, someone gets a family.",
+    "russian": "Ваши дети неблагодарны, бесполезны или не подают надежд стать достойным продолжением вашей династии? Возможно, у вас вообще нет наследника или вы просто не хотите ждать десятилетие, пока кто-то станет полезным. Ребенку постарше потребуется не так много лет, чтобы начать приносить пользу. Или, может быть, вы просто чувствуете благотворительный порыв. В любом случае, кто-то обретет семью."
   },
   {
     "english": "Are your people full of {CHAR_ENE_C}energy{##} and {I_TYP_COMEQU_C}well-equipped{##} to resolve the matter with arms, or do you prefer to bide your time and fight another day?",
@@ -2472,6 +2504,10 @@
     "russian": "Лезвие Топора"
   },
   {
+    "english": "BAACCAABACCACBCCBDDCDD><C<CC=<<C>>=?>?>=?>==>?=?==>>?",
+    "russian": "BAACCAABACCACBCCBDDCDD><C<CC=<<C>>=?>?>=?>==>?=?==>>?"
+  },
+  {
     "english": "Back",
     "russian": "Назад"
   },
@@ -2620,6 +2656,10 @@
     "russian": "Базовое время крафта"
   },
   {
+    "english": "Base Price",
+    "russian": "Базовая цена"
+  },
+  {
     "english": "Base processing time",
     "russian": "Базовое время обработки"
   },
@@ -2660,12 +2700,24 @@
     "russian": "Баумгартнер"
   },
   {
-    "english": "BBBBBBBBBBBBBBBBB",
-    "russian": "ББББББББББББББ"
+    "english": "BBAAABBBAA@BBABA@A@@@@@AA@@@@@A?@????A??????",
+    "russian": "BBAAABBBAA@BBABA@A@@@@@AA@@@@@A?@????A??????"
   },
   {
-    "english": "BBDDEBBBC<<;<;<C<;",
-    "russian": "BBDDEBBBC<<;<;<C<;"
+    "english": "BBBHHBHHHHHHCBHHHHH",
+    "russian": "BBBHHBHHHHHHCBHHHHH"
+  },
+  {
+    "english": "BBBo",
+    "russian": "BBBo"
+  },
+  {
+    "english": "BBFFBFBFCFCCCCBDDDCCBBDCDDCCCDFCDCFDCFFFDDFDFKGKKJ?KDJEEEJKIJKJJJIKKILKLKLN",
+    "russian": "BBFFBFBFCFCCCCBDDDCCBBDCDDCCCDFCDCFDCFFFDDFDFKGKKJ?KDJEEEJKIJKJJJIKKILKLKLN"
+  },
+  {
+    "english": "BCCJCCCCCJCCJKJKHJLKLKKLLLKKLKLMMMLLKLNNMNTMMTTMUULLULLUUONNNLNLLMUOUUUOOaMaaMaMaMaMaaabbbXcccWWXWWWWWWWYYY>Y",
+    "russian": "BCCJCCCCCJCCJKJKHJLKLKKLLLKKLKLMMMLLKLNNMNTMMTTMUULLULLUUONNNLNLLMUOUUUOOaMaaMaMaMaMaaabbbXcccWWXWWWWWWWYYY>Y"
   },
   {
     "english": "Be elected to a rank {icon_n} {O_TYP_CIVOFF_C}office position{##}",
@@ -2842,6 +2894,10 @@
   {
     "english": "Beáta",
     "russian": "Беата"
+  },
+  {
+    "english": "BFBFBFFBFF:FFFBFC::::",
+    "russian": "BFBFBFFBFF:FFFBFC"
   },
   {
     "english": "Bianca",
@@ -3100,8 +3156,8 @@
     "russian": "Вдохните, и разум покинет вас, оставив лишь безумие сломанных тел."
   },
   {
-    "english": "Breathe in... Hold... Breathe out... That's it.",
-    "russian": "Вдох... Задержка... Выдох... Вот так."
+    "english": "Breathe in… Hold… Breathe out… That's it.",
+    "russian": "Вдохните… Задержите… Выдохните… Вот так."
   },
   {
     "english": "Breslau",
@@ -3464,6 +3520,18 @@
     "russian": "Купить {item}"
   },
   {
+    "english": "Buyer",
+    "russian": "Покупатель"
+  },
+  {
+    "english": "Buyer Influence",
+    "russian": "Влияние покупателя"
+  },
+  {
+    "english": "Buying Business Influence",
+    "russian": "Влияние на покупку предприятия"
+  },
+  {
     "english": "Buying price",
     "russian": "Цена покупки"
   },
@@ -3486,10 +3554,6 @@
   {
     "english": "Buzziness & Co.",
     "russian": "Баззинс и Ко."
-  },
-  {
-    "english": "BVBVCBCC77AA@@A@@@@@@@9999@999@@@@@V@VVAVAVYVYVYW;Y;YZ;AAVWWdRRRURRVV",
-    "russian": "BVBVBCCC77AA@@A@@@@@@@9999@999@@@@@V@VVAVAVYVYVYW;Y;YZ;AAVWWdRRRURRVV"
   },
   {
     "english": "By applying for this position, you give up your right to vote in this election.",
@@ -3532,8 +3596,8 @@
     "russian": "ок. 1380 – 30 мая 1434"
   },
   {
-    "english": "C4DC4DC4DC4DC4DC4DC4DC",
-    "russian": "C4DC4DC4DC4DC4DC4DC4DC"
+    "english": "C@AABAAA@@Ah??@??????>>>>>>==>EEEBBB",
+    "russian": "C@AABAAA@@Ah??@??????>>>>>>==>EEEBBB"
   },
   {
     "english": "Calamity Bucket",
@@ -3638,6 +3702,14 @@
   {
     "english": "Cannonball",
     "russian": "Пушечное ядро"
+  },
+  {
+    "english": "Cannot be purchased here",
+    "russian": "Здесь это купить нельзя"
+  },
+  {
+    "english": "Cannot be sold here",
+    "russian": "Здесь это продать нельзя"
   },
   {
     "english": "Canny",
@@ -3856,64 +3928,40 @@
     "russian": "CBBCBCBCBC.--B--.B"
   },
   {
-    "english": "CC8C8<DD99:DD:::DD::4DDE;;;;EEEEEEFEEEFFFFGFFFF<G<===GGG=G===HH>>>I>?H>",
-    "russian": "CC8C8<DD99:DD:::DD::4DDE;;;;EEEEEEFEEEFFFFGFFFF<G<===GGG=G===HH>>>I>?H>"
+    "english": "CBCBBCBBBC:CC::DBCDCBCCBB<88;:::::;;;AAA;>@A@@@AV@",
+    "russian": "CBCBBCBBBC:CC::DBCDCBCCBB<88;:::::;;;AAA;>@A@@@AV@"
+  },
+  {
+    "english": "CCBBBBBCCDBBDDCDCD",
+    "russian": "CCBBBBBCCDBBDDCDCD"
   },
   {
     "english": "CCCc",
     "russian": "CCCc"
   },
   {
-    "english": "CCCC.,,,CCC,C,,/,,,--,,,,,+,+((((-----,-,,D,",
-    "russian": "CCCC.,,,CCC,C,,/,,,--,,,,,+,+((((-----,-,,D,"
+    "english": "CCCCACCCBCBCCDCD5@@C",
+    "russian": "CCCCACCCBCBCCDCD5@@C"
   },
   {
-    "english": "CCCCCCACCCBCBCCDCD5@@C",
-    "russian": "CCCCCCACCCBCBCCDCD5@@C"
+    "english": "CCCCCCCCCCs",
+    "russian": "CCCCCCCCCCs"
   },
   {
-    "english": "CCCCCCc",
-    "russian": "CCCCCCc"
-  },
-  {
-    "english": "CCCCCCCCCCCCCCCCC",
-    "russian": "КСССССССССССССССС"
-  },
-  {
-    "english": "CCCCCCCCCCCCCCCCCc",
-    "russian": "CCCCCCCCCCCCCCCCCc"
-  },
-  {
-    "english": "CCCCCCCCCCCCCCCCCCCB@BAB@AAj",
-    "russian": "CCCCCCCCCCCCCCCCCCCB@BAB@AAj"
-  },
-  {
-    "english": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCc~>n",
-    "russian": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCc~>n"
-  },
-  {
-    "english": "CCCCCCCCCCCCc{|d",
-    "russian": "CCCCCCCCCCCCc{|d"
+    "english": "CCCCCCCCCs",
+    "russian": "CCCCCCCCCs"
   },
   {
     "english": "CCCEEFEFEFEEFFGGFGFG",
     "russian": "CCCEEFEFEFEEFFGGFGFG"
   },
   {
-    "english": "CCD==??BBC>BC<<>>",
-    "russian": "CCD==??BBC>BC<<>>"
+    "english": "CCCs",
+    "russian": "CCCs"
   },
   {
-    "english": "CCDCECCCDCCDDDDGDDDDDDDGEGHEEHHHHHFH;FFI",
-    "russian": "CCDCECCCDCCDDDDDGDDDDDDDGEGHEEHHHHHFH;FFI"
-  },
-  {
-    "english": "CD4CD4CD4CD4CD4CD4CY3Y3D4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD",
-    "russian": "CD4CD4CD4CD4CD4CD4CY3Y3D4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD4CD"
-  },
-  {
-    "english": "CDDDDDCDDDCCCCCCBBBBBAC@AAAAAAABABBAABA>>AAABBA@@@A@@A@AAA@@AA@@@AAA??@??>?????>?>>>>?====>>?==>===<",
-    "russian": "CDDDDDCDDDCCCCCCBBBBBAC@AAAAAAABABBAABA>>AAABBA@@@A@@A@AAA@@AA@@@AAA??@??>?????>?>>>>?====>>?==>===<"
+    "english": "CDCDDDDCDDCCCCCCD;DD;CDDEDED5EED<E<<EDD=<",
+    "russian": "CDCDDDDCDDCCCCCCD;DD;CDDEDED5EED<E<<EDD=<"
   },
   {
     "english": "Ceramic Grenade",
@@ -4480,6 +4528,14 @@
     "russian": "Нажмите на персонажа, чтобы узнать о нем больше. Вы увидите его имя, навыки, полезные и вредные черты характера и даже его богатство. Если бы в жизни все было так прозрачно."
   },
   {
+    "english": "Click to hide out-of-stock items.",
+    "russian": "Нажмите, чтобы скрыть отсутствующие товары."
+  },
+  {
+    "english": "Click to show out-of-stock items.",
+    "russian": "Нажмите, чтобы показать отсутствующие товары."
+  },
+  {
     "english": "Click-to-Pick, Click-to-Place",
     "russian": "Нажми, чтобы выбрать», «Нажми, чтобы разместить"
   },
@@ -4517,7 +4573,7 @@
   },
   {
     "english": "Coin earned from {B_PARAM_ATT_C}customers{##} buying directly from the business {B_STOFRO_C}storefront{##}.",
-    "russian": "Монета, заработанная от {B_PARAM_ATT_C}клиенты{##}, покупая напрямую у компании {B_STOFRO_C}витрина{##}."
+    "russian": "Монеты, полученные от {B_PARAM_ATT_C}покупателей{##}, которые берут товар прямо с {B_STOFRO_C}витрины{##} мастерской."
   },
   {
     "english": "Coin flows where we allow it. Debts are remembered, even when people hope they are not.",
@@ -5004,10 +5060,6 @@
     "russian": "Купер"
   },
   {
-    "english": "Coordinate patrols and raids. Crime does not survive sustained pressure.",
-    "russian": "Координируйте патрулирование и рейды. Преступность не выдерживает постоянного давления."
-  },
-  {
     "english": "Cornelis",
     "russian": "Корнелис"
   },
@@ -5212,6 +5264,14 @@
     "russian": "Разоблачение преступности"
   },
   {
+    "english": "Crime is down and the streets are safer. Yet somehow, people are complaining that the guards are becoming a bigger nuisance than the thieves. There is no pleasing some people.",
+    "russian": "Преступность снизилась, и на улицах стало безопаснее. Однако люди жалуются, что стражники стали досаждать им больше, чем воры. Всем не угодишь."
+  },
+  {
+    "english": "Crime is down. Things are staying where people left them.",
+    "russian": "Преступность снизилась. Вещи остаются там, где их оставили."
+  },
+  {
     "english": "Crime is under control.\nIf {QUA_CRI_C}Crime Rate{##} rises above {value}, the quarter becomes {ST_QTR_CRI_1_C}Shady{##}.",
     "russian": "Уровень преступности под контролем. Если {QUA_CRI_C}Уровень преступности{##} поднимется выше {value}, квартал станет {ST_QTR_CRI_1_C}Подозрительный{##}."
   },
@@ -5318,6 +5378,10 @@
   {
     "english": "Cupbearer Service",
     "russian": "Служба виночерпия"
+  },
+  {
+    "english": "Cur .",
+    "russian": "Тек."
   },
   {
     "english": "Cures {ST_CHR_SIC_C}illnesses{##}",
@@ -5464,36 +5528,44 @@
     "russian": "Световой день короче, работа становится тяжелее, а болезни пускают корни на холоде."
   },
   {
+    "english": "DDDCDGFEGEDDBDC;;::::::0;0000::00<<D<GGDFDG",
+    "russian": "DDDCDGFEGEDDBDC;;::::::0;0000::00<<D<GGDFDG"
+  },
+  {
+    "english": "DDDd",
+    "russian": "DDDd"
+  },
+  {
     "english": "DDDd0",
     "russian": "ДДДд0"
   },
   {
-    "english": "DDDDDDDDDDd",
-    "russian": "ДДДДДДДДдд"
+    "english": "DDDDDD4k",
+    "russian": "DDDDDD4k"
   },
   {
     "english": "DDDDDDDDDDDd",
     "russian": "ДДДДДДДДДдд"
   },
   {
-    "english": "DDDDDDDDDDDDDDDDDD",
-    "russian": "DDDDDDDDDDDDDDDDDD"
+    "english": "DDDDDDDDDDDDDDDDD",
+    "russian": "DDDDDDDDDDDDDDDDD"
   },
   {
-    "english": "DDDDDDDDDDDDDDDDDD*R",
-    "russian": "DDDDDDDDDDDDDDDDDD*R"
+    "english": "DDDDDDDDDDDDDDDDDDD",
+    "russian": "DDDDDDDDDDDDDDDDDDD"
+  },
+  {
+    "english": "DDDDDDDDDDDDDDDDDDDS",
+    "russian": "DDDDDDDDDDDDDDDDDDDS"
+  },
+  {
+    "english": "DDDDDDDDDl",
+    "russian": "DDDDDDDDDl"
   },
   {
     "english": "DDDDDDDDO\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"*6\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
     "russian": "ДДДДДДДДО\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"*6"
-  },
-  {
-    "english": "DDE^#o",
-    "russian": "ДДЕ^#о"
-  },
-  {
-    "english": "DDEk",
-    "russian": "ДДЕк"
   },
   {
     "english": "de Vries",
@@ -5538,6 +5610,10 @@
   {
     "english": "Deathly Hush",
     "russian": "Смертельная тишина"
+  },
+  {
+    "english": "DEBDDEDCECCCCCC%%DD%%7*8%*H",
+    "russian": "DEBDDEDCECCCCCC%%DD%%7*8%*H"
   },
   {
     "english": "Debug Menu",
@@ -5768,6 +5844,10 @@
     "russian": "Сложность"
   },
   {
+    "english": "Difficulty,W",
+    "russian": "Сложность,W"
+  },
+  {
     "english": "Dig & Drink",
     "russian": "Копать и пить"
   },
@@ -5884,6 +5964,10 @@
     "russian": "Уволить с должности"
   },
   {
+    "english": "Dismiss Master and Take Over",
+    "russian": "Уволить мастера и взять управление на себя"
+  },
+  {
     "english": "Dispatch spies to gather whatever secrets the town is careless enough to spill.",
     "russian": "Отправьте шпионов, чтобы они собрали все секреты, которые город может раскрыть по неосторожности."
   },
@@ -5970,6 +6054,10 @@
   {
     "english": "Don't forget to invest in your chosen {CHAR_HEI_C}heir{##}, to make sure that they are indeed ready to perform their duties and will not bring shame and ruin to your dynasty when the time comes for you to pass the mantle, willingly or otherwise. Start {A_TRACHI_C}training{##} your first born early, as you never know how much time you have left.",
     "russian": "Не забудьте инвестировать в выбранных вами {CHAR_HEI_C}наследник{##}, чтобы убедиться, что они действительно готовы выполнять свои обязанности и не принесут позора и разрушения вашей династии, когда придет время вам передать мантию, по своей воле или нет. Начните {A_TRACHI_C}обучение{##} как можно раньше, потому что вы никогда не знаете, сколько времени у вас осталось."
+  },
+  {
+    "english": "Don't hav",
+    "russian": "Нет"
   },
   {
     "english": "Donate it to the church",
@@ -6216,10 +6304,6 @@
     "russian": "Дюрр"
   },
   {
-    "english": "E56Ev^v^6Ew^v^ls5E5Elsnslsmsnsnsoos4Eosq4Eosnqs1Erqsnsmsnsmsp",
-    "russian": "E56Ev^v^6Ew^v^ls5E5Elsnslsmsnsnsoos4Eosq4Eosnqs1Erqsnsmsnsmsp"
-  },
-  {
     "english": "Each round ends with a calculated {CO_SCO_C}score{##} that adjusts the {CO_SCOBAR_C}Victory Meter{##}.",
     "russian": "Каждый раунд заканчивается вычислением {CO_SCO_C}счет{##}, которое корректирует {CO_SCOBAR_C}Счетчик победы{##}."
   },
@@ -6316,24 +6400,24 @@
     "russian": "Едит"
   },
   {
-    "english": "EEEEe**************",
-    "russian": "ЭЭЭее**************"
+    "english": "EEEE:EE9E99:999A9BABA",
+    "russian": "EEEE:EE9E99:999A9BABA"
   },
   {
-    "english": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEE%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQI",
-    "russian": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEE%MRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQI"
+    "english": "EEEEBEEFFEEEEEBBB=G>>GGGGG>",
+    "russian": "EEEEBEEFFEEEEEBBB=G>>GGGGG>"
   },
   {
-    "english": "EEEEEEEEEEEEEEEEEF",
-    "russian": "EEEEEEEEEEEEEEEEEF"
-  },
-  {
-    "english": "EEEEEEEEEEEoi",
-    "russian": "ЭЭЭЭЭЭЭЭЭой"
+    "english": "EEEEEEEEEEEEEEEEEEE",
+    "russian": "EEEEEEEEEEEEEEEEEEE"
   },
   {
     "english": "EEEGGHGGGGGHGHHHGGHG",
     "russian": "EEEGGHGGGGGHGHHHGGHG"
+  },
+  {
+    "english": "EEEm",
+    "russian": "EEEm"
   },
   {
     "english": "Eeyore",
@@ -6796,6 +6880,10 @@
     "russian": "Каждое заявление рассматривается определенными назначенцами, на которых можно повлиять. Пока вы ждете {O_ELE_C}выборы{##}, постарайтесь улучшить свой {S_RHE_C}Риторическое мастерство{##} и используйте действия и предметы, чтобы повысить {CHAR_STA_C}Мнение{##} у вас, а также {A_BLANAM_C}подрывать{##} у ваших конкурентов."
   },
   {
+    "english": "Every buyer brings something to the bargaining table: skill, reputation, a charming smile, or a face the seller simply does not trust. It can all affect the price.",
+    "russian": "Каждый покупатель привносит что-то своё в торг: мастерство, репутацию, обаятельную улыбку или лицо, которому продавец просто не доверяет. Всё это может повлиять на цену."
+  },
+  {
     "english": "Every choice shapes the building. Change your mind later—if you can afford to.",
     "russian": "Каждый выбор меняет здание. Передумаете позже — если сможете себе это позволить."
   },
@@ -6814,6 +6902,10 @@
   {
     "english": "Every merchant must contribute to the greater good by handing over a portion of their sales earnings to those who contribute nothing at all.",
     "russian": "Каждый торговец должен внести свой вклад во всеобщее благо, передавая часть своих доходов от продаж тем, кто вообще ничего не вносит."
+  },
+  {
+    "english": "Every seller has their own way of doing business. Skill and reputation help, but so can a charming smile, a foul mood, or an inexplicable grudge against your hat. It can all affect the price.",
+    "russian": "У каждого продавца свой подход к делу. Мастерство и репутация помогают, но также могут повлиять обаятельная улыбка, дурное настроение или необъяснимая неприязнь к вашей шляпе. Всё это может сказаться на цене."
   },
   {
     "english": "Every task comes with its own risks. Some are safer, while others are more prone to {ACC_C}accidents{##} — especially in unskilled hands.",
@@ -7036,8 +7128,8 @@
     "russian": "F2"
   },
   {
-    "english": "F22222T2SSSSSSNSNNSSSSSSTNMMSSMNSMMMMNMMMMMTMMMMSMC???^^^^^",
-    "russian": "F22222T2SSSSSSNSNNSSSSSSSTNMMSSMNSMMMMNMMMMMMTMMMMSMC???^^^^^"
+    "english": "F22222T2SSSSSSNSNNSSSSSSTNMMSSMNSMMMMNMMMMMTMMMMSMC???^^^^^BBB25",
+    "russian": "F22222T2SSSSSSNSNNSSSSSSTNMMSSMNSMMMMNMMMMMTMMMMSMC???^^^^^BBB25"
   },
   {
     "english": "F3",
@@ -7058,10 +7150,6 @@
   {
     "english": "F7",
     "russian": "F7"
-  },
-  {
-    "english": "F7AABBBBBBBAB=>=CB==>B=>>>>===C=BB===BD==D>>D=DBBBABEE",
-    "russian": "F7AABBBBBBBAB=>=CB==>B=>>>>===C=BB===BD==D>>D=DBBBABEE"
   },
   {
     "english": "F8",
@@ -7228,6 +7316,10 @@
     "russian": "Любимец богачей"
   },
   {
+    "english": "FCCDDCBDBBJKBK20B",
+    "russian": "FCCDDCBDBBJKBK20B"
+  },
+  {
     "english": "Feared by Children",
     "russian": "Гроза детей"
   },
@@ -7292,8 +7384,8 @@
     "russian": "Меньше ошибок происходит, когда два разума просматривают один и тот же реестр."
   },
   {
-    "english": "FFFFFFFFFFFFFFFFFF",
-    "russian": "FFFFFFFFFFFFFFFFFF"
+    "english": "FFFFFFFFFFFFFFFFFr",
+    "russian": "FFFFFFFFFFFFFFFFFr"
   },
   {
     "english": "FFGFGFFFGGFFFFGFGGSSSSGS5FGFGGFGG--SSSSSSSZS",
@@ -7466,6 +7558,10 @@
   {
     "english": "Flink",
     "russian": "Флинк"
+  },
+  {
+    "english": "Flood the streets with patrols. Give criminals nowhere to breathe. Crime will buckle under the pressure, but the people may tire of guards on every corner and boots at every door.",
+    "russian": "Наводните улицы патрулями. Не давайте преступникам продохнуть. Преступность согнется под давлением, но горожане могут устать от стражников на каждом углу и сапог у каждой двери."
   },
   {
     "english": "Floor_02",
@@ -7762,6 +7858,10 @@
   {
     "english": "Freiburg",
     "russian": "Фрайбург"
+  },
+  {
+    "english": "Fresh bread is in high demand in the morning, while ale becomes more popular after a long day's work. Near the end of the day, even a stubborn merchant might lower the price rather than haul their wares back home. Prices can change quite a bit from dawn to dusk.",
+    "russian": "Свежий хлеб пользуется большим спросом по утрам, а эль становится популярнее после долгого рабочего дня. К концу дня даже упрямый торговец может снизить цену, лишь бы не везти товар обратно домой. Цены могут заметно меняться от рассвета до заката."
   },
   {
     "english": "Fresh Enough",
@@ -8106,6 +8206,10 @@
   {
     "english": "Give a worker a weapon from your inventory to better defend themselves when faced with danger.",
     "russian": "Дайте рабочему оружие из вашего инвентаря, чтобы он лучше защищался при столкновении с опасностью."
+  },
+  {
+    "english": "Give a young child a home and watch them grow into the family. You will have plenty of time to care for them, teach them, and gently steer them toward becoming exactly the sort of heir you had in mind.",
+    "russian": "Дайте маленькому ребенку дом и наблюдайте, как он становится частью семьи. У вас будет достаточно времени, чтобы заботиться о нем, обучать его и мягко направлять к тому, чтобы он стал именно тем наследником, о котором вы мечтали."
   },
   {
     "english": "Give Absolution",
@@ -8458,6 +8562,10 @@
   {
     "english": "Grey Eminence",
     "russian": "Серое Высокопреосвященство"
+  },
+  {
+    "english": "Grief-Stricken",
+    "russian": "Скорбящий"
   },
   {
     "english": "Grietje",
@@ -8984,6 +9092,10 @@
     "russian": "Травяной ликер"
   },
   {
+    "english": "Here are the professions available for your chosen backstory.",
+    "russian": "Вот список профессий, доступных для выбранной вами предыстории."
+  },
+  {
     "english": "Here you'll find the {L_LAW_C}laws{##} that hold the city together — and the {O_TYP_CIVOFF_C}offices{##} that enforce them. ",
     "russian": "Здесь собраны {L_LAW_C}законы{##}, на которых держится город, и {O_TYP_CIVOFF_C}должности{##}, которые следят за их исполнением."
   },
@@ -9013,7 +9125,7 @@
   },
   {
     "english": "Hey, thanks for jumping in!\nWe genuinely appreciate you giving our game a try.\n\nThis is an <text fontface=\"bold\">early build</>, so some things may be missing or break. We're eager to hear your thoughts — so don't forget to fill out the <text fontface=\"bold\">feedback survey</>. It helps us build a better version!\n \nIf anything feels confusing, check the guide for a smoother experience.\nJoin our <text fontface=\"bold\">private Discord</> server to discuss with other playtesters and us devs!",
-    "russian": "Hey, thanks for jumping in!\nWe genuinely appreciate you giving our game a try.\n\nThis is an <text fontface=\"bold\">early build</>, so some things may be missing or break. We're eager to hear your thoughts — so don't forget to fill out the <text fontface=\"bold\">feedback survey</>. It helps us build a better version!\n \nIf anything feels confusing, check the guide for a smoother experience.\nJoin our <text fontface=\"bold\">private Discord</> server to discuss with other playtesters and us devs!"
+    "russian": "Эй, спасибо, что присоединились!\nМы искренне ценим, что вы решили попробовать нашу игру.\n\nЭто <text fontface=\"bold\">ранняя версия</>, поэтому некоторые вещи могут отсутствовать или работать со сбоями. Мы с нетерпением ждем ваших отзывов — не забудьте заполнить <text fontface=\"bold\">опрос</>. Это поможет нам сделать игру лучше!\n\nЕсли что-то кажется непонятным, загляните в руководство для более комфортной игры.\nПрисоединяйтесь к нашему <text fontface=\"bold\">закрытому Discord</>-серверу, чтобы обсудить игру с другими тестерами и нами, разработчиками!"
   },
   {
     "english": "Hey, thanks for jumping in!\nWe genuinely appreciate you trying out our game.\n\nThis is a demo version, offering a glimpse of what The Guild 1 Remake: Europa 1410 has to offer. We hope you enjoy building your business and shaping your story.\n\nDon't forget to wishlist the game on Steam so you don't miss the full release.",
@@ -9122,6 +9234,10 @@
   {
     "english": "Higher-level buildings usually have higher Maximum Integrity.",
     "russian": "У зданий более высокого уровня обычно выше максимальная целостность."
+  },
+  {
+    "english": "Highest in city",
+    "russian": "Самая высокая в городе"
   },
   {
     "english": "Highlight Options",
@@ -9380,6 +9496,10 @@
     "russian": "Горак"
   },
   {
+    "english": "Hospitality Fee",
+    "russian": "Плата за гостеприимство"
+  },
+  {
     "english": "Host",
     "russian": "Хозяин"
   },
@@ -9478,6 +9598,10 @@
   {
     "english": "Hussites",
     "russian": "Гуситы"
+  },
+  {
+    "english": "Hybrid",
+    "russian": "Смешанный"
   },
   {
     "english": "Hydration Infrastructure (Manual)",
@@ -10428,6 +10552,10 @@
     "russian": "Кажется, этот день настал. Вам нужно поддерживать репутацию в нашем прекрасном городе, поскольку никто не будет уважать охранников, которые не встают на защиту невиновных, поэтому быстро решите, как вы планируете справиться с ситуацией."
   },
   {
+    "english": "It seems your harvest in the next season will be plentiful.",
+    "russian": "Похоже, ваш урожай в следующем сезоне будет богатым."
+  },
+  {
     "english": "It warms. It itches.",
     "russian": "Оно согревает. Это зудит."
   },
@@ -10776,6 +10904,10 @@
     "russian": "Йёрг"
   },
   {
+    "english": "K22212:::K:==I=>>,>:>I>I;KGH+LKHIK=UJGKHKHK>J=KJJIJLLLL;LL<LLLK",
+    "russian": "K22212:::K:==I=>>,>:>I>I;KGH+LKHIK=UJGKHKHK>J=KJJIJLLLL;LL<LLLK"
+  },
+  {
     "english": "Karel",
     "russian": "Карел"
   },
@@ -10820,6 +10952,10 @@
     "russian": "Кацимир"
   },
   {
+    "english": "Keep a set amount in the storeroom. Anything above that goes to the storefront.",
+    "russian": "Хранить определенное количество в кладовой. Все, что сверх этого, отправляется на витрину."
+  },
+  {
     "english": "Keep It",
     "russian": "Оставить себе"
   },
@@ -10838,6 +10974,10 @@
   {
     "english": "Keep one for yourself. A sword begins with smaller things.",
     "russian": "Оставьте один меч себе. Любое великое дело начинается с малого."
+  },
+  {
+    "english": "Keep patrols moving and guards visible on the streets. It will keep crime in check and make would-be troublemakers think twice. For the bigger threats, however, you may want to leave the heavy lifting to someone with more authority.",
+    "russian": "Поддерживайте движение патрулей и следите, чтобы стражники были видны на улицах. Это поможет сдержать преступность и заставит потенциальных нарушителей спокойствия дважды подумать. Однако для борьбы с более серьезными угрозами вам, возможно, стоит переложить эту тяжелую работу на кого-то с большими полномочиями."
   },
   {
     "english": "Keep the Relic",
@@ -11012,12 +11152,20 @@
     "russian": "Кистенмахер"
   },
   {
+    "english": "KKK21?>>>>>@L?L?L?M",
+    "russian": "KKK21?>>>>>@L?L?L?M"
+  },
+  {
     "english": "Klaus",
     "russian": "Клаус"
   },
   {
     "english": "Klára",
     "russian": "Клара"
+  },
+  {
+    "english": "Kni Socks",
+    "russian": "Вязаные носки"
   },
   {
     "english": "Knirsch",
@@ -12000,6 +12148,10 @@
     "russian": "Снижает затраты на {B_HP_C}ремонтировать{##} на {value}"
   },
   {
+    "english": "Lowest in city",
+    "russian": "Самая низкая в городе"
+  },
+  {
     "english": "Lubomír",
     "russian": "Лубомир"
   },
@@ -12042,6 +12194,10 @@
   {
     "english": "Lumberjack's Lair",
     "russian": "Логово лесоруба"
+  },
+  {
+    "english": "Lure Bee Swarm",
+    "russian": "Приманить рой пчел"
   },
   {
     "english": "Löwenstein",
@@ -12290,6 +12446,10 @@
   {
     "english": "Marketplace",
     "russian": "Торговая площадка"
+  },
+  {
+    "english": "Marketplace Fee",
+    "russian": "Рыночный сбор"
   },
   {
     "english": "Marketplace Sales",
@@ -13104,6 +13264,10 @@
     "russian": "Необходимо построить {B_PER_BEEHIV_C}Пчелиные Ульи{##}."
   },
   {
+    "english": "Needless to say, you should not expect any honey next season.",
+    "russian": "Излишне говорить, что в следующем сезоне вам не стоит ждать меда."
+  },
+  {
     "english": "Neglected",
     "russian": "Заброшенный"
   },
@@ -13352,10 +13516,6 @@
     "russian": "Нет пощады"
   },
   {
-    "english": "No o<",
-    "russian": "Нет о<"
-  },
-  {
     "english": "No office",
     "russian": "Без должности"
   },
@@ -13382,6 +13542,10 @@
   {
     "english": "No problem! We know that our game can be a bit much, so we've prepared a few tips to get you around the most common hurdles.",
     "russian": "Без проблем! Мы знаем, что наша игра может оказаться слишком сложной, поэтому подготовили несколько советов, которые помогут вам обойти наиболее распространенные препятствия."
+  },
+  {
+    "english": "No Profession",
+    "russian": "Без профессии"
   },
   {
     "english": "No succession, no continuation. Just a quiet retreat and the dust of ambition.",
@@ -13462,6 +13626,10 @@
   {
     "english": "Not available in the demo",
     "russian": "Недоступно в демо-версии"
+  },
+  {
+    "english": "Not bought by this building",
+    "russian": "Это здание не покупает данный товар"
   },
   {
     "english": "Not built",
@@ -14068,6 +14236,10 @@
     "russian": "Одни из городских ворот теперь досматривают каждую телегу. Ожидайте долгих очередей и, возможно, дополнительных пошлин."
   },
   {
+    "english": "One of these e",
+    "russian": "Один из этих"
+  },
+  {
     "english": "One of your buildings has collapsed. Time and neglect did the rest.",
     "russian": "Одно из ваших зданий обрушилось. Время и отсутствие ухода сделали свое дело."
   },
@@ -14166,6 +14338,10 @@
   {
     "english": "Open City Archives",
     "russian": "Открыть городские архивы"
+  },
+  {
+    "english": "Open City Overview",
+    "russian": "Открыть обзор города"
   },
   {
     "english": "Open Context Menu",
@@ -15396,6 +15572,10 @@
     "russian": "Рынки производителей"
   },
   {
+    "english": "Productive to the proverbial bone, they work diligently, albeit passive-aggressively, towards next season's harvest.",
+    "russian": "Трудолюбивые до мозга костей, они усердно, пусть и с пассивной агрессией, работают ради урожая следующего сезона."
+  },
+  {
     "english": "Productivity",
     "russian": "Производительность"
   },
@@ -15685,7 +15865,7 @@
   },
   {
     "english": "Queen bees are scarce. As {B_PER_BEEHIV_C}hives{##} spread through the city, unclaimed queens grow harder to find.",
-    "russian": "Пчелиных маток мало. По мере того как {B_PER_BEEHIV_C}крапивница{##} распространяется по городу, найти невостребованных королев становится все труднее."
+    "russian": "Пчелиных маток мало. По мере того как {B_PER_BEEHIV_C}ульи{##} распространяются по городу, найти невостребованных королев становится все труднее."
   },
   {
     "english": "Quell Unrest",
@@ -16088,6 +16268,10 @@
     "russian": "Навсегда избавиться от пчел в улье. Какими бы ни были ваши причины, колония больше не вернется."
   },
   {
+    "english": "Remove the master and run the building yourself. The master will be free to manage other buildings, provided you find their performance and attitude acceptable.",
+    "russian": "Отстраните мастера и управляйте зданием самостоятельно. Мастер будет свободен для управления другими зданиями, если вы сочтете его работу и отношение к делу приемлемыми."
+  },
+  {
     "english": "Removed from {O_TYP_CIVOFF_C}office{##}",
     "russian": "Удалено из {O_TYP_CIVOFF_C}Должность{##}"
   },
@@ -16100,8 +16284,12 @@
     "russian": "Известность"
   },
   {
+    "english": "Renown measures how much you are respected in the city. Compared to the rest of your family members, your renown counts more towards the {CHAR_RENDYN_C}dynasty prestige{##}.",
+    "russian": "Репутация показывает, насколько вас уважают в городе. По сравнению с остальными членами вашей семьи, ваша репутация вносит больший вклад в {CHAR_RENDYN_C}престиж династии{##}."
+  },
+  {
     "english": "Renown measures how much you are respected in the city. It reflects upon the {CHAR_RENDYN_C}dynasty{##} and its members, and is inherited across generations.",
-    "russian": "Репутация измеряет уровень вашего уважения в городе. Она отражается на {CHAR_RENDYN_C}династия{##} и ее членах, а также передается по наследству из поколения в поколение."
+    "russian": "Репутация показывает, насколько вас уважают в городе. Она отражается на {CHAR_RENDYN_C}династии{##} и её членах и передаётся по наследству из поколения в поколение."
   },
   {
     "english": "Rent Price Level",
@@ -16382,6 +16570,10 @@
   {
     "english": "Right-click anywhere to exit",
     "russian": "Нажмите правой кнопкой мыши в любом месте, чтобы выйти"
+  },
+  {
+    "english": "Right-click to configure",
+    "russian": "Нажмите правую кнопку мыши для настройки"
   },
   {
     "english": "Right-hold or [E]",
@@ -17044,6 +17236,10 @@
     "russian": "Обыщите разбитый караван — обломки еще принесут немного монет. Продолжайте собирать их, пока там ничего не останется."
   },
   {
+    "english": "Seasonal Demand",
+    "russian": "Сезонный спрос"
+  },
+  {
     "english": "Secret",
     "russian": "Секрет"
   },
@@ -17310,6 +17506,18 @@
   {
     "english": "Sell {value} worth of {item}",
     "russian": "Продать {item} на сумму {value}"
+  },
+  {
+    "english": "Seller",
+    "russian": "Продавец"
+  },
+  {
+    "english": "Seller Influence",
+    "russian": "Влияние продавца"
+  },
+  {
+    "english": "Selling Business Influence",
+    "russian": "Влияние торгового предприятия"
   },
   {
     "english": "Selling price",
@@ -18240,6 +18448,10 @@
     "russian": "Одни дают из жалости, другие — из чувства вины — но тратят одинаково. {S_RHE_C}Риторика{##} знает, на какие струны души надавить."
   },
   {
+    "english": "Some goods fill every market stall in one season and are nowhere to be found in the next. People's needs change with the seasons too, and merchants know well enough to adjust their prices.",
+    "russian": "Некоторые товары заполняют все прилавки рынка за один сезон, а в следующем их уже не найти. Потребности людей также меняются в зависимости от времени года, и купцы прекрасно знают, что цены нужно корректировать."
+  },
+  {
     "english": "Some goons had waylaid your cart but in the end decided to just let it go. Someone must be looking out for you.",
     "russian": "Какие-то головорезы подстерегли вашу телегу, но в конце концов решили просто отпустить ее. Кто-то, должно быть, присматривает за вами."
   },
@@ -18840,6 +19052,10 @@
     "russian": "Впрочем, возможно, так даже лучше. Из того, что у них было, вряд ли получилось бы хорошее потомство."
   },
   {
+    "english": "Still, too much time spent shoulder to shoulder can give working folk ideas about their importance.",
+    "russian": "И все же, когда рабочие люди проводят слишком много времени бок о бок, они начинают воображать, что имеют какое-то значение."
+  },
+  {
     "english": "Stingholders' Assembly",
     "russian": "Собрание жалольщиков"
   },
@@ -18852,8 +19068,24 @@
     "russian": "Стежок за стежком"
   },
   {
+    "english": "Stock in City",
+    "russian": "Запасы в городе"
+  },
+  {
+    "english": "Stock in This Building",
+    "russian": "Запасы в этом здании"
+  },
+  {
     "english": "Stock Up",
     "russian": "Сделать запасы"
+  },
+  {
+    "english": "Stock up to",
+    "russian": "Запас до"
+  },
+  {
+    "english": "Stone & Bee",
+    "russian": "Камень и ульи"
   },
   {
     "english": "Stone & Beer",
@@ -19118,6 +19350,10 @@
   {
     "english": "Subjected to torture",
     "russian": "Подвергнутый пыткам"
+  },
+  {
+    "english": "Submit the necessary papers and have your {T_C}title{##} recognized by the city. Your {CHAR_WEA_C}wealth{##} and earned {I_NOBRIG_C}rights{##} determine which rank you may claim.",
+    "russian": "Подайте необходимые документы, чтобы ваш {T_C}дворянский титул{##} был признан городом. Ваше {CHAR_WEA_C}богатство{##} и заработанные {I_NOBRIG_C}права{##} определяют, на какой ранг вы можете претендовать."
   },
   {
     "english": "Submit verdict",
@@ -19640,6 +19876,10 @@
     "russian": "Бездна эха"
   },
   {
+    "english": "The accent gives them away every time. Visitors may not know the streets, the customs or the right price for an onion, but they will quickly learn about the city's hospitality fee.",
+    "russian": "Акцент выдает их каждый раз. Посетители могут не знать улиц, обычаев или правильной цены на лук, но они быстро узнают о городском сборе за гостеприимство."
+  },
+  {
     "english": "The action will be available directly from the object.",
     "russian": "Действие будет доступно непосредственно из объекта."
   },
@@ -19658,6 +19898,10 @@
   {
     "english": "The Altar of Selective Repentance",
     "russian": "Алтарь выборочного покаяния"
+  },
+  {
+    "english": "The amount of an item sitting in this building affects its price too. A full stock means lower prices, while running low makes every remaining piece more valuable.",
+    "russian": "Количество товара в этом здании также влияет на его цену. Полные запасы означают более низкие цены, в то время как нехватка делает каждую оставшуюся единицу товара более ценной."
   },
   {
     "english": "The Anvil Circle",
@@ -19820,6 +20064,14 @@
     "russian": "Бюро обмена без согласия"
   },
   {
+    "english": "The business doing the buying brings its own advantages and disadvantages to the deal. Its reputation, improvements, working conditions, or whatever is currently going wrong behind the counter can affect the price.",
+    "russian": "Предприятие, совершающее покупку, привносит в сделку свои преимущества и недостатки. Его репутация, улучшения, условия труда или любые неприятности, происходящие за прилавком, могут повлиять на цену."
+  },
+  {
+    "english": "The business doing the selling matters too. Its reputation, improvements, working conditions, and the occasional bit of chaos on the premises can all find their way into the price.",
+    "russian": "Предприятие, совершающее продажу, также имеет значение. Его репутация, улучшения, условия труда и периодический хаос в помещениях — все это может отразиться на цене."
+  },
+  {
     "english": "The Calculated Accumulation",
     "russian": "Расчетное накопление"
   },
@@ -19882,6 +20134,10 @@
   {
     "english": "The city is orderly and free from pestilence.\nIf {QUA_DEV_C}Filth and Ruin{##} rises above {value}, the quarter becomes {ST_QTR_DEV_1_C}Poorly Maintained{##}.",
     "russian": "В квартале порядок, болезней нет.\nЕсли {QUA_DEV_C}Разруха{##} поднимется выше {value}, квартал станет {ST_QTR_DEV_1_C}Плохое состояние{##}."
+  },
+  {
+    "english": "The city levies a modest fee off of each transaction for your privilege of doing business at the marketplace. Some refer to it as a protection fee and claim the Robber Baron offers better service.",
+    "russian": "Город взимает скромную плату с каждой сделки за привилегию торговать на рынке. Некоторые называют это платой за защиту и утверждают, что барон-разбойник обслуживает лучше."
   },
   {
     "english": "The city officials recommend that all newcomers direct their first efforts to establishing a business in Herle before moving to the big city and becoming entangled in the many demands of business, influence, and personal affairs.",
@@ -20242,6 +20498,10 @@
   {
     "english": "The final sum of your coin purse after all income and expenses.",
     "russian": "Итоговая сумма в вашем кошельке после всех доходов и расходов."
+  },
+  {
+    "english": "The final value shown here is an estimate. The actual value for any purchase made from your building will take into account the specifics of the buyer in addition to all other factors influencing the sell price.",
+    "russian": "Итоговая стоимость, показанная здесь, является оценочной. Фактическая стоимость любой покупки, совершенной в вашем здании, будет учитывать особенности покупателя в дополнение ко всем остальным факторам, влияющим на цену продажи."
   },
   {
     "english": "The final version of The Guild 1 Remake: Europa 1410 will carry you through all of these historic milestones, and many more, that will change how you experience the game.",
@@ -20680,11 +20940,11 @@
     "russian": "Любовь всей вашей жизни готова присоединиться к вам в священных узах брака. Пусть ваш союз будет благословлен сильными детьми, которые продолжат вашу династию!"
   },
   {
-    "english": "The Lovers’ Corner",
+    "english": "The Lovers' Corner",
     "russian": "Уголок влюбленных"
   },
   {
-    "english": "The Lovers’ Fountain",
+    "english": "The Lovers' Fountain",
     "russian": "Фонтан влюбленных"
   },
   {
@@ -20716,6 +20976,10 @@
     "russian": "Мастер получает процент от прибыли предприятия."
   },
   {
+    "english": "The master was dismissed with a harsh reprimand and a small bag of coin. You are now in charge of the building again, so all mistakes are your own.",
+    "russian": "Мастер был уволен с суровым выговором и небольшим кошельком монет. Теперь вы снова управляете зданием, так что все ошибки — ваши собственные."
+  },
+  {
     "english": "The Mayor can build worker accommodations while the Treasurer sets rent price levels, both directly affecting homelessness rates.",
     "russian": "Мэр может строить жилье для рабочих, а казначей устанавливает уровень арендной платы, что напрямую влияет на уровень бездомности."
   },
@@ -20730,6 +20994,10 @@
   {
     "english": "The moneylenders will sleep well tonight.",
     "russian": "Ростовщики сегодня будут спать спокойно."
+  },
+  {
+    "english": "The more of an item there is around the city, the less people are willing to pay for it. Scarce goods, on the other hand, can fetch a much better price.",
+    "russian": "Чем больше товара в городе, тем меньше люди готовы за него платить. С другой стороны, дефицитные товары могут стоить гораздо дороже."
   },
   {
     "english": "The more you nurture it, the faster it blossoms. Try {A_SWETAL_C}sweet-talking{##} or {A_SENGIF_C}sending gifts{##}.",
@@ -21504,6 +21772,14 @@
     "russian": "{H_ELE_C}Курфюрсты{##} собираются снова, и почти нет сомнений, кого они выберут на этот раз."
   },
   {
+    "english": "The {O_COL_C}Colonel{##} ordered a {A_SUPCRI_C}crackdown on crime{##}, and now there are guards everywhere. The quarter is safer, sure, but good luck getting home without having your purse searched.",
+    "russian": "{O_COL_C}Полковник{##} приказал устроить {A_SUPCRI_C}облаву на преступников{##}, и теперь повсюду стража. В квартале, конечно, стало безопаснее, но попробуйте добраться домой, чтобы вас не обыскали."
+  },
+  {
+    "english": "The {O_FENMAS_C}Fencing Master{##} {A_SUPCRIW_C}stepped up the patrols{##}, and trouble in the quarter has quieted down. Nothing dramatic, just fewer reasons to clutch your purse on the way home.",
+    "russian": "{O_FENMAS_C}Мастер фехтования{##} {A_SUPCRIW_C}усилил патрули{##}, и в квартале стало спокойнее. Ничего особенного, просто теперь по пути домой реже приходится прижимать кошелёк к груди."
+  },
+  {
     "english": "The “I Might Need This” House",
     "russian": "Дом «Мне это может понадобиться"
   },
@@ -21526,6 +21802,10 @@
   {
     "english": "Thefts and assaults are no longer rare. Guards stay busy, but can't be everywhere.",
     "russian": "Кражи и нападения перестали быть редкостью. Стража занята, но она не может быть везде."
+  },
+  {
+    "english": "Their heart lies burried with the one they lost; it is not yet ready to love again.",
+    "russian": "Их сердце погребено вместе с тем, кого они потеряли; оно еще не готово полюбить снова."
   },
   {
     "english": "Thekla",
@@ -21680,6 +21960,10 @@
     "russian": "Они сказали да. Вскоре состоится церемония бракосочетания."
   },
   {
+    "english": "They say that when you want something done right, you better do it yourself. In this case, it's probably better to take matters into your own hands.",
+    "russian": "Говорят, если хочешь сделать что-то хорошо, лучше сделай это сам. В данном случае, вероятно, лучше взять дело в свои руки."
+  },
+  {
     "english": "They say time forgets nothing, yet remembers selectively. How long will your name linger in the memory of the city?",
     "russian": "Говорят, время ничего не забывает, но помнит выборочно. Как долго ваше имя останется в памяти города?"
   },
@@ -21782,6 +22066,10 @@
   {
     "english": "This game is still being developed by a small, dedicated team, and you will most certainly encounter unfinished features and bugs. Your feedback is extremely valuable for the future development of the game. Please join our Discord to share your thoughts, report issues, or just chat with us about The Guild!",
     "russian": "Эта игра все еще находится в разработке небольшой преданной команды, и вы почти наверняка столкнетесь с незавершенными функциями и ошибками. Ваш отзыв чрезвычайно ценен для будущего развития игры. Пожалуйста, присоединяйтесь к нашему Discord, чтобы поделиться своими мыслями, сообщить о проблемах или просто пообщаться с нами о The Guild!"
+  },
+  {
+    "english": "This is a known bug, so naturally, we've decided to call it a feature!\nWhile we work on a fix, give a child a home and raise them as your heir!",
+    "russian": "Это известная ошибка, поэтому мы решили назвать её особенностью! Пока мы работаем над исправлением, дайте ребенку дом и воспитайте его как своего наследника!"
   },
   {
     "english": "This is Jan, Willem, Pieter, Margriet, Lijsbeth, Cornelis, Aleid, Geertruid, little Hendrika — and the one hiding beneath the table is Adriaan. Unless that is Pieter. No, Pieter is eating the cheese.",
@@ -21930,6 +22218,10 @@
   {
     "english": "Time Keeps Count Society",
     "russian": "Общество «Время ведет счет"
+  },
+  {
+    "english": "Time of Day",
+    "russian": "Время суток"
   },
   {
     "english": "Time remaining: {Minutes}|plural(one=1 minute, other={Minutes} minutes)",
@@ -22544,8 +22836,12 @@
     "russian": "Попробуйте навести указатель мыши на {TUT_TOO_1_C}выделенный текст{##} или любой значок, чтобы открыть подсказку с подробной информацией."
   },
   {
+    "english": "Try to catch a {I_BEEQUE_C}Queen Bee{##}. Once you have built a {B_PER_BEEHIV_C}hive{##}, you will need the Queen Bee to lure her swarm of tiny but dedicated workers who will make money for you if you treat them well.",
+    "russian": "Попробуйте поймать {I_BEEQUE_C}пчелиную матку{##}. Как только вы построите {B_PER_BEEHIV_C}улей{##}, вам понадобится пчелиная матка, чтобы привлечь рой крошечных, но трудолюбивых рабочих, которые будут приносить вам прибыль, если вы будете хорошо с ними обращаться."
+  },
+  {
     "english": "Try to catch a {I_BEEQUE_C}Queen Bee{##}. With her, you can build a {B_PER_BEEHIV_C}hive{##} — and let hundreds of tiny workers make money for you.",
-    "russian": "Попробуйте поймать {I_BEEQUE_C}Пчелиная матка{##}. С ней вы сможете построить {B_PER_BEEHIV_C}улей{##} — и позволить сотням крошечных рабочих зарабатывать для вас деньги."
+    "russian": "Попробуйте поймать {I_BEEQUE_C}пчелиную матку{##}. С ней вы сможете построить {B_PER_BEEHIV_C}улей{##} — и сотни крошечных рабочих будут зарабатывать для вас деньги."
   },
   {
     "english": "Try to reclaim your money",
@@ -22764,10 +23060,6 @@
     "russian": "К сожалению, работа оказалась ровно настолько опасной, насколько выглядела."
   },
   {
-    "english": "Unfortunately, they did not take the evidence with them, and now your misdeeds shall be known by all.",
-    "russian": "К сожалению, они не забрали улики с собой, и теперь о ваших злодеяниях станет известно всем."
-  },
-  {
     "english": "Unfortunately, whenever I sent him to serve the tables, he frightened half the customers into drinking elsewhere. Excellent with barrels. Terrible with people.",
     "russian": "К сожалению, всякий раз, когда я отправлял его обслуживать столы, он пугал половину клиентов, и те уходили пить в другое место. Отлично управляется с бочками. Ужасно — с людьми."
   },
@@ -22814,6 +23106,10 @@
   {
     "english": "Unleashes a stench so foul even rats flee, emptying your rival's shop in seconds. Remember to act surprised when it “accidentally” drops.",
     "russian": "Испускает такое зловоние, что даже крысы бегут прочь, опустошая лавку соперника за секунды. Не забудьте изобразить удивление, когда она «случайно» упадет."
+  },
+  {
+    "english": "Unless you manage to heal them in time, best to seek professional medical advice before tasting next year's harvest.",
+    "russian": "Если вы не успеете их вылечить, лучше обратиться за профессиональной медицинской помощью, прежде чем пробовать урожай следующего года."
   },
   {
     "english": "Unlimited",
@@ -23036,6 +23332,10 @@
     "russian": "До {NumCitizens} {NumCitizens}|plural(one={CHAR_CITVSWOR_C}горожанин{##},few={CHAR_CITVSWOR_C}горожанина{##},many={CHAR_CITVSWOR_C}горожан{##},other={CHAR_CITVSWOR_C}горожане{##})"
   },
   {
+    "english": "Up to {NumItems}|plural(one={NumItems} item stays, other={NumItems} items stay) in the storeroom. Any surplus goes to the storefront.",
+    "russian": "До {NumItems}|plural(one={NumItems} товар остается,few={NumItems} товара остаются,many={NumItems} товаров остаются,other={NumItems} товаров остаются) в кладовой. Излишки отправляются на витрину."
+  },
+  {
     "english": "Upcoming Events",
     "russian": "Предстоящие события"
   },
@@ -23081,11 +23381,11 @@
   },
   {
     "english": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the brightness",
-    "russian": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the brightness"
+    "russian": "Используйте <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</>, чтобы настроить яркость"
   },
   {
     "english": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the corners so it lines up with the edges of your display.",
-    "russian": "Use <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</> to adjust the corners so it lines up with the edges of your display."
+    "russian": "Используйте <text color=\\\\\"FFFFFFFF\\\\\" fontface=\\\\\"black\\\\\">{0}</>, чтобы настроить углы так, чтобы они совпадали с краями вашего экрана."
   },
   {
     "english": "Use a {B_IMP_SPY_C}spyglass{##} in your home to {A_SPYPER_C}spy{##} on others, or hire a professional at the {B_OCC_THI_C}Hideout{##}.",
@@ -23174,6 +23474,10 @@
   {
     "english": "V",
     "russian": "V"
+  },
+  {
+    "english": "V2 aD",
+    "russian": "V2 aD"
   },
   {
     "english": "vacant",
@@ -24080,6 +24384,10 @@
     "russian": "Где природные ресурсы добываются и подготавливаются для крафта."
   },
   {
+    "english": "Where should your newly crafted items go?",
+    "russian": "Куда должны отправляться ваши новые товары?"
+  },
+  {
     "english": "Where skilled hands carve wood into toys, tools, and weapons alike.",
     "russian": "Где умелые руки вырезают из дерева игрушки, инструменты и оружие."
   },
@@ -24253,15 +24561,15 @@
   },
   {
     "english": "With the {I_BEEQUE_C}Queen Bee{##} in your {HB_INV} {CHAR_PERINV_C}Personal Inventory{##}, open {HB_CONMEN} Construction Menu  on the left. In the Personal tab, choose the {B_PER_BEEHIV_C}Beehive{##} you want to build and select where to place it. The Queen Bee will be used automatically when construction begins.",
-    "russian": "С помощью предмета «{I_BEEQUE_C}Пчелиная матка{##}» в вашем {HB_INV} «{CHAR_PERINV_C}Личный инвентарь{##}» откройте меню строительства {HB_CONMEN} слева. На вкладке «Личное» выберите «{B_PER_BEEHIV_C}Улей{##}», которую хотите построить, и укажите место для ее установки. Матка будет использована автоматически при начале строительства."
+    "russian": "Когда {I_BEEQUE_C}пчелиная матка{##} лежит в {HB_INV} {CHAR_PERINV_C}личном инвентаре{##}, откройте {HB_CONMEN} меню строительства слева. Во вкладке «Личное» выберите {B_PER_BEEHIV_C}улей{##} и укажите, куда его поставить. Матка будет использована автоматически, как только начнётся строительство."
   },
   {
     "english": "with workers",
     "russian": "с работниками"
   },
   {
-    "english": "With you pacing the workshop, distractions quickly disappear and production improves. Still, too much time spent shoulder to shoulder can give working folk ideas about their importance.",
-    "russian": "Когда вы расхаживаете по мастерской, отвлекающие факторы быстро исчезают, а производительность растет. И все же, слишком долгое пребывание плечом к плечу может навести рабочих на мысли об их собственной значимости."
+    "english": "With you pacing the workshop, distractions quickly disappear and production improves.",
+    "russian": "Когда вы расхаживаете по мастерской, отвлекающие факторы быстро исчезают, а производительность растет."
   },
   {
     "english": "With {B_IMP_OCCBUI_PROD_C}proper tools{##}, your workers become more {CHAR_PRO_C}productive{##}.",
@@ -24573,7 +24881,7 @@
   },
   {
     "english": "X+X-Y+-es=",
-    "russian": "X+X-Y+-es="
+    "russian": "X+X-Y+-да="
   },
   {
     "english": "X-Axis Sensitivity",
@@ -24592,6 +24900,10 @@
     "russian": "Чувствительность оси Y"
   },
   {
+    "english": "Year",
+    "russian": "Год"
+  },
+  {
     "english": "Years wear the body down. {A_PHYCHE_C}Visit the physician{##} or drink the right potions to improve your health.",
     "russian": "Годы изнашивают тело. {A_PHYCHE_C}Посетите врача{##} или пейте правильные зелья, чтобы улучшить свое здоровье."
   },
@@ -24606,6 +24918,10 @@
   {
     "english": "Yes",
     "russian": "Да"
+  },
+  {
+    "english": "Yet to find a calling…",
+    "russian": "Еще не нашел своего призвания…"
   },
   {
     "english": "You",
@@ -25588,10 +25904,6 @@
     "russian": "Ваше письмо поддержки и сопутствующие средства были доставлены."
   },
   {
-    "english": "Your Love Chose Another",
-    "russian": "Твоя любовь выбрала другого"
-  },
-  {
     "english": "Your love interest",
     "russian": "Ваш любовный интерес"
   },
@@ -25784,12 +26096,12 @@
     "russian": "Ваш шпионаж раскрыт"
   },
   {
-    "english": "Your starting profession may limit which backstories are available.",
-    "russian": "Ваша стартовая профессия может ограничить выбор доступных предысторий."
-  },
-  {
     "english": "Your storage has reached its limit",
     "russian": "Ваше хранилище достигло предела"
+  },
+  {
+    "english": "Your Storu",
+    "russian": "Ваша история"
   },
   {
     "english": "Your Story",
@@ -26710,6 +27022,10 @@
   {
     "english": "{NumStorage} {B_STOROO_C}{NumStorage}|plural(one=storeroom slot,other=storeroom slots){##}",
     "russian": "{NumStorage} {B_STOROO_C}{NumStorage}|plural(one=ячейка склада,few=ячейки склада,many=ячеек склада,other=ячеек склада){##}"
+  },
+  {
+    "english": "{NumStorefront} {B_STOFRO_C}{NumStorefront}|plural(one=storefront slot,other=storefront slots){##}",
+    "russian": "{NumStorefront} {B_STOFRO_C}{NumStorefront}|plural(one=слот витрины,few=слота витрины,many=слотов витрины,other=слотов витрины){##}"
   },
   {
     "english": "{NumTurns} remaining",
