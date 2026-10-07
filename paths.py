@@ -6,6 +6,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+STEAM_APP_ID = "2977260"
 DEFAULT_GAME_PAKS = (
     Path(r"C:/Program Files (x86)/Steam/steamapps/common")
     / "The Guild - Europa 1410/Europa1410/Content/Paks"
@@ -25,7 +26,9 @@ class ProjectPaths:
     string_tables_dir: Path
     ucas_path: Path
     ucas_hash_cache: Path
+    steam_appmanifest: Path
     install_mod_after_build: bool = True
+    auto_release: bool = False
 
 
 def _load_config(work: Path) -> dict:
@@ -44,6 +47,12 @@ def resolve_paths(work: Path | None = None) -> ProjectPaths:
         or config.get("game_paks_dir")
         or DEFAULT_GAME_PAKS
     )
+    steamapps = next((parent for parent in game_paks.parents if parent.name.lower() == "steamapps"), None)
+    default_manifest = (
+        steamapps / f"appmanifest_{STEAM_APP_ID}.acf"
+        if steamapps is not None
+        else Path(r"C:/Program Files (x86)/Steam/steamapps") / f"appmanifest_{STEAM_APP_ID}.acf"
+    )
 
     return ProjectPaths(
         work=work,
@@ -57,5 +66,11 @@ def resolve_paths(work: Path | None = None) -> ProjectPaths:
         string_tables_dir=work / "source/Europa1410/Content/StringTables",
         ucas_path=game_paks / "Europa1410-Windows.ucas",
         ucas_hash_cache=work / "ucas_hash_entries.json",
+        steam_appmanifest=Path(
+            os.environ.get("EUROPA1410_STEAM_MANIFEST")
+            or config.get("steam_appmanifest")
+            or default_manifest
+        ),
         install_mod_after_build=config.get("install_mod_after_build", True),
+        auto_release=bool(config.get("auto_release", False)),
     )

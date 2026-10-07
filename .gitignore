@@ -17,6 +17,9 @@ config.json
 
 # Отчёт валидации (пересоздаётся)
 validation_report.txt
+auto_update.log
+auto_update.lock
+auto_update_state.json
 
 # Бинарные инструменты — скачиваются отдельно (см. tools/README.md)
 tools/repak.exe

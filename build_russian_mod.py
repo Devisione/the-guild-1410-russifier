@@ -9,6 +9,7 @@ import re
 import shutil
 import struct
 import subprocess
+import sys
 import time
 import zipfile
 from pathlib import Path
@@ -25,7 +26,7 @@ from locmod_lib import (
     should_keep_english,
     translate_entries,
 )
-from paths import ProjectPaths, resolve_paths
+from paths import STEAM_APP_ID, ProjectPaths, resolve_paths
 
 PATHS: ProjectPaths = resolve_paths()
 GAME_PAKS = PATHS.game_paks
@@ -44,7 +45,24 @@ MOD_FILES = (
 
 # Bump this before publishing a GitHub release.
 MOD_VERSION = "1.0.6"
+# Steam buildid this translation was last rebuilt against.
+GAME_BUILD_ID = "25534673"
 VERSION_FILE = "RussianLocalization.version"
+TASK_NAME = "Europa1410-Russifier-AutoUpdate"
+AUTO_LOCK = "auto_update.lock"
+AUTO_LOG = "auto_update.log"
+AUTO_STATE = "auto_update_state.json"
+AUTO_LOG_MAX_BYTES = 256 * 1024
+FAIL_COOLDOWN_SEC = 6 * 3600
+RELEASE_COOLDOWN_SEC = 3600
+# Only these files are auto-committed. Unrelated local edits stay out of the release.
+AUTO_RELEASE_FILES = (
+    "build_russian_mod.py",
+    "entry_cache.json",
+    "release/README.txt",
+    "translation_manual.json",
+    "ucas_hash_entries.json",
+)
 LAUNCHER_FILES = (
     "CheckTranslationUpdate.cmd",
     "check_translation_update.ps1",
@@ -228,9 +246,379 @@ def export_manual(entries: list[LocEntry], cache: dict[str, str]) -> None:
     MANUAL.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def ensure_source_assets() -> None:
+def parse_steam_acf(path: Path) -> dict[str, str]:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    return dict(re.findall(r'"([^"]+)"\s+"([^"]*)"', text))
+
+
+def read_steam_game_state() -> dict[str, str | bool | Path]:
+    path = PATHS.steam_appmanifest
+    if not path.exists():
+        raise FileNotFoundError(f"Steam appmanifest not found: {path}")
+    data = parse_steam_acf(path)
+    state_flags = data.get("StateFlags", "")
+    return {
+        "buildid": data.get("buildid", ""),
+        "state_flags": state_flags,
+        "ready": state_flags == "4",
+        "path": path,
+    }
+
+
+def game_is_running() -> bool:
+    if os.name != "nt":
+        return False
+    names = ("Europa1410-Win64-Shipping.exe", "Europa1410.exe")
+    result = subprocess.run(
+        ["tasklist", "/FO", "CSV", "/NH"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    output = result.stdout.lower()
+    return any(name.lower() in output for name in names)
+
+
+def game_pak_newer_than_source() -> bool:
+    locres = SOURCE / "Game/en/Game.locres"
+    tables = STRING_TABLES_DIR / "ST_General.csv"
+    pak = GAME_PAKS / "Europa1410-Windows.pak"
+    if not locres.exists() or not tables.exists() or not pak.exists():
+        return True
+    pak_mtime = pak.stat().st_mtime
+    return pak_mtime > locres.stat().st_mtime + 1 or pak_mtime > tables.stat().st_mtime + 1
+
+
+def bump_patch_version(current: str) -> str:
+    value = current.strip().lstrip("vV")
+    parts = [part for part in value.split(".") if part]
+    while len(parts) < 3:
+        parts.append("0")
+    parts[2] = str(int(parts[2]) + 1)
+    return ".".join(parts)
+
+
+def write_build_constants(mod_version: str, game_build_id: str) -> None:
+    path = Path(__file__).resolve()
+    text = path.read_text(encoding="utf-8")
+    text, count_version = re.subn(
+        r'^MOD_VERSION = "[^"]*"',
+        f'MOD_VERSION = "{mod_version}"',
+        text,
+        count=1,
+        flags=re.M,
+    )
+    text, count_build = re.subn(
+        r'^GAME_BUILD_ID = "[^"]*"',
+        f'GAME_BUILD_ID = "{game_build_id}"',
+        text,
+        count=1,
+        flags=re.M,
+    )
+    if count_version != 1 or count_build != 1:
+        raise RuntimeError("Could not update MOD_VERSION / GAME_BUILD_ID")
+    path.write_text(text, encoding="utf-8")
+
+
+def acquire_auto_lock() -> bool:
+    lock = WORK / AUTO_LOCK
+    if lock.exists():
+        try:
+            pid = int(lock.read_text(encoding="utf-8").strip())
+        except ValueError:
+            pid = 0
+        if pid and os.name == "nt":
+            listed = subprocess.run(
+                ["tasklist", "/FI", f"PID eq {pid}", "/FO", "CSV", "/NH"],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            if str(pid) in listed.stdout and "python" in listed.stdout.lower():
+                print(f"Auto-update already running (pid {pid})", flush=True)
+                return False
+    lock.write_text(str(os.getpid()), encoding="utf-8")
+    return True
+
+
+def release_auto_lock() -> None:
+    lock = WORK / AUTO_LOCK
+    try:
+        if lock.exists() and lock.read_text(encoding="utf-8").strip() == str(os.getpid()):
+            lock.unlink()
+    except OSError:
+        pass
+
+
+def now_iso() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def parse_iso(value: str) -> float | None:
+    try:
+        return time.mktime(time.strptime(value, "%Y-%m-%dT%H:%M:%SZ"))
+    except ValueError:
+        return None
+
+
+def load_auto_state() -> dict:
+    path = WORK / AUTO_STATE
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def save_auto_state(update: dict) -> None:
+    state = load_auto_state()
+    state.update(update)
+    (WORK / AUTO_STATE).write_text(
+        json.dumps(state, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def in_cooldown(key: str, seconds: int) -> bool:
+    stamp = load_auto_state().get(key)
+    if not isinstance(stamp, str):
+        return False
+    then = parse_iso(stamp)
+    if then is None:
+        return False
+    return (time.time() - then) < seconds
+
+
+def git_changed_files() -> list[str]:
+    result = subprocess.run(
+        ["git", "status", "--porcelain", "-uall"],
+        cwd=WORK,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    files: list[str] = []
+    for line in result.stdout.splitlines():
+        if len(line) < 4:
+            continue
+        path = line[3:].strip().replace("\\", "/")
+        if " -> " in path:
+            path = path.split(" -> ", 1)[1]
+        files.append(path)
+    return files
+
+
+def unexpected_dirty_files() -> list[str]:
+    allowed = set(AUTO_RELEASE_FILES)
+    return [path for path in git_changed_files() if path not in allowed]
+
+
+def current_git_branch() -> str:
+    result = subprocess.run(
+        ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+        cwd=WORK,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    return result.stdout.strip()
+
+
+def release_tag_exists(tag: str) -> bool:
+    result = subprocess.run(
+        ["gh", "release", "view", tag],
+        cwd=WORK,
+        capture_output=True,
+        check=False,
+    )
+    return result.returncode == 0
+
+
+def attach_auto_log() -> None:
+    log_path = WORK / AUTO_LOG
+    if log_path.exists() and log_path.stat().st_size > AUTO_LOG_MAX_BYTES:
+        text = log_path.read_text(encoding="utf-8", errors="replace")
+        log_path.write_text(text[-AUTO_LOG_MAX_BYTES // 2 :], encoding="utf-8")
+    handle = log_path.open("a", encoding="utf-8")
+    handle.write(f"\n---- {time.strftime('%Y-%m-%d %H:%M:%S')} ----\n")
+    handle.flush()
+
+    class _Tee:
+        def __init__(self, *streams):
+            self.streams = streams
+
+        def write(self, data):
+            for stream in self.streams:
+                stream.write(data)
+                stream.flush()
+
+        def flush(self):
+            for stream in self.streams:
+                stream.flush()
+
+    sys.stdout = _Tee(sys.__stdout__, handle)
+    sys.stderr = _Tee(sys.__stderr__, handle)
+
+
+def run_validation() -> None:
+    result = subprocess.run(
+        [sys.executable, str(WORK / "validate_translations.py")],
+        cwd=WORK,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError("validate_translations.py failed")
+
+
+def publish_github_release(version: str, game_build_id: str) -> None:
+    zip_path = WORK / "release/Europa1410-RussianLocalization.zip"
+    if not zip_path.exists():
+        raise FileNotFoundError(f"Missing {zip_path}")
+    tag = version if version.lower().startswith("v") else f"v{version.lstrip('vV')}"
+    if current_git_branch() != "master":
+        raise RuntimeError("Auto-release only from master")
+    unexpected = unexpected_dirty_files()
+    if unexpected:
+        raise RuntimeError(
+            "Refuse auto-release, unexpected dirty files: " + ", ".join(unexpected)
+        )
+    if in_cooldown("last_release_at", RELEASE_COOLDOWN_SEC):
+        print("GitHub release cooldown is active, skip publish", flush=True)
+        save_auto_state(
+            {
+                "pending_release_tag": tag,
+                "pending_release_buildid": game_build_id,
+            }
+        )
+        return
+    if release_tag_exists(tag):
+        print(f"GitHub release {tag} already exists, skip create", flush=True)
+        save_auto_state(
+            {
+                "pending_release_tag": "",
+                "pending_release_buildid": "",
+                "last_release_at": now_iso(),
+                "last_release_tag": tag,
+            }
+        )
+        return
+
+    subprocess.run(["git", "add", "--", *AUTO_RELEASE_FILES], cwd=WORK, check=True)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        cwd=WORK,
+        check=False,
+    )
+    if staged.returncode != 0:
+        message = (
+            f"Выпустить русификатор {tag}: автообновление под сборку Steam {game_build_id}."
+        )
+        subprocess.run(["git", "commit", "-m", message], cwd=WORK, check=True)
+    ahead = subprocess.run(
+        ["git", "rev-list", "--count", "@{u}..HEAD"],
+        cwd=WORK,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if ahead.returncode == 0 and ahead.stdout.strip() not in {"", "0"}:
+        subprocess.run(["git", "push", "origin", "HEAD"], cwd=WORK, check=True)
+    elif staged.returncode != 0:
+        subprocess.run(["git", "push", "origin", "HEAD"], cwd=WORK, check=True)
+
+    notes = f"""> **Поддержать автора:** https://www.donationalerts.com/r/link_it
+
+## Что нового в {tag}
+
+- Автообновление под Steam-сборку `{game_build_id}`.
+- Новые строки переведены автоматически, IoStore-файлы мода снова совпадают с игрой.
+
+## Как включить перевод
+
+**Settings → Language → Text Language → Русский.** Затем полностью перезапустите игру.
+
+Русской озвучки нет: **Audio Language → English.**
+
+## Автозапуск лаунчера в Steam
+
+В свойствах игры, поле **Параметры запуска**:
+
+```
+CheckTranslationUpdate.cmd %command%
+```
+"""
+    asset = f"{zip_path}#RussianLocalization_Europa1410_{tag}.zip"
+    subprocess.run(
+        [
+            "gh",
+            "release",
+            "create",
+            tag,
+            "--title",
+            "Русификатор для The Guild - Europa 1410",
+            "--latest",
+            "--target",
+            "master",
+            asset,
+            "--notes",
+            notes,
+        ],
+        cwd=WORK,
+        check=True,
+    )
+    save_auto_state(
+        {
+            "pending_release_tag": "",
+            "pending_release_buildid": "",
+            "last_release_at": now_iso(),
+            "last_release_tag": tag,
+            "last_success_buildid": game_build_id,
+        }
+    )
+    print(f"Published GitHub release {tag}", flush=True)
+
+
+def _create_scheduled_task(name: str, schedule: list[str]) -> None:
+    python = sys.executable
+    script = str(Path(__file__).resolve())
+    work = str(WORK)
+    command = f'cmd.exe /c cd /d "{work}" && "{python}" "{script}" --auto'
+    result = subprocess.run(
+        ["schtasks", "/Create", "/TN", name, "/F", "/RL", "LIMITED", *schedule, "/TR", command],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout or "").strip()
+        raise RuntimeError(f"schtasks failed for {name}: {detail or result.returncode}")
+    print(f"Scheduled task installed: {name}", flush=True)
+
+
+def install_scheduled_task() -> None:
+    _create_scheduled_task(TASK_NAME, ["/SC", "HOURLY", "/MO", "3"])
+    print("Checks Steam every 3 hours.", flush=True)
+
+
+def uninstall_scheduled_task() -> None:
+    subprocess.run(["schtasks", "/Delete", "/TN", TASK_NAME, "/F"], check=False)
+    print(f"Scheduled task removed: {TASK_NAME}", flush=True)
+
+
+def ensure_source_assets(force: bool = False) -> None:
     locres_ok = (SOURCE / "Game/en/Game.locres").exists()
     tables_ok = (STRING_TABLES_DIR / "ST_General.csv").exists()
+    if force or (locres_ok and tables_ok and game_pak_newer_than_source()):
+        if force:
+            print("Refreshing extracted source from the current game pak...", flush=True)
+        else:
+            print("Game pak is newer than extracted source, refreshing...", flush=True)
+        locres_ok = False
+        tables_ok = False
     if locres_ok and tables_ok:
         return
 
@@ -271,8 +659,8 @@ def ensure_source_assets() -> None:
     shutil.rmtree(tmp)
 
 
-def ensure_string_tables() -> None:
-    ensure_source_assets()
+def ensure_string_tables(force: bool = False) -> None:
+    ensure_source_assets(force=force)
 
 
 def parse_st_csv(path: Path) -> list[tuple[str, str]]:
@@ -993,91 +1381,215 @@ def main() -> None:
         default="",
         help="Version stamp written into the release (e.g. 1.0.4)",
     )
+    parser.add_argument(
+        "--refresh-source",
+        action="store_true",
+        help="Re-extract locres and string tables from the current game pak",
+    )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Rebuild only if the installed Steam game build changed",
+    )
+    parser.add_argument(
+        "--release",
+        action="store_true",
+        help="Commit, push, and publish a GitHub release after a successful build",
+    )
+    parser.add_argument(
+        "--install-task",
+        action="store_true",
+        help="Install a Windows scheduled task that runs --auto",
+    )
+    parser.add_argument(
+        "--uninstall-task",
+        action="store_true",
+        help="Remove the Windows scheduled task",
+    )
     args = parser.parse_args()
 
-    version = resolve_mod_version(args.mod_version or None)
-    print(f"Mod version: {version}", flush=True)
-
-    WORK.mkdir(parents=True, exist_ok=True)
-    if MOD_ROOT.exists():
-        shutil.rmtree(MOD_ROOT)
-
-    ensure_string_tables()
-
-    global ALL_ST_ENTRIES, MISSING_ST_ENTRIES, UCAS_HASH_ENTRIES
-    ALL_ST_ENTRIES = collect_all_st_entries()
-
-    all_entries: list[LocEntry] = []
-    for rel in LOC_FILES:
-        _loc, entries, _handles = collect_entries(rel)
-        all_entries.extend(entries)
-
-    game_loc, _, _ = collect_entries("Game/en/Game.locres")
-    MISSING_ST_ENTRIES = collect_missing_st_entries(game_loc)
-    print(f"Missing string-table keys in Game.locres: {len(MISSING_ST_ENTRIES)}", flush=True)
-
-    uncat_loc, _, _ = collect_entries("Uncategorized Texts/en/Uncategorized Texts.locres")
-    existing_hash_keys = {
-        entry.key
-        for namespace in uncat_loc
-        for entry in namespace
-        if len(entry.key) == 32 and all(ch in "0123456789ABCDEFabcdef" for ch in entry.key)
-    }
-    UCAS_HASH_ENTRIES = harvest_ucas_hash_entries(
-        existing_hash_keys,
-        refresh=args.refresh_ucas_hash,
-    )
-    UCAS_HASH_ENTRIES = merge_authoritative_entries(
-        list(KNOWN_HASH_ENTRIES),
-        UCAS_HASH_ENTRIES,
-    )
-    print(f"Uncategorized hash entries to sync: {len(UCAS_HASH_ENTRIES)}", flush=True)
-
-    all_entries = merge_authoritative_entries(
-        all_entries,
-        ALL_ST_ENTRIES,
-        list(EXTRA_GAME_LOC_ENTRIES),
-        list(EXTRA_UNCATEGORIZED_LOC_ENTRIES),
-        UCAS_HASH_ENTRIES,
-    )
-
-    cache = {} if args.force else load_cache()
-    locme = sum(1 for entry in all_entries if entry.english.startswith("(LocMe)"))
-    print(f"Collected {len(all_entries)} entries, LocMe kept in English: {locme}", flush=True)
-
-    if not args.skip_translate:
-        dropped = drop_english_cache_entries(cache, all_entries)
-        if dropped:
-            print(f"Dropped {dropped} untranslated cache entries for re-translation", flush=True)
-        cache = translate_entries(
-            all_entries,
-            cache,
-            batch_size=args.batch_size,
-            pause=args.pause,
-            force=args.force,
-            workers=args.workers,
-            on_progress=save_cache,
+    if args.install_task:
+        install_scheduled_task()
+        steam = read_steam_game_state()
+        print(
+            f"Steam app {STEAM_APP_ID} build {steam['buildid']} "
+            f"(tracked {GAME_BUILD_ID}, ready={steam['ready']})",
+            flush=True,
         )
+        return
+    if args.uninstall_task:
+        uninstall_scheduled_task()
+        return
+
+    steam_state: dict[str, str | bool | Path] | None = None
+    auto_locked = False
+    try:
+        if args.auto:
+            attach_auto_log()
+            WORK.mkdir(parents=True, exist_ok=True)
+            if not acquire_auto_lock():
+                return
+            auto_locked = True
+            if in_cooldown("last_failure_at", FAIL_COOLDOWN_SEC):
+                print("Previous auto-update failed recently, waiting 6 hours", flush=True)
+                return
+            steam_state = read_steam_game_state()
+            print(
+                f"Steam app {STEAM_APP_ID} build {steam_state['buildid']} "
+                f"(tracked {GAME_BUILD_ID}, StateFlags={steam_state['state_flags']})",
+                flush=True,
+            )
+            if not steam_state["ready"]:
+                print("Steam is still updating the game, skipping", flush=True)
+                return
+            if not steam_state["buildid"]:
+                print("Steam buildid is empty, skipping", flush=True)
+                return
+            if steam_state["buildid"] == GAME_BUILD_ID:
+                state = load_auto_state()
+                pending_tag = str(state.get("pending_release_tag") or "")
+                pending_build = str(state.get("pending_release_buildid") or "")
+                if (
+                    PATHS.auto_release
+                    and pending_tag
+                    and pending_build == steam_state["buildid"]
+                ):
+                    print(f"Retry pending GitHub release {pending_tag}", flush=True)
+                    run_validation()
+                    publish_github_release(pending_tag, pending_build)
+                    save_auto_state({"last_failure_at": "", "last_success_at": now_iso()})
+                    return
+                print("Game build unchanged, nothing to do", flush=True)
+                return
+            if game_is_running():
+                print("Game is running, skipping until the next check", flush=True)
+                return
+            args.refresh_source = True
+            args.refresh_ucas_hash = True
+            if not args.mod_version:
+                args.mod_version = bump_patch_version(MOD_VERSION)
+
+        version = resolve_mod_version(args.mod_version or None)
+        print(f"Mod version: {version}", flush=True)
+
+        WORK.mkdir(parents=True, exist_ok=True)
+        if MOD_ROOT.exists():
+            shutil.rmtree(MOD_ROOT)
+
+        ensure_string_tables(force=args.refresh_source)
+
+        global ALL_ST_ENTRIES, MISSING_ST_ENTRIES, UCAS_HASH_ENTRIES
+        ALL_ST_ENTRIES = collect_all_st_entries()
+
+        all_entries: list[LocEntry] = []
+        for rel in LOC_FILES:
+            _loc, entries, _handles = collect_entries(rel)
+            all_entries.extend(entries)
+
+        game_loc, _, _ = collect_entries("Game/en/Game.locres")
+        MISSING_ST_ENTRIES = collect_missing_st_entries(game_loc)
+        print(f"Missing string-table keys in Game.locres: {len(MISSING_ST_ENTRIES)}", flush=True)
+
+        uncat_loc, _, _ = collect_entries("Uncategorized Texts/en/Uncategorized Texts.locres")
+        existing_hash_keys = {
+            entry.key
+            for namespace in uncat_loc
+            for entry in namespace
+            if len(entry.key) == 32 and all(ch in "0123456789ABCDEFabcdef" for ch in entry.key)
+        }
+        UCAS_HASH_ENTRIES = harvest_ucas_hash_entries(
+            existing_hash_keys,
+            refresh=args.refresh_ucas_hash,
+        )
+        UCAS_HASH_ENTRIES = merge_authoritative_entries(
+            list(KNOWN_HASH_ENTRIES),
+            UCAS_HASH_ENTRIES,
+        )
+        print(f"Uncategorized hash entries to sync: {len(UCAS_HASH_ENTRIES)}", flush=True)
+
+        all_entries = merge_authoritative_entries(
+            all_entries,
+            ALL_ST_ENTRIES,
+            list(EXTRA_GAME_LOC_ENTRIES),
+            list(EXTRA_UNCATEGORIZED_LOC_ENTRIES),
+            UCAS_HASH_ENTRIES,
+        )
+
+        cache = {} if args.force else load_cache()
+        locme = sum(1 for entry in all_entries if entry.english.startswith("(LocMe)"))
+        print(f"Collected {len(all_entries)} entries, LocMe kept in English: {locme}", flush=True)
+
+        if not args.skip_translate:
+            dropped = drop_english_cache_entries(cache, all_entries)
+            if dropped:
+                print(f"Dropped {dropped} untranslated cache entries for re-translation", flush=True)
+            cache = translate_entries(
+                all_entries,
+                cache,
+                batch_size=args.batch_size,
+                pause=args.pause,
+                force=args.force,
+                workers=args.workers,
+                on_progress=save_cache,
+            )
+            save_cache(cache)
+
+        manual_applied = apply_manual_overrides(cache, all_entries)
+        print(f"Manual overrides applied: {manual_applied}", flush=True)
         save_cache(cache)
 
-    manual_applied = apply_manual_overrides(cache, all_entries)
-    print(f"Manual overrides applied: {manual_applied}", flush=True)
-    save_cache(cache)
+        export_manual(all_entries, cache)
 
-    export_manual(all_entries, cache)
+        total = 0
+        for rel in LOC_FILES:
+            total += build_locres(rel, cache)
 
-    total = 0
-    for rel in LOC_FILES:
-        total += build_locres(rel, cache)
+        stage_mod_support_files()
+        pack_mod()
+        setup_iostore()
+        install = PATHS.install_mod_after_build and not args.no_install
+        publish_dist(install=install, version=version)
+        if not args.no_zip:
+            make_release_zip(version)
+        print(f"Done. {total} entries.", flush=True)
 
-    stage_mod_support_files()
-    pack_mod()
-    setup_iostore()
-    install = PATHS.install_mod_after_build and not args.no_install
-    publish_dist(install=install, version=version)
-    if not args.no_zip:
-        make_release_zip(version)
-    print(f"Done. {total} entries.", flush=True)
+        if steam_state and steam_state.get("buildid"):
+            write_build_constants(version.lstrip("vV"), str(steam_state["buildid"]))
+            save_auto_state(
+                {
+                    "last_success_buildid": str(steam_state["buildid"]),
+                    "last_success_at": now_iso(),
+                    "last_failure_at": "",
+                }
+            )
+            print(
+                f"Tracked Steam build is now {steam_state['buildid']}, mod {version}",
+                flush=True,
+            )
+        if args.release or (args.auto and PATHS.auto_release):
+            run_validation()
+            release_buildid = str((steam_state or {}).get("buildid") or GAME_BUILD_ID)
+            release_tag = version if str(version).lower().startswith("v") else f"v{version}"
+            try:
+                publish_github_release(version, release_buildid)
+            except Exception:
+                save_auto_state(
+                    {
+                        "pending_release_tag": release_tag,
+                        "pending_release_buildid": release_buildid,
+                        "last_failure_at": now_iso(),
+                    }
+                )
+                raise
+        if args.auto:
+            save_auto_state({"last_failure_at": "", "last_success_at": now_iso()})
+    except Exception:
+        if args.auto:
+            save_auto_state({"last_failure_at": now_iso()})
+        raise
+    finally:
+        if auto_locked:
+            release_auto_lock()
 
 
 if __name__ == "__main__":
